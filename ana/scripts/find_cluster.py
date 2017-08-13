@@ -15,14 +15,15 @@ script: find_cluster.py
 #import numpy as np
 import const  # constants used in LAMOST image processing
 import bits   # bit manipulate function
+import image  # module deal with fits image process
 
 #============================
-def findCluster(mask, hotcell, iy, ix, pixelFlag, pixels, im=0):
+def findCluster(mask, hotcellList, iy, ix, pixelFlag, pixels, im=0):
     """
     purpose: findCluster of pixel (iy, ix)
     input: 
-         mask  matrix
-         hotcell matrix
+         mask, 
+         hotcellList: hotcell list of the current CCD chip
          pixel position (iy, ix), 
          pixelFlag: np.(Ny, Nx), value(iy, ix) set to 1 if pixel(iy, ix) is already checked
          pixels: already found pixels in the cluster
@@ -36,9 +37,8 @@ def findCluster(mask, hotcell, iy, ix, pixelFlag, pixels, im=0):
         print ('Error: calling function findCluster() for a non-PIXEL position')
         return
 
-    # if it is a hotcell, ignore
-    if hotcell[iy, ix] == 1:  return pixels
-
+    # check if it is a hotcell:
+    if image.inHotcellList(hotcellList, iy, ix) == True:  return # if it is a hotcell, do nothing
     # if pixel(iy, ix) is already checked, do nothing
     if (pixelFlag[iy, ix] == 1): return pixels
 

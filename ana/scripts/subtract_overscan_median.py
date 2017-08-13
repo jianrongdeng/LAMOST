@@ -121,13 +121,14 @@ for k in range(N_t):
 		    os_data =  (images[j_y, os_x_min[i]:os_x_max[i] ] )  # note: the first index is y-axis, the second axis is x
 		    cn_y[j_y] = j_y # used in plotting 
 # calculate mean and std deviation using values in the overscan region
+                    # average over OS_Nbins (=32, along x-axis)
 		    os_mean[j_y, i] =  np.mean(os_data)   #  calculate the mean for the two overscan regions
 		    # sample standard deviation
 		    os_sstd[j_y, i] =  (sts.stdev(os_data.flatten()))
 		    # population standard deviation
 		    os_pstd[j_y, i] = (np.std(os_data))
 		    # subtract overscan
-		    overscan[j_y, data_x_min[i]:data_x_max[i]] =  os_mean[j_y, i]
+		    overscan[j_y, data_x_min[i]:data_x_max[i]] =  os_mean[j_y, i] # use mean value along x-axis for OS subtraction
 		    net[j_y, data_x_min[i]:data_x_max[i],k] = images[j_y, data_x_min[i]:data_x_max[i] ] - os_mean[j_y, i]
 
 

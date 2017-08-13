@@ -14,12 +14,25 @@ import filesIO as fIO
 import numpy as np
 import statistics as sts
 import const
+import bits 
 from read_fits import read_fits
 
 
+hotcell = np.zeros((const.N_y, const.N_x),dtype=int )    # array to save the bitmap of each HOTCELL 
 
 # mask matrix for the >3sigma pixels
 mask =  read_fits(fIO.getMaskFilename())
+
+# flag hotcells
+for iy in range(const.N_y):
+    for ix in range(const.N_x):
+    # check if any hotcells in the 5 biased images
+    count = bits.bitCount(mask[iy,ix]) # number of images with pixel ix-iy fired 
+    if (count == 5):  # if pixel fired in all FIVE image, flag as hotcell
+	hotcell[iy,ix] = 1  # if > 3sigma, set the it-th bit to 1
+	print ('pixels with number of images fired >=5: ')
+	print (count, iy, ix, hotcell[iy,ix])
+
 
 # five biased images 
 for im in range(const.N_b):
@@ -39,7 +52,7 @@ for im in range(const.N_b):
         for iy in range(const.N_y):
             pixels = []
             # find cluster
-            fcl.findCluster(mask, iy, ix, pFlag, pixels, im)
+            fcl.findCluster(mask, hotcell, iy, ix, pFlag, pixels, im)
             if (len(pixels) > 0): 
                 clusters.append(pixels)
 

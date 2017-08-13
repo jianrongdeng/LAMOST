@@ -17,11 +17,12 @@ import const  # constants used in LAMOST image processing
 import bits   # bit manipulate function
 
 #============================
-def findCluster(mask, iy, ix, pixelFlag, pixels, im=0):
+def findCluster(mask, hotcell, iy, ix, pixelFlag, pixels, im=0):
     """
     purpose: findCluster of pixel (iy, ix)
     input: 
-         mask, 
+         mask  matrix
+         hotcell matrix
          pixel position (iy, ix), 
          pixelFlag: np.(Ny, Nx), value(iy, ix) set to 1 if pixel(iy, ix) is already checked
          pixels: already found pixels in the cluster
@@ -34,8 +35,12 @@ def findCluster(mask, iy, ix, pixelFlag, pixels, im=0):
     if (not isPixel(iy, ix)): 
         print ('Error: calling function findCluster() for a non-PIXEL position')
         return
+
+    # if it is a hotcell, ignore
+    if hotcell[iy, ix] == 1:  return pixels
+
     # if pixel(iy, ix) is already checked, do nothing
-    if (bits.testBit(pixelFlag[iy, ix])): return pixels
+    if (pixelFlag[iy, ix] == 1): return pixels
 
     # if not checked yet
     pixelFlag[iy, ix] =  1              # flag pixel(iy, ix) as checked
@@ -45,7 +50,7 @@ def findCluster(mask, iy, ix, pixelFlag, pixels, im=0):
          # now check its neighbor pixels
          nbr = getNeighbor(iy, ix)
          for ip in nbr:
-                  findCluster(mask, ip[0], ip[1], pixelFlag, pixels, im)
+                  findCluster(mask, hotcell, ip[0], ip[1], pixelFlag, pixels, im)
     return pixels 
 
 #============================

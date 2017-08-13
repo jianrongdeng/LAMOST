@@ -11,6 +11,8 @@ script: const.py
 N_b = 5 # number of biased images
 N_x = 4096 # the last pixel (in x) before overscan bands
 N_y = 4136 # total number of pixels in y direction
+N_os = 2  # number of overscan regions
+OS_Nbins = 32  # number of total x bins in overscan regions
 
 ### pixel value threshold
 th_pixel = 3  # if pixel value > 3 * sstd, keep this pixel
@@ -32,3 +34,4 @@ test_time = [
 
 # debug flag
 DEBUG = True
+DEBUG_L2 = False

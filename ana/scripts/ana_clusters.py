@@ -14,12 +14,14 @@ import filesIO as fIO
 import numpy as np
 import statistics as sts
 import const
+import image
 from read_fits import read_fits
 
 
 
 # mask matrix for the >3sigma pixels
 mask =  read_fits(fIO.getMaskFilename())
+hotcellList = getHotcellList(mask)
 
 # five biased images 
 for im in range(const.N_b):
@@ -35,13 +37,13 @@ for im in range(const.N_b):
     # matrix used to save flags of the pixel (if it is already checked or not)
     pFlag = np.zeros((const.N_y, const.N_x),dtype=np.int8)
     # go through each pixel
-    for ix in range(const.N_x):
-        for iy in range(const.N_y):
-            pixels = []
-            # find cluster
-            fcl.findCluster(mask, iy, ix, pFlag, pixels, im)
-            if (len(pixels) > 0): 
-                clusters.append(pixels)
+    for iy in range(const.N_y):
+         for ix in range(const.N_x):
+                pixels = []
+                # find cluster
+                fcl.findCluster(mask, hotcellList, iy, ix, pFlag, pixels, im)
+                if (len(pixels) > 0): 
+                    clusters.append(pixels)
 
     # read in pixel values (these should be values after Overscan and biased subtraction)
     data =  read_fits(fIO.getFilename(time=const.test_time[im]))

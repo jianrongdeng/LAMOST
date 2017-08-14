@@ -36,17 +36,24 @@ sstd = np.zeros((const.N_b))
 pixelLists = []
 for im in range(const.N_b): pixelLists.append([]) # pixelLists for the five images
 
-# modify this section for different input data file
-d_path_in = '/Users/jdeng/baiduCloudDisk/LAMOST/data/'
-os.system('mkdir -p {}'.format(fIO.getDir())) # create output directory if not already exists
-file_stat = fIO.getFilename(tag = '-stat', postfix='.txt') # mean and sstd output file
-d_time = const.test_time    # data file specification: recorded time
-for im in range(const.N_b): # five biased images 
-    rawFile = fIO.getFilename(path=d_path_in, time=d_time[im], tag='', postfix='.fit.gz') # input data file
-    file_pixelList = fIO.getFilename(time=d_time[im], tag = '-pixelList', postfix='.txt') # output files
-# modify the above section for different input data files
+#set input / output files using environment variables, create output directory if not already exist
+r_onlynames = fIO.get_onlyrawfilenames()
+# output file for saving pixel lists (one file for 5 lists)
+file_pixelList = fIO.setOutFilename(r_onlynames[0], d_tag='pixelList') 
+# mean and sstd output file
+file_stat = fIO.setOutFilename(r_onlynames[0], d_tag='stat')
+# filenames with pathname
+rawfiles= fIO.get_rawfilenames()
 
-    data_raw = read_fits(rawFile)  # read in raw data
+if DEBUG:
+    print('rawdata files :', rawfiles)
+    print('file_stat     :', file_stat)
+    print('file_pixelList:', file_pixelList)
+
+
+# readin images
+for im in range(const.N_b): # five biased images 
+    data_raw = read_fits(rawfiles[im])  # read in raw data
     net[im] = image.subtract_overscan(data_raw, DEBUG=False) # subtract Overscan
 
 # get medium    
@@ -70,7 +77,8 @@ if len(hotcellList)> 0: # remove hotcells
         pixelLists[im] = image.removeHotcell(pixelLists[im], hotcellList)
 
 # save results
-# save pixelList to file			  
+# save pixelLists to file			  
+# 5 lists from 5 images save in one file
 fIO.dumpPixelList(file_pixelList, pixelLists)
 
 

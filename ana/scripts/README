@@ -97,3 +97,11 @@ ana_image.py
 		for further cluster analysis.
 ============================
 
+============================
+ana_image.sh
+============================
+	date: 20170813 by Jianrong Deng
+	purpose:
+		bash script to run through raw bias data
+============================
+

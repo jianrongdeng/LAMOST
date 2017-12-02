@@ -54,7 +54,6 @@ if [ -d "$env_rawdata_path" ]
 fi  
 
 # check total number of days analysized and to be analysized
-total_days=0
 total_days_analysized=0
 
 # loop through dates in $year
@@ -100,11 +99,11 @@ do
 		#echo "raw files : "  ${env_rawdata_onlyfilenames}
 		#echo "total number of files"  ${n_file} "for det " $env_rawdata_det 
 		#python3 test_filename.py
-		# check the test flag, if test=true, skip the python command
+		# check the run flag, if run_flag=1, run the python analysis process
 	       if [ $run_flag == 1 ]
 		  then
-		#	    python ana_image.py 
-		           echo "run_flag ="  $run_flag
+		       python ana_image.py 
+		       # echo "run_flag ="  $run_flag
 	       fi   # if test_flag
 		((n_det +=1))
 	     done # loop through 32 dets

@@ -169,7 +169,7 @@ def getReal( net, medium):
 #============================
 
 #============================
-def getMask(data, stat, pixelList, DEBUG=const.DEBUG):
+def getMask(data, stat, pixelLists, DEBUG=const.DEBUG):
 #============================
     """
     purpose: generate mask matrix to mark pixels above threshold
@@ -179,7 +179,7 @@ def getMask(data, stat, pixelList, DEBUG=const.DEBUG):
                 mean = mean[i]
                 sstd = sstd[i], where i is the ith image
     output: mask matrix where > threshold pixels are marked
-            pixelList: pixel[i], list of candidate pixels of the ith image
+            pixelLists: pixel[i], list of candidate pixels of the ith image
     """
 
     mask = np.zeros((const.N_y, const.N_x),dtype=int )    # array to save the bitmap of each pixel
@@ -192,9 +192,9 @@ def getMask(data, stat, pixelList, DEBUG=const.DEBUG):
                 pvalue = data[it, iy, ix]
                 if ( pvalue - mean ) > const.th_pixel * sstd:
                       mask[iy,ix] = bits.setBit(mask[iy, ix], it)  # if > 3sigma, set the it-th bit to 1
-                      pixelList[it].append([iy, ix, pvalue])
+                      pixelLists[it].append([iy, ix, pvalue])
         if DEBUG:
-            print('image ', it, ' has ', len(pixelList[it]), ' candidate pixels')
+            print('image ', it, ' has ', len(pixelLists[it]), ' candidate pixels')
     return mask
 #============================
 

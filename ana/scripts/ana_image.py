@@ -15,7 +15,6 @@ import filesIO as fIO
 import numpy as np
 import const
 import image
-import os
 from read_fits import read_fits
 import time
 
@@ -79,7 +78,7 @@ if len(hotcellList)> 0: # remove hotcells
 # save results
 # save pixelLists to file			  
 # 5 lists from 5 images save in one file
-fIO.dumpPixelList(file_pixelList, pixelLists)
+fIO.dumpPixelLists(file_pixelList, pixelLists)
 
 
 # time stamp: 

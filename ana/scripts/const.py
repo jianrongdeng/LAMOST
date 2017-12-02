@@ -34,5 +34,5 @@ test_time = [
 
 
 # debug flag
-DEBUG = True
+DEBUG = False
 DEBUG_L2 = False

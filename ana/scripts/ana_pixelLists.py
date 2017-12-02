@@ -4,7 +4,8 @@ script: ana_clusters.py
 ============================
 	date: 20170615 by Jianrong Deng
 	purpose:
-		analyze clusters
+		generate a list of clusters from an input data file of
+                above threshold pixels 
 	Input: pixel lists of net data (raw - OS - bias) files
 	output: cluster list
 """
@@ -79,7 +80,7 @@ file_stat = os.environ['env_filename_stat']
 # mean and sstd input file (which is output from ana_image.py script)
 file_pixelList = fIO.setFilename(file_stat, in_tag='stat.txt', out_tag='pixelList.txt')
 
-file_cluster = fIO.setFilename(file_stat, in_tag='stat.txt', out_tag='clusters.txt')
+file_cluster = fIO.setFilename(file_stat, in_tag='stat.txt', out_tag='clusters.dat')
 
 if DEBUG:
     print('file_stat     :', file_stat)
@@ -97,24 +98,46 @@ for im in range(const.N_b): clusterLists.append([]) # clusterLists for the five 
 
 # five biased images 
 for im in range(const.N_b):
+    if DEBUG:
+        print('checking the ', im, '-th image for clusters')
 
     # cluster list
     clusters = []
 
-    # pixel list of the im-th image
-    pL = pixelLists[im]
+    # pixel list of the im-th image, including pixel Value
+    pV = pixelLists[im]
     # iflag set to initial value 0 for all pixels
-    pFlag = InitFlagPixels(pL)
-    # list of pixel[iy, ix]
-    ps = getPixels(pL)
+    #pFlag = InitFlagPixels(pL)
+    # list of pixel[iy, ix] positions
+    ps = getPixels(pV)
+    psLoop = ps.copy() # this is the list for the for looping, without pop out checked pixels
+    len_psLoop = len(psLoop)
+    if const.DEBUG_L2: 
+        print("length of psLoop = ", len(psLoop))
+        for i in range(len(psLoop)): 
+            print(i, psLoop[i])
 
+    nP = 10000
     # go through each pixel in the list
-    for ip in ps: 
-                pixels = []
-                # find cluster
-                fcl.findCluster(ps, pFlag, ip, pixels)
-                if (len(pixels) > 0): 
-                    clusters.append(pixels)
+    for i in range(len(psLoop)): 
+        if DEBUG:
+           if i>= nP and (i/nP) - int(i/nP)==0:
+                print("check the ", i, "-th pixel in the list: ", psLoop[i])
+        """        
+        # [index_b, index_e]: index range to look for the current pixel in the List 'ps' 
+        index_b = i -  (len_psLoop - len_ps) 
+        if index_b < 0: index_b = 0
+        index_e = index_b + 1
+        """
+        len_ps = len(ps)        
+        index_b = 0
+        index_e = len_ps
+        # list to save pixels in a cluster
+        pixels = []
+        # find cluster
+        fcl.findCluster(ps, pV, psLoop[i],  pixels, index_b, index_e)
+        if (len(pixels) > 0): 
+            clusters.append(pixels)
 
     # get Stat
     mean = stat[im][0]
@@ -135,6 +158,8 @@ for im in range(const.N_b):
 # save results
 # save clusterLists to file			  
 # 5 lists from 5 images save in one file
+if DEBUG:
+    print('dump clusters to file')
 fIO.dumpPixelLists(file_cluster, clusterLists)
 
 

@@ -4,7 +4,7 @@
 #============================
 #	date: 20170823 by Jianrong Deng
 #	purpose:
-#		bash script to run through pixelLists data to find #		clusters
+#		bash script to run through pixelLists data to find clusters
 #        usage: ./ana_clusters.sh $year
 #           ex: ./ana_clusters.sh 201601 # will run through pixelLists data of January 2016
 #============================
@@ -38,7 +38,7 @@ do
 			  export env_filename_stat=$i_file
 			  echo "env_filename_stat: ${env_filename_stat}"
 			  # find clusters
-		          python ana_pixelLists.py 
+		          python -u ana_pixelLists.py 
 		    fi  
 		    ((n_file +=1))
 		done 

@@ -6,6 +6,7 @@
 #	purpose:
 #		bash script to run through raw bias data
 #        usage: ./ana_image.sh $year
+#           ex: ./ana_image.sh 201601 # will run through data of January 2016
 #============================
 
 env_rawdata_year=$1; export env_rawdata_year
@@ -29,8 +30,16 @@ rb-14r rb-14b
 rb-15r rb-15b
 rb-16r rb-16b); export dets
 
-export env_rawdata_path='/data2/rawdata'
-export env_path_out='/home/jdeng/LAMOST/ana/outputs'
+export env_rawdata_path='/Users/jdeng/baiduCloudDisk/LAMOST/data'
+export env_path_out='/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs'
+
+# if it is a directory 
+if [ -d "$env_rawdata_path" ]
+  then 
+      echo "$env_rawdata_path" directory exists
+  else
+      echo "ERROR: $env_rawdata_path" directory does not exist
+fi  
 
 # loop through dates in $year
 for i_date in $env_rawdata_path/$env_rawdata_year*

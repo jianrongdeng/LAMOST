@@ -37,8 +37,6 @@ def setOutFilename(rawfile, d_tag='stat'):
     input: rawfile: filename of raw data
     output: output filename
     """
-    import os
-    import const
 
     # info from input filenames 
     d_path_in = os.environ['env_rawdata_onlypath'] # get environment variable 
@@ -50,9 +48,24 @@ def setOutFilename(rawfile, d_tag='stat'):
     # setup output file directory and names
     d_path_out = os.environ['env_path_out'] # get environment variable 
     os.system('mkdir -p {}'.format(getDir(path=d_path_out, date=d_date, datatype=d_type))) # create output directory if not already exists
-    file_out = getFilename(path=d_path_out, date=d_date,det=d_det,time=d_time, tag = d_tag, postfix='.txt') 
+    file_out = getFilename(path=d_path_out, date=d_date,det=d_det,time=d_time, tag = d_tag, postfix='.dat') 
     return file_out
 #==========================
+
+#==========================
+def setFilename(infile, in_tag='stat.dat', out_tag='clusters.dat'):
+    """
+    purpose: set output filename using environment variables
+    input: infile: the input filename
+           in_tag: tag of the input file
+           out_tag: tag of the output file
+    output: output filename
+    """
+
+    in_len = len(infile)
+    file_out = infile[0:in_len-len(in_tag)]
+    file_out = file_out + out_tag 
+    return file_out
 
 #==========================
 
@@ -65,7 +78,7 @@ def getMaskFilename(path=const.test_path_out, date=const.test_date, datatype=con
     return filename
 
 #==========================
-def getClusterFilename(path=const.test_path_out, date=const.test_date, datatype=const.test_datatype, det=const.test_det, time=const.test_time[0], tag = '-cluster', postfix = '.txt'): 
+def getClusterFilename(path=const.test_path_out, date=const.test_date, datatype=const.test_datatype, det=const.test_det, time=const.test_time[0], tag = '-cluster', postfix = '.dat'): 
     """
     purpose: name scheme for 3sigma-mask file
     """
@@ -75,7 +88,7 @@ def getClusterFilename(path=const.test_path_out, date=const.test_date, datatype=
 
 
 #============================
-def dumpPixelList(file_out, pixelLists, DEBUG = const.DEBUG):
+def dumpPixelLists(file_out, pixelLists, DEBUG = const.DEBUG):
 #============================
     """
     purpose: save pixel Lists to output file
@@ -96,12 +109,12 @@ def dumpPixelList(file_out, pixelLists, DEBUG = const.DEBUG):
 #============================
 
 #============================
-def loadPixelList(file_out, DEBUG = const.DEBUG):
+def loadPixelLists(file_out, DEBUG = const.DEBUG):
 #============================
     """
     purpose: load pixel List from file
     input :  filename 
-    output : pixellist
+    output : pixellists
 
     """
     # save list to output file
@@ -128,7 +141,7 @@ def printPixelLists(pixelLists, DEBUG = const.DEBUG_L2):
     """
     print('number of images: ', len(pixelLists))
     for im in pixelLists: # loop through five images 
-        print('number of candiate pixels in the image: ', len(im))
+        print('number of candiate pixels (clusters) in the image: ', len(im))
         if DEBUG:
             for ip in im:
                 print (ip[0], ip[1], int(ip[2]))
@@ -205,6 +218,7 @@ def get_onlyrawfilenames(DEBUG=const.DEBUG_L2):
         os.system("${env_rawdata_onlypath:?}") # ${variable:?} check if the variable is set
         os.system("ls -l ${env_rawdata_onlypath:?}/${env_rawdata_onlyfilenames_0:?}")
         os.system("ls -l ${env_rawdata_onlypath:?}/${env_rawdata_onlyfilenames_1:?}")
+
     rawfiles=[]
     rawfiles.append( os.environ['env_rawdata_onlyfilenames_0'])
     rawfiles.append( os.environ['env_rawdata_onlyfilenames_1'])
@@ -266,7 +280,7 @@ def get_date(pathname, DEBUG=const.DEBUG_L2):
     purpose: strip the date stamps from pathname
     """
     temp = pathname.strip().split('/')
-    date = temp[3]
+    date = temp[6]
     if DEBUG: 
         print('pathname = ', pathname, '\t date =', date)
     return date
@@ -278,8 +292,10 @@ def get_datatype(pathname):
     purpose: strip the data type info from pathname
     """
     temp = pathname.strip().split('/')
-    return temp[4]
+    return temp[7]
 #============================
+
+
 
 #============================
 class filename_rawdata:
@@ -295,6 +311,6 @@ class filename_rawdata:
         self.det = a_det
         self.dType = a_dType
         self.date = a_date
-        slef.times = a_times
+        self.times = a_times
 #============================
 

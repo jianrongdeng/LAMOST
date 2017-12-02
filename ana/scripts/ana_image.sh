@@ -42,8 +42,8 @@ rb-14r rb-14b
 rb-15r rb-15b
 rb-16r rb-16b); export dets
 
-export env_rawdata_path='/Users/jdeng/baiduCloudDisk/LAMOST/data'
-export env_path_out='/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs'
+export env_rawdata_path='/data2/rawdata'
+export env_path_out='/home/jdeng/LAMOST/ana/outputs'
 
 # if it is a directory 
 if [ -d "$env_rawdata_path" ]

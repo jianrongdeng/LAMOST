@@ -280,7 +280,7 @@ def get_date(pathname, DEBUG=const.DEBUG_L2):
     purpose: strip the date stamps from pathname
     """
     temp = pathname.strip().split('/')
-    date = temp[6]
+    date = temp[3]
     if DEBUG: 
         print('pathname = ', pathname, '\t date =', date)
     return date
@@ -292,7 +292,7 @@ def get_datatype(pathname):
     purpose: strip the data type info from pathname
     """
     temp = pathname.strip().split('/')
-    return temp[7]
+    return temp[4]
 #============================
 
 

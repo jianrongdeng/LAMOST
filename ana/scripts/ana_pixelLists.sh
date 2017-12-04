@@ -2,26 +2,30 @@
 #============================
 # ana_pixelLists.sh
 #============================
-#	date: 20170823 by Jianrong Deng
-#	purpose:
-#		bash script to run through pixelLists data to find clusters
-#        usage: ./ana_pixelLists.sh $year $run_flag
-#           ex0: ./ana_pixelLists.sh 201601 1 # will run through pixelLists data of January 2016
-#           example1: 
-#                    ./ana_pixelLists.sh 2016 0
-#               note:
-#                    test run without running the python analysis code, just checking the script loops
-#                     test run: 		             run_flag = 0
-#                   
-#        example2: 
-#                    nohup ./ana_pixelLists.sh 2016 1 > ../log/ana_pixelLists_run0_20171202/2016.txt
-#               note: 
-#                    data analysis run :                     run_flag = 1
+#   date: 20170823 by Jianrong Deng
+#   purpose:
+#   	bash script to run through pixelLists data to find clusters
+#   usage: ./ana_pixelLists.sh $year $run_flag
+#       ex0: ./ana_pixelLists.sh 201601 1 # will run through pixelLists data of January 2016
+#       example1: 
+#                ./ana_pixelLists.sh 0 2016 
+#           note:
+#                test run without running the python analysis code, just checking the script loops
+#              test run: 		             run_flag = 0
+#            
+#   example2: 
+#               nohup ./ana_pixelLists.sh 1 201601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../log/ana_pixelLists/run1_20171205/2016.dat
+#          note: 
+#            short test run: 		             
+#                        run_flag = 1  env_path_out=/home/jdeng/LAMOST/ana/outputs/run1_20171205
 #============================
 
-export env_year=$1
-run_flag=$2
-export env_path_out='/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs'
+run_flag=$1
+export env_year=$2
+#export env_path_out='/home/jdeng/LAMOST/ana/outputs'
+export env_path_out=$3
+echo "env_path_out=" $env_path_out
+
 
 # if it is a directory 
 if [ -d "$env_path_out" ]
@@ -42,7 +46,7 @@ do
       then
 		# loop through stat files
 		n_file=0
-		for i_file in  $i_date/bias/*-stat.txt
+		for i_file in  $i_date/bias/*-stat.dat
 		do
 		    # if file exists
 		    if [ -e "$i_file" ]
@@ -52,7 +56,8 @@ do
 			  # find clusters
 			  # check the run flag, if run_flag=1, run the python analysis process
 			  if [ $run_flag == 1 ]
-			        python -u ana_pixelLists.py 
+			     then
+			        python3 -u ana_pixelLists.py 
 			  fi  
 		    fi  
 		    ((n_file +=1))
@@ -61,4 +66,4 @@ do
                 ((total_days_analysized +=1))
    fi   # if it is a directory 
 done # loop through dates in $year
-echo "total number of days analyzed = "  ${total_days_analysized} "for year " $env_rawdata_year 
+echo "total number of days analyzed = "  ${total_days_analysized} "for year " $env_year 

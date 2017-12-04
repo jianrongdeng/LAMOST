@@ -31,7 +31,7 @@ def imageStats(imagefile, DEBUG = 1):
 #============================
 
 #============================
-def imageDataStats(data, DEBUG = 1):
+def imageDataStats(data, DEBUG = const.DEBUG):
 #============================
     """
     purpose: calculate the mean pixel value and the sstd of the input image

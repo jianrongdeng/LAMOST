@@ -78,9 +78,9 @@ DEBUG = const.DEBUG
 # input file for saving pixel lists (one file for 5 lists)
 file_stat = os.environ['env_filename_stat']
 # mean and sstd input file (which is output from ana_image.py script)
-file_pixelList = fIO.setFilename(file_stat, in_tag='stat.txt', out_tag='pixelList.txt')
+file_pixelList = fIO.setFilename(file_stat, in_tag='stat.dat', out_tag='pixelList.dat')
 
-file_cluster = fIO.setFilename(file_stat, in_tag='stat.txt', out_tag='clusters.dat')
+file_cluster = fIO.setFilename(file_stat, in_tag='stat.dat', out_tag='clusters.dat')
 
 if DEBUG:
     print('file_stat     :', file_stat)

@@ -2,26 +2,37 @@
 #============================
 # ana_image.sh
 #============================
-#	date: 20170813 by Jianrong Deng
-#	purpose:
-#		bash script to run through raw bias data
-#        usage: ./ana_image.sh $year $run_flag
-#        example1: 
-#                    ./ana_image.sh 2016 0
-#               note:
-#                    test run without running the python analysis code, just checking the script loops
-#                     test run: 		             run_flag = 0
-#                   
-#        example2: 
-#                    nohup ./ana_image.sh 2016 1 > ../log/run0_2017/2016.txt
-#               note: 
-#                    data analysis run :                     run_flag = 1
+#   date: 20170813 by Jianrong Deng
+#   purpose:
+#   	bash script to run through raw bias data
+#    usage: ./ana_image.sh $year $run_flag $path_out
+#    example1: 
+#      ./ana_image.sh 0 2016 
+#           note:
+#                debug run without running the python analysis code, just checking the script loops
+#                 debug run: run_flag = 0
+#               
+#    example2: 
+#      nohup ./ana_image.sh 1 201601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../log/ana_image/run1_20171205/test_201601.txt
+#           note:
+#                short test run, run through 5-day data ( in this example, run the first 5 days in January 2016)
+#                 short test run: 		             
+#                             run_flag = 1  env_path_out=/home/jdeng/LAMOST/ana/outputs/run1_20171205
+#    example2: 
+#        note: 
+#             data analysis run :   
+#                          run_flag = 2  env_path_out=/home/jdeng/LAMOST/ana/outputs/run1_20171205
 #============================
 
-env_rawdata_year=$1; export env_rawdata_year
-run_flag=$2
-echo "env_rawdata_year = " $env_rawdata_year
+run_flag=$1
 echo "run_flag = " $run_flag
+env_rawdata_year=$2; export env_rawdata_year
+echo "env_rawdata_year = " $env_rawdata_year
+
+#export env_path_out='/home/jdeng/LAMOST/ana/outputs'
+export env_path_out=$3
+echo "env_path_out=" $env_path_out
+
 
 # 32 CCD dets
 dets=(
@@ -43,12 +54,12 @@ rb-15r rb-15b
 rb-16r rb-16b); export dets
 
 export env_rawdata_path='/data2/rawdata'
-export env_path_out='/home/jdeng/LAMOST/ana/outputs'
+#echo "env_rawdata_path=" $env_rawdata_path
 
 # if it is a directory 
 if [ -d "$env_rawdata_path" ]
   then 
-      echo "$env_rawdata_path" directory exists
+      echo Data Directory = "$env_rawdata_path" 
   else
       echo "ERROR: $env_rawdata_path" directory does not exist
 fi  
@@ -100,14 +111,22 @@ do
 		#echo "total number of files"  ${n_file} "for det " $env_rawdata_det 
 		#python3 test_filename.py
 		# check the run flag, if run_flag=1, run the python analysis process
-	       if [ $run_flag == 1 ]
+	       if [ $run_flag -ge 1 ]
 		  then
-		       python ana_image.py 
+		       python3 ana_image.py 
 		       # echo "run_flag ="  $run_flag
 	       fi   # if test_flag
 		((n_det +=1))
 	     done # loop through 32 dets
              ((total_days_analysized +=1))
+	     # in short test run, only run through data of the first five days
+	     if [ ${run_flag} -eq 1 ]
+	        then
+		if [ ${total_days_analysized} -ge 5 ]
+	           then
+		       break
+		fi  # if [ ${total_days_analysized} -gt 5 ]
+	     fi	  #if [ ${run_flag} -eq 1 ]
    fi   # if it is a directory 
 done # loop through dates in $year
 echo "total number of days analyzed = "  ${total_days_analysized} "for year " $env_rawdata_year 

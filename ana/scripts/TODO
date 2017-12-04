@@ -1,3 +1,19 @@
 20170604: 
 	understand the y and x dependence (less than 1/2 sigma ) of pixel values in the overscan regions (see figure below)
 	    ~/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/figures/rb-16r-20150923234527-10000-82496145-overscan-mean-sstd-x-y.png
+
+20171205:
+   on run1_20171205 analysis run:
+   @@@ problems / questions to check in current run:
+     1. check why this image has a sstd = 835 for the bias medium data
+	 rb-01r-20160101174212-stat.dat: 
+	 image : 5 mean = 12.5559661079 , sstd = 835.769496222341
+
+   @@@ data sanity check:
+      1. plot the mean & sstd of bias images as a function of time
+   @@@ features to add for future runs: 
+     1. dump OS stat info to output for future analysis, such as
+     checking device stability 
+
+     
+    

@@ -54,7 +54,6 @@ rb-15r rb-15b
 rb-16r rb-16b); export dets
 
 export env_rawdata_path='/data2/rawdata'
-#echo "env_rawdata_path=" $env_rawdata_path
 
 # if it is a directory 
 if [ -d "$env_rawdata_path" ]

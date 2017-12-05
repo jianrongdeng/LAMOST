@@ -14,9 +14,8 @@ script: find_cluster.py
 
 #import numpy as np
 import const  # constants used in LAMOST image processing
-import bits   # bit manipulate function
-import image  # module deal with fits image process
 
+'''
 #============================
 def findCluster(mask, hotcellList, iy, ix, pixelFlag, pixels, im=0):
     """
@@ -40,7 +39,7 @@ def findCluster(mask, hotcellList, iy, ix, pixelFlag, pixels, im=0):
     # check if it is a hotcell:
     if image.inHotcellList(hotcellList, iy, ix) == True:  return # if it is a hotcell, do nothing
     # if pixel(iy, ix) is already checked, do nothing
-    if (bits.testBit(pixelFlag[iy, ix])): return pixels
+    if (pixelFlag[iy, ix] == 1): return pixels
 
     # if not checked yet
     pixelFlag[iy, ix] =  1              # flag pixel(iy, ix) as checked
@@ -50,8 +49,57 @@ def findCluster(mask, hotcellList, iy, ix, pixelFlag, pixels, im=0):
          # now check its neighbor pixels
          nbr = getNeighbor(iy, ix)
          for ip in nbr:
-                  findCluster(mask, ip[0], ip[1], pixelFlag, pixels, im)
+                  findCluster(mask, hotcell, ip[0], ip[1], pixelFlag, pixels, im)
     return pixels 
+#============================
+'''
+
+#============================
+def findCluster(ps, pV, ip, pixels, index_b, index_e, DEBUG=const.DEBUG):
+    """
+    purpose: findCluster of pixel ip[iy, ix]
+    input: 
+         ps, list of pixel[iy, ix]
+         pV: ip(iy, ix, ivalue), 
+            where [iy, ix] is pixel position, 
+                  ivalue is pixel value, 
+         pixels: already found pixels in the cluster
+         #[index_b, index_e]: index range to look for the current pixel in the List 'ps' 
+    output: 
+         pixels: cluster in pixel-list (using 3x3 cluster to check neighboring pixels)
+    Usage: use findCluster recursively to get cluster, see example in ana_clusters.py     
+    """
+    # calculate index range for look for the current pixel in the list
+    try:
+        # check if ip is in the pixel list:
+        # if yes, get the list index i, if no return
+         #[index_b, index_e]: index range to look for the current pixel in the List 'ps' 
+         # the neighboring pixels are in the range [-1-Ny + index_i, +1+Ny + index_i]
+        #i = ps.index(ip, [index_b, index_e])
+        i = ps.index(ip, index_b, index_e)
+        #if DEBUG: print('index ', i, ' pixel ', pV[i])
+        #if DEBUG and ip[0] >= 2000 and (ip[0]/2000)-int(ip[0]/2000) == 0: print("find cluster for pixel: ", pV[i])
+        pixels.append(pV[i]) # add pix to cluster
+        # remove the already checked pixel from list to save time
+        ps.pop(i)
+        pV.pop(i)
+        # now check its neighbor pixels
+        nbr = getNeighbor(ip[0], ip[1])
+        index_b = i + ( -const.N_y - 1) # the index range of neighboring pixels
+        if index_b < 0: index_b = 0
+        len_ps = len(ps)
+        index_e = i + ( const.N_y + 1 + 1) # the index range of neighboring pixels
+        if index_e > len_ps: index_e = len_ps
+        for inb in nbr:
+            findCluster(ps, pV, inb, pixels, index_b, index_e)
+    except ValueError:  # if ip[iy, ix] is not in the List, do nothing
+        #if DEBUG: print(err)
+        return pixels
+
+        
+    return pixels
+#============================
+
 
 #============================
 def isPixel(iy, ix):

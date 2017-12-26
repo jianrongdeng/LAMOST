@@ -20,7 +20,7 @@ th_cluster =5 # require at least one pixel in a cluster has a value of 5 * sstd
 
 # test path and file
 test_path_in = '/data2/rawdata'
-test_path_out = '/home/jdeng/LAMOST/ana/outputs'
+test_path_out = '/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/'
 test_date = '20150923'
 test_datatype = 'bias'
 test_det = 'rb-16r-'

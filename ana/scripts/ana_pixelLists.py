@@ -177,7 +177,7 @@ fIO.dumpPixelLists(file_cluster, clusterLists)
 t_stop = time.ctime()
 t_stop_clock = time.clock()
 t_running = t_stop_clock - t_start_clock
-print( "Run starts. Current local time is  {} ".format(t_start))
+#print( "Run starts. Current local time is  {} ".format(t_start))
 print ("Run stop. Current local time is  {} ".format(t_stop))
 print ("Total running time is  {} minutes".format(t_running/60 ))
 

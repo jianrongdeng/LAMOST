@@ -5,10 +5,15 @@
 #   date: 20170823 by Jianrong Deng
 #   purpose:
 #   	bash script to run through pixelLists data to find clusters
-#   usage: ./ana_pixelLists.sh $run_flag $year $env_path_out
-#             (input data directory = output data directory = $env_path_out)
+#   usage: ./ana_pixelLists.sh $run_flag $date $env_path_out [$verbose_level]
+#       Note:
+#          1. $date: acceptable format: 2016, 201612, 20161201
+#          2. input data directory = output data directory = $env_path_out
+#          3. run_flag: 
+#                 0 (test run, see ex1, only checking the flow of script loops)
+#                 1 (test data run, see ex2, ex3, only checking the first five (out of 32) dets)  
+#                 2 (data run, see ex3)  
 #
-#       ex0: ./ana_pixelLists.sh 201601 1 # will run through pixelLists data of January 2016
 #       example1: 
 #                ./ana_pixelLists.sh 0 2016  /home/jdeng/LAMOST/ana/outputs/run1_20171205
 #           note:
@@ -21,17 +26,52 @@
 #   example2: 
 #               nohup ./ana_pixelLists.sh 1 201601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../log/ana_pixelLists/run1_20171205/test_201601.txt
 #          note: 
-#            short test run: 		             
-#                       run_flag = 0
+#            short test run on data: run through the first 5 detectors in each date
+#                       run_flag = 1
+#                       year = 201601 (loop through data of January 2016)
+#
+#   example3: 
+#               nohup ./ana_pixelLists.sh 1 20160601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../log/ana_pixelLists/run1_20171205/test_20160601.txt 1
+#          note: 
+#            data run: 		             
+#                       run_flag = 1
+#                       verbose_level = 1
+#
+#   example4: 
+#               nohup ./ana_pixelLists.sh 2 201601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../log/ana_pixelLists/run1_20171205/test_201601.txt
+#          note: 
+#            data run: run through the full data
+#                       run_flag = 2
 #                       year = 201601 (loop through data of January 2016)
 #			env_path_out=/home/jdeng/LAMOST/ana/outputs/run1_20171205
 #                     
 #============================
 
+if test $# -eq 0
+    then
+        echo "Usage: $0 $run_flag $date $path_out [$verbose]" 1>&2 #  note: "1>&2": redirect its output to standard error
+	echo " Note: examples of acceptable formats for 'date': 2016, 201601, 20160101, 2016010[1-5]"
+	echo " Note1: run_flag (0, 1, 2)"
+        echo "   0 (test run, see ex1, only checking the flow of script loops) "
+        echo "   1 (test data run, see ex2, ex3, only checking the first five (out of 32) dets)  "
+        echo "   2 (data run, see ex4)  "
+fi    
+
+# reprint the shell script command executed
+echo $0 $@
+
+
 run_flag=$1
 export env_year=$2
 #export env_path_out='/home/jdeng/LAMOST/ana/outputs'
 export env_path_out=$3
+# reading the optional arguments if any
+if [ $# -le 3 ]
+    then
+       verbose=0
+    else
+       verbose=$4
+fi    
 
 
 # if it is a directory 
@@ -43,41 +83,73 @@ if [ -d "$env_path_out" ]
       exit
 fi  
 
-total_days_analysized=0
+# check total number of days analyzed and to be analyzed
+total_days=0
+total_days_dets=0
+total_days_analyzed=0
+total_days_dets_analyzed=0
+total_dets=32
 
 # loop through dates in $year
 for i_date in $env_path_out/$env_year*
 do
+
+   if [ $verbose == 1 ]
+      then 
+         echo "date = $i_date"
+   fi	 #if [ $verbose == 1 ]
+
    # if it is a directory 
-   if [ -d "$i_date" ]
+   if [ -d "$i_date/bias" ]
       then
-		# loop through stat files
-		n_file=0
-		for i_file in  $i_date/bias/*-stat.dat
-		do
-		    # if file exists
-		    if [ -e "$i_file" ]
-		       then
-			  export env_filename_stat=$i_file
-			  echo "env_filename_stat: ${env_filename_stat}"
-			  # find clusters
-			  # check the run flag, if run_flag=1, run the python analysis process
-			  if [ $run_flag == 1 ]
-			     then
-			        python3 -u ana_pixelLists.py 
-			  fi  
-		    fi  
-		    ((n_file +=1))
-		done 
-		echo "total number of files: $n_file for $i_date analysed"
-                ((total_days_analysized +=1))
-		if [ ${run_flag} -eq 1 ]
-		   then
-		   if [ ${total_days_analysized} -ge 5 ]
-		      then
-		          break
-		   fi  # if [ ${total_days_analysized} -gt 5 ]
-		fi	  #if [ ${run_flag} -eq 1 ]
+
+	if [ $verbose == 1 ]
+	  then 
+	     echo "bias directory of  $i_date exists"
+	fi	 #if [ $verbose == 1 ]
+
+	# if there are bias data, check data
+	# echo "checking the pixelList data on :" $i_date
+	# loop through stat files of 32 CCD dets
+	n_file=0 # counting the number of stat files
+	for i_file in  $i_date/bias/*-stat.dat
+	do
+	    # if file exists
+	    if [ -e "$i_file" ]
+	       then
+	          ((n_file +=1))
+		  ((total_days_dets +=1))
+		  export env_filename_stat=$i_file
+		  if [ $verbose == 1 ]
+		      then 
+		         echo "env_filename_stat: ${env_filename_stat}"
+		  fi	 
+		  # check the run flag, if run_flag>=1, run the python analysis process
+		  if [ $run_flag -ge 1 ]
+		     then
+		        # -u     Force the binary I/O layers of stdout and stderr to be unbuffered.  
+			# stdin is always  buffered.  The text I/O layer will still be line-buffered.
+		        # find clusters
+		        python3 -u ana_pixelLists.py 
+                        ((total_days_dets_analyzed +=1))
+		        if [ ${run_flag} -eq 1 ]
+		           then
+		           if [ ${n_file} -ge 5 ]
+		              then
+			          # in debug mode, go to next day after checking data of 5 dets  of the current day
+		                  break
+		           fi  #if [ ${n_file} -ge 5 ]
+		        fi	  #if [ ${run_flag} -eq 1 ]
+		  fi  #if [ $run_flag -ge 1 ]
+	    fi  # if [ -e "$i_file" ]
+	done #for i_file in  $i_date/bias/*-stat.dat
+	echo "total number of stat files = $n_file in $i_date"
    fi   # if it is a directory 
 done # loop through dates in $year
-echo "total number of days analyzed = "  ${total_days_analysized} "for year " $env_year 
+# print out days analyzed.
+let total_days=${total_days_dets}/${total_dets}
+let total_days_analyzed=${total_days_dets_analyzed}/${total_dets}
+echo "total_days * total_number_of_dets = " ${total_days_dets}
+echo "total number of days with data = "  ${total_days} "for " $env_year 
+echo "total_days_analyzed * total_number_of_dets = " ${total_days_dets_analyzed}
+echo "total number of days analyzed = "  ${total_days_analyzed} "for " $env_year 

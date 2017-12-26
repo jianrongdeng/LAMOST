@@ -27,7 +27,7 @@
 
 if test $# -eq 0
     then
-        echo "Usage: ./ana_image.sh $run_flag $date $path_out [$verbose] [$nice]" 1>&2 #  note: "1>&2": redirect its output to standard error
+        echo "Usage: ./ana_image.sh $run_flag $date $path_out [$verbose] [$nice_flag]" 1>&2 #  note: "1>&2": redirect its output to standard error
 	echo " Note: examples of acceptable formats for 'date': 2016, 201601, 20160101, 2016010[1-5]"
 	echo " Note1: $1 = run_flag (0, 1, 2)"
         echo "   0 (test run, see ex1, only checking the flow of script loops) "
@@ -36,7 +36,7 @@ if test $# -eq 0
 	echo " Note2: $4 = verbose"
         echo "   0  off"
         echo "   1: on "
-	echo " Note3: $5 = nice"
+	echo " Note3: $5 = nice_flag"
         echo "   0  off"
         echo "   1: on "
 fi    
@@ -57,13 +57,13 @@ echo "env_path_out=" $env_path_out
 if [ $# -le 3 ]
     then
        verbose=0
+       nice_flag=0
     else
       if [ $# -le 4 ]
          then
             verbose=$4
-            nice=0
 	 else    
-	    nice=$5
+	    nice_flag=$5
       fi	    
 fi    
 
@@ -191,12 +191,12 @@ do
 				     echo "{env_rawdata_onlypath} =" ${env_rawdata_onlypath}
 			             echo "WARNING: data of date = $i_date, det = $env_rawdata_det does not exist"
 				  else
-				  if [ $nice -eq 1 ]
+				  if [ ${nice_flag} -eq 1 ]
 				      then 
 			                 nice python3 ana_image.py 
 			              else		 
 				         python3 ana_image.py  
-			          fi		 # if [ $nice -eq 1 ]
+			          fi		 # if [ ${nice_flag} -eq 1 ]
 		                  ((total_days_dets_analyzed +=1))
 			       fi	     
 		        fi   # if [ $run_flag -ge 1 ]

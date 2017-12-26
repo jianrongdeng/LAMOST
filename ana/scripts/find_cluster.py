@@ -61,8 +61,8 @@ def findCluster(ps, pV, ip, pixels, index_b, index_e, DEBUG=const.DEBUG):
     input: 
          ps, list of pixel[iy, ix]
          pV: ip(iy, ix, ivalue), 
-            where [iy, ix] is pixel position, 
-                  ivalue is pixel value, 
+            where [iy, ix] is the pixel position, 
+                  ivalue is the pixel value, 
          pixels: already found pixels in the cluster
          #[index_b, index_e]: index range to look for the current pixel in the List 'ps' 
     output: 

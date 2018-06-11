@@ -1,0 +1,57 @@
+============================
+Current Directory: test/
+============================
+  date: 20180205 by Jianrong Deng
+  Purpose: test various functions
+============================
+
+============================
+test_argv.py
+============================
+	date: 20180116 by Jianrong Deng
+        Purpose: test the use of sys.argv
+           sys.argv: command line arguments
+           sys.argv[0] is the input script name
+============================
+
+============================
+test_cv2.py
+============================
+	date: 20180205 by Jianrong Deng
+        Purpose: test the usage of cv2 moments
+============================
+
+
+============================
+test_string.py
+============================
+	date: 20180516 by Jianrong Deng
+        Purpose: test the conversion of int to string
+============================
+
+============================
+test_walk.py
+============================
+	date: 20180523 by Jianrong Deng
+        Purpose: test the function of os.walk(topdir)
+============================
+
+============================
+test_np_sum.py
+============================
+	date: 20180523 by Jianrong Deng
+        Purpose: test the function of sum() of a numpy array
+	  Try to figure out why the sum() = 95 (short of 1), where the individual
+	  counts = 32 * 3 = 96 (correct)
+============================
+
+============================
+test_matplotlib.py
+============================
+	date: 20180527 by Jianrong Deng
+        Purpose: test the 2D scatter plot in the matplotlib module. 
+	   Will use the 2D bitmap to check the cluster algerithm
+	   graphically.
+============================
+
+

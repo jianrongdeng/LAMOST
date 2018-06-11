@@ -1,0 +1,77 @@
+[jdeng@Dengs-MacBook-Air]~/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check% 
+
+python cluster_density.py
+
+Enter the path of *-clusters.dat data: /Volumes/Untitled/run1_20171205
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ total number of *clusters.dat files analyzed =  6145
+ total number of clusters found in 32 CCDs =  52381734
+ dataset :  Number of clusters found in each CCD   
+    mean =  1636929     sstd =  3140343
+index i,	 data[i]
+0      rb-01r         509,488
+1      rb-02r      13,174,923
+2      rb-03r         607,182
+3      rb-04r       1,575,530
+4      rb-05r          40,111
+5      rb-06r         248,274
+6      rb-07r         709,208
+7      rb-08r       1,736,619
+8      rb-09r       1,160,123
+9      rb-10r          36,588
+10     rb-11r       1,891,746
+11     rb-12r          54,796
+12     rb-13r         695,326
+13     rb-14r         460,194
+14     rb-15r          63,527
+15     rb-16r          39,697
+16     rb-01b       3,756,932
+17     rb-02b         446,192
+18     rb-03b         403,174
+19     rb-04b       4,121,259
+20     rb-05b         137,929
+21     rb-06b         109,248
+22     rb-07b         445,743
+23     rb-08b      12,448,114
+24     rb-09b          40,952
+25     rb-10b          36,089
+26     rb-11b       1,445,412
+27     rb-12b         161,093
+28     rb-13b       3,263,641
+29     rb-14b          34,770
+30     rb-15b       2,477,767
+31     rb-16b          50,087
+
+ NOTE: det  1  has data outside the  3  sigma  region, data[i] =  13174923
+ NOTE: det  23  has data outside the  3  sigma  region, data[i] =  12448114

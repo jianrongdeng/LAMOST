@@ -1,0 +1,18 @@
+"""
+============================
+in.txt
+============================
+	date: 20180528 by Jianrong Deng
+        Purpose: 
+	   various commonly used input path strings
+           
+============================
+"""
+
+@@@ input to cluster_density.py 
+     /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/
+
+@@@ input to cluster_hist.py:
+     /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01b-20160101174212-clusters.dat 
+     /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-02r-20160101174212-clusters.dat
+     /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-08b-20160101174212-clusters.dat

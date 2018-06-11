@@ -1,0 +1,55 @@
+============================
+Current Directory: data-sanity-check/
+============================
+  date: 20180515 by Jianrong Deng
+  Purpose: data sanity check
+============================
+
+============================
+check_imageStat.py
+============================
+	date: 20180205 by Jianrong Deng
+        Purpose: 
+	   input: read in '-stat,dat' data files
+           output: print out a list of out of range ( >5sigma) points (data files)
+============================
+
+============================
+cluster_density.py
+============================
+	date: 20180515 by Jianrong Deng
+        Purpose: 
+	   input: read in '-clusters,dat' data files
+           output: total number of clusters (per year or per analyze
+	   period) for each of the 32 CCDs. 
+============================
+
+============================
+check_cluster.py
+============================
+	date: 20180524 by Jianrong Deng
+        Purpose: 
+	   input: read in a '-clusters,dat' data file
+           output: convert a selected cluster (in a list format ) to a 2D bit map
+============================
+
+============================
+in.txt
+============================
+	date: 20180528 by Jianrong Deng
+        Purpose: 
+	   various commonly used input path strings
+           
+============================
+
+
+============================
+cluster_hist.py
+============================
+	date: 20180529 by Jianrong Deng
+        Purpose: 
+	   Plot out various histograms of clusters' distributions
+	   input: *clusters.dat
+           output: histograms 
+============================
+

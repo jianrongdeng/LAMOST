@@ -196,9 +196,11 @@ class Cluster(list):
 #==========================
     def printCluster(self, fn=sys.stdout):
          '''
+         purpose: print out the cluster variables 
+
          input:
             fn: save the print out to file: fn
-         output: 
+
          '''
 
          import numpy as np

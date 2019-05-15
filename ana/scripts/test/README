@@ -54,4 +54,22 @@ test_matplotlib.py
 	   graphically.
 ============================
 
+============================
+test_fnmatch.py
+============================
+	date: 20180611 by Jianrong Deng
+        Purpose: test the function of fnmatch
+============================
+
+============================
+test_covariance.py
+============================
+	date: 20190305 by Jianrong Deng
+        Purpose: test covariance calculate of a 2-D matrix
+	Method: use the function gaussian_kdefrom scipy import stats
+	Input: 2-D (x, y) datasets
+	Output: Covariance matrix
+		Eigenvalue and EigenVector
+
+============================
 

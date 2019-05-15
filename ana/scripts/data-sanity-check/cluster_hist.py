@@ -101,11 +101,13 @@ if mode == '1':
 elif mode == '2':
     # use 'input' to get the path of the input data files, and the CCD name
     d_path = input('Enter the path of the *-clusters.dat files to be checked: ')
-    det_tag = '01r'
-    #det_tag = input('Enter the CCD name tag of the *-clusters.dat files to be checked: (ex: rb-01b, rb-01r) ')
+    #det_tag = '*01r*'
+    det_tag = input('Enter the CCD name tag of the *-clusters.dat files to be checked: (ex: 01b, 01r) ')
+    det_tag = '*' + det_tag + '*'
 
     if debug:
-       print ('input 1 = {}, input 2 = {}'.format(d_path, det_tag))
+       print ('d_path = {}, det_tag = {}'.format(d_path, det_tag))
+       print('det_tag = {}, str(det_tag) = {}, repr(det_tag) = {}'.format(  det_tag, str(det_tag), repr(det_tag)))
 
 
     # the maximum number of pixels in a cluster = const.N_x * const.N_y
@@ -123,21 +125,22 @@ elif mode == '2':
           print ( 'dirs ', dirs)
           print ( 'files ', files)
           print ( 'rootfd', rootfd)
-          """
+       """
        for ifile in sorted(files): 
            #if(debug): print('ifile =', ifile)
            if fnmatch.fnmatch(ifile, d_tag): # data type: clusters
-          #     if fnmatch.fnmatch(ifile, det_tag): # det type: [01-16][r-b]
-                    #if(debug): print('d_tag file ={}, det_tag = {}, str(det_tag) = {}'.format( ifile, det_tag, repr(det_tag)))
-                    # clusters.dat file, read in clusters data
-                    if(debug): print('d_tag file =', ifile)
+                # clusters.dat file, read in clusters data
+                #if(debug): print('d_tag file =', ifile)
+                if fnmatch.fnmatch(ifile, det_tag): # det type: [01-16][r-b]
+                    #if(debug): print('det_tag = {}, str(det_tag) = {}, repr(det_tag) = {}'.format(  det_tag, str(det_tag), repr(det_tag)))
+                    if(debug): print('det_tag file =', ifile)
+
                     d_file = join(root, ifile) 
-                    #if(debug): print('det_tag file =', d_file)
+
                     clusterLists = fIO.loadPixelLists( d_file , False, 'clusters') # get clusters from the input data file
 
                     m = 0
-                    # check the first five clusters ( one cluster in each image)
-                    for im in clusterLists: # loop through five images 
+                    for im in clusterLists: # loop through the five images 
                            N_im = len(im)
                            N_cluster += N_im
                            m +=1

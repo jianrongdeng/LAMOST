@@ -9,32 +9,6 @@ Enter the path of *-clusters.dat data: /Volumes/Untitled/run1_20171205
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  total number of *clusters.dat files analyzed =  6145
  total number of clusters found in 32 CCDs =  52381734
  dataset :  Number of clusters found in each CCD   

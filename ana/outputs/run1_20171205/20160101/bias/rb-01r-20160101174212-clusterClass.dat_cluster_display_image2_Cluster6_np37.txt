@@ -1,0 +1,56 @@
+filename =  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusterClass.dat_cluster_display_image2_Cluster6_np37.txt
+data_type =  rb , det =  01r , time_stamp =  20160101174212
+image mean =  0.0 image sstd =  10.2
+image_index =  2
+cluster_index =  6
+pixels : 
+0  	:   2573,   2141,     69
+1  	:   2574,   2140,    309
+2  	:   2574,   2139,    183
+3  	:   2574,   2138,     55
+4  	:   2575,   2137,    964
+5  	:   2575,   2136,   1028
+6  	:   2575,   2135,    770
+7  	:   2575,   2134,    440
+8  	:   2575,   2133,    166
+9  	:   2575,   2132,     45
+10  	:   2576,   2131,    702
+11  	:   2576,   2130,   1145
+12  	:   2576,   2129,    399
+13  	:   2576,   2132,   2145
+14  	:   2576,   2133,    756
+15  	:   2576,   2134,    249
+16  	:   2576,   2135,    148
+17  	:   2576,   2136,     53
+18  	:   2575,   2138,   1261
+19  	:   2575,   2139,   1799
+20  	:   2575,   2140,    807
+21  	:   2576,   2140,     43
+22  	:   2575,   2141,    817
+23  	:   2574,   2141,    603
+24  	:   2573,   2142,     89
+25  	:   2574,   2142,    697
+26  	:   2575,   2142,    828
+27  	:   2576,   2141,    123
+28  	:   2576,   2142,    165
+29  	:   2575,   2143,    397
+30  	:   2574,   2143,    409
+31  	:   2573,   2143,    110
+32  	:   2573,   2144,     35
+33  	:   2574,   2144,    167
+34  	:   2575,   2144,    147
+35  	:   2576,   2143,     64
+36  	:   2576,   2144,     36
+number of pixels in the cluster =  37
+xmin =  2573
+xmax =  2576
+ymin =  2129
+ymax =  2144
+pVmin =  36.0
+pVmax =  2145.9
+sumpV =  18244.0
+avgpV =  493.1
+correlation coefficient          =  -0.5
+weighted correlation coefficient =  -0.76
+eigen values of the covariance matrix=          [  0.74 ,  20.45 ]
+weighted eigen values of the covariance matrix= [  0.22 ,  19.55 ]

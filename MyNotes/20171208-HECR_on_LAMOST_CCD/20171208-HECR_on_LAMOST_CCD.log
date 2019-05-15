@@ -1,0 +1,254 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  23 APR 2019 14:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**20171208-HECR_on_LAMOST_CCD
+(./20171208-HECR_on_LAMOST_CCD.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+\epsfxsize=\dimen105
+\epsfysize=\dimen106
+)
+(./20171208-HECR_on_LAMOST_CCD.aux)
+\openout1 = `20171208-HECR_on_LAMOST_CCD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 77.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 77.
+ [1
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
+
+ []
+
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
+r-20150924000612-10000-82496166.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
+50924000612-10000-82496166.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
+r-20150924000612-10000-82496166-bright-spot-x692-y2637.ps Graphic file (type ep
+s)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
+50924000612-10000-82496166-bright-spot-x692-y2637.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
+r-20150923235754-10000-82496157-bright-spot-x827-y2839.ps Graphic file (type ep
+s)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
+50923235754-10000-82496157-bright-spot-x827-y2839.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
+r-20150923235754-10000-82496157-straightline-muCand.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
+50923235754-10000-82496157-straightline-muCand.ps> [2] [3] [4] [5] [6]
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
+150923235754-10000-82496157-hist-pixel-value.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
+3235754-10000-82496157-hist-pixel-value.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
+150923235754-10000-82496157-hist-pixel-value-overscan.ps Graphic file (type eps
+)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
+3235754-10000-82496157-hist-pixel-value-overscan.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
+150923235754-10000-82496157-overscan-mean-sstd.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
+3235754-10000-82496157-overscan-mean-sstd.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
+150923235754-10000-82496157-hist-sub_overscan.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
+3235754-10000-82496157-hist-sub_overscan.ps>
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
+150923235754-10000-82496157-hist-sub_overscan-sub_bias.ps Graphic file (type ep
+s)
+
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
+3235754-10000-82496157-hist-sub_overscan-sub_bias.ps> [7] [8] [9] [10] [11]
+[12] [13]
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
+run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps G
+raphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
+20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps>
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
+run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Data
+set.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
+20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Dataset.p
+s>
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
+run1_20171205/cluster_density/figures/20180606_cluster_hist_2016Dataset_Ncl_vs_
+Np_loglog.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
+20171205/cluster_density/figures/20180606_cluster_hist_2016Dataset_Ncl_vs_Np_lo
+glog.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+[15] [16] [17]
+Missing character: There is no ‰ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ‰ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no ™ in font cmr12!
+Missing character: There is no Á in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ® in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no à in font cmr12!
+Missing character: There is no ∑ in font cmr12!
+Missing character: There is no Á in font cmr12!
+Missing character: There is no ö in font cmr12!
+Missing character: There is no Ñ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no ñ in font cmr12!
+Missing character: There is no á in font cmr12!
+Missing character: There is no Á in font cmr12!
+Missing character: There is no õ in font cmr12!
+Missing character: There is no ∏ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no Ö in font cmr12!
+Missing character: There is no ≥ in font cmr12!
+Missing character: There is no Ë in font cmr12!
+Missing character: There is no µ in font cmr12!
+Missing character: There is no Ñ in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no ñ in font cmr12!
+Missing character: There is no ô in font cmr12!
+Missing character: There is no Ê in font cmr12!
+Missing character: There is no î in font cmr12!
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no È in font cmr12!
+Missing character: There is no õ in font cmr12!
+Missing character: There is no Ü in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no © in font cmr12!
+Missing character: There is no È in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no ì in font cmr12!
+Missing character: There is no È in font cmr12!
+Missing character: There is no Ö in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ã in font cmr12!
+Missing character: There is no § in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ç in font cmr12!
+Missing character: There is no ö in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no Æ in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no È in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no ë in font cmr12!
+Missing character: There is no È in font cmr12!
+Missing character: There is no Å in font cmr12!
+Missing character: There is no ì in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
+[]\OT1/cmr/m/it/12 http://blog.csdn.net/u013709332/article/details/45768763\OT1
+/cmr/m/n/12 , Python-
+ []
+
+[18] (./20171208-HECR_on_LAMOST_CCD.aux) ) 
+Here is how much of TeX's memory you used:
+ 642 strings out of 493634
+ 10481 string characters out of 3143401
+ 59404 words of memory out of 3000000
+ 3974 multiletter control sequences out of 15000+200000
+ 9195 words of font info for 32 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 32i,7n,21p,400b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on 20171208-HECR_on_LAMOST_CCD.dvi (18 pages, 16584 bytes).

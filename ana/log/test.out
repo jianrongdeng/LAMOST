@@ -1,0 +1,75 @@
+Run starts. Current local time is  Fri Aug 25 08:32:27 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  89916
+number of candiate pixels (clusters) in the image:  119703
+number of candiate pixels (clusters) in the image:  98879
+number of candiate pixels (clusters) in the image:  100633
+number of candiate pixels (clusters) in the image:  50078
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0125691360385 , sstd = 10.133966779151562
+image : 1 mean = 0.00673301814834 , sstd = 9.527183630632315
+image : 2 mean = 0.0099246137608 , sstd = 10.558010750749729
+image : 3 mean = 0.0158965555335 , sstd = 10.03756421819633
+image : 4 mean = 0.00208254063383 , sstd = 11.08132543661031
+image : 5 mean = 0.24676522895 , sstd = 4.9758069773733204
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [374, 324]
+check the  20000 -th pixel in the list:  [778, 345]
+check the  30000 -th pixel in the list:  [1211, 1572]
+check the  40000 -th pixel in the list:  [1628, 1750]
+check the  50000 -th pixel in the list:  [2085, 337]
+check the  60000 -th pixel in the list:  [2548, 896]
+check the  70000 -th pixel in the list:  [2986, 1495]
+check the  80000 -th pixel in the list:  [3476, 1916]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [523, 179]
+check the  20000 -th pixel in the list:  [952, 1136]
+check the  30000 -th pixel in the list:  [1268, 1853]
+check the  40000 -th pixel in the list:  [1621, 1556]
+check the  50000 -th pixel in the list:  [1978, 1816]
+check the  60000 -th pixel in the list:  [2278, 512]
+check the  70000 -th pixel in the list:  [2581, 350]
+check the  80000 -th pixel in the list:  [2963, 266]
+check the  90000 -th pixel in the list:  [3314, 965]
+check the  100000 -th pixel in the list:  [3587, 608]
+check the  110000 -th pixel in the list:  [3883, 144]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [572, 1516]
+check the  20000 -th pixel in the list:  [895, 856]
+check the  30000 -th pixel in the list:  [1225, 1955]
+check the  40000 -th pixel in the list:  [1547, 153]
+check the  50000 -th pixel in the list:  [2051, 528]
+check the  60000 -th pixel in the list:  [2369, 1113]
+check the  70000 -th pixel in the list:  [2674, 991]
+check the  80000 -th pixel in the list:  [3046, 894]
+check the  90000 -th pixel in the list:  [3610, 1278]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [483, 630]
+check the  20000 -th pixel in the list:  [882, 448]
+check the  30000 -th pixel in the list:  [1356, 1783]
+check the  40000 -th pixel in the list:  [1863, 563]
+check the  50000 -th pixel in the list:  [2201, 1145]
+check the  60000 -th pixel in the list:  [2482, 902]
+check the  70000 -th pixel in the list:  [2805, 967]
+check the  80000 -th pixel in the list:  [3193, 37]
+check the  90000 -th pixel in the list:  [3630, 733]
+check the  100000 -th pixel in the list:  [4108, 1414]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [573, 2013]
+check the  20000 -th pixel in the list:  [1368, 706]
+check the  30000 -th pixel in the list:  [2347, 783]
+check the  40000 -th pixel in the list:  [3124, 47]
+check the  50000 -th pixel in the list:  [4124, 333]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  2334
+number of candiate pixels (clusters) in the image:  4261
+number of candiate pixels (clusters) in the image:  3591
+number of candiate pixels (clusters) in the image:  2765
+number of candiate pixels (clusters) in the image:  731
+Run starts. Current local time is  Fri Aug 25 08:32:27 2017 
+Run stop. Current local time is  Fri Aug 25 08:47:42 2017 
+Total running time is  15.22124595 minutes

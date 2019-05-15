@@ -1,0 +1,49 @@
+filename =  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusterClass.dat_cluster_display_image1_Cluster27_np30.txt
+data_type =  rb , det =  01r , time_stamp =  20160101174212
+image mean =  0.0 image sstd =  12.2
+image_index =  1
+cluster_index =  27
+pixels : 
+0  	:   3434,    489,     37
+1  	:   3435,    488,    122
+2  	:   3436,    487,    113
+3  	:   3437,    486,   1240
+4  	:   3437,    485,    626
+5  	:   3438,    484,    951
+6  	:   3438,    483,   1061
+7  	:   3438,    482,    430
+8  	:   3439,    481,    637
+9  	:   3439,    480,    430
+10  	:   3439,    482,    872
+11  	:   3439,    483,     93
+12  	:   3438,    485,    907
+13  	:   3438,    486,    333
+14  	:   3437,    487,    623
+15  	:   3438,    487,     48
+16  	:   3437,    488,    800
+17  	:   3436,    488,    841
+18  	:   3435,    489,    318
+19  	:   3436,    489,   3915
+20  	:   3437,    489,   3566
+21  	:   3438,    488,     96
+22  	:   3438,    489,    198
+23  	:   3437,    490,   1120
+24  	:   3436,    490,   1263
+25  	:   3435,    490,    198
+26  	:   3435,    491,     67
+27  	:   3436,    491,    126
+28  	:   3437,    491,     93
+29  	:   3438,    490,    126
+number of pixels in the cluster =  30
+xmin =  3434
+xmax =  3439
+ymin =  480
+ymax =  491
+pVmin =  37.5
+pVmax =  3916.0
+sumpV =  21265.8
+avgpV =  708.9
+correlation coefficient          =  -0.7
+weighted correlation coefficient =  -0.82
+eigen values of the covariance matrix=          [  0.88 ,  11.15 ]
+weighted eigen values of the covariance matrix= [  0.34 ,  9.75 ]

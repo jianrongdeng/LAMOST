@@ -1,4 +1,4 @@
-
+Np       N cluster events
 1 	 49397556 	 
 2 	 1593412 	 
 3 	 157773 	 
@@ -570,5 +570,5 @@
 1 49397556 	 2 1593412 	 3 157773 	 1640 1
  total number of clusters in the input file =  52381734
 
- input data file: /Volumes/Untitled/run1_20171205
+ input data file: /Volumes/Untitled/run1_20171205 (this is 2016 dataset)
  python script: cluster_hist.py

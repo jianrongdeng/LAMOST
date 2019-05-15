@@ -1,0 +1,1201 @@
+/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs directory exists
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 08:50:30 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  34097
+number of candiate pixels (clusters) in the image:  39791
+number of candiate pixels (clusters) in the image:  33550
+number of candiate pixels (clusters) in the image:  11092
+number of candiate pixels (clusters) in the image:  27994
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.00921084110695 , sstd = 6.554238324896375
+image : 1 mean = 0.0135560247838 , sstd = 6.214525917082992
+image : 2 mean = 0.014178536155 , sstd = 6.5813204938118135
+image : 3 mean = 0.0244906442078 , sstd = 9.082540886122832
+image : 4 mean = 0.0189258789417 , sstd = 7.005887183898701
+image : 5 mean = 1.32334056537 , sstd = 2.484393848749212
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [1243, 241]
+check the  20000 -th pixel in the list:  [2455, 225]
+check the  30000 -th pixel in the list:  [3646, 2184]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [1042, 1660]
+check the  20000 -th pixel in the list:  [2093, 992]
+check the  30000 -th pixel in the list:  [3125, 225]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [1239, 1141]
+check the  20000 -th pixel in the list:  [2482, 909]
+check the  30000 -th pixel in the list:  [3711, 668]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [3752, 806]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [1490, 1267]
+check the  20000 -th pixel in the list:  [2953, 853]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  4158
+number of candiate pixels (clusters) in the image:  5707
+number of candiate pixels (clusters) in the image:  4080
+number of candiate pixels (clusters) in the image:  372
+number of candiate pixels (clusters) in the image:  2639
+Run starts. Current local time is  Fri Aug 25 08:50:30 2017 
+Run stop. Current local time is  Fri Aug 25 08:54:31 2017 
+Total running time is  4.0107929 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 08:54:31 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-01r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  6202
+number of candiate pixels (clusters) in the image:  10318
+number of candiate pixels (clusters) in the image:  4853
+number of candiate pixels (clusters) in the image:  3659
+number of candiate pixels (clusters) in the image:  16173
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0129064028683 , sstd = 10.8511542756423
+image : 1 mean = 0.0425932181412 , sstd = 9.706880789988283
+image : 2 mean = 0.00710735468615 , sstd = 11.404558001962677
+image : 3 mean = 0.0235447597688 , sstd = 12.280332691046638
+image : 4 mean = 0.0364637301093 , sstd = 8.540440628893274
+image : 5 mean = 13.4831822707 , sstd = 873.1637422469327
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [4034, 1393]
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [2544, 365]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  305
+number of candiate pixels (clusters) in the image:  555
+number of candiate pixels (clusters) in the image:  248
+number of candiate pixels (clusters) in the image:  270
+number of candiate pixels (clusters) in the image:  1024
+Run starts. Current local time is  Fri Aug 25 08:54:31 2017 
+Run stop. Current local time is  Fri Aug 25 08:55:25 2017 
+Total running time is  0.89553235 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 08:55:25 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  276
+number of candiate pixels (clusters) in the image:  4737
+number of candiate pixels (clusters) in the image:  3360
+number of candiate pixels (clusters) in the image:  2398
+number of candiate pixels (clusters) in the image:  14013
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0339062836461 , sstd = 11.832865080694818
+image : 1 mean = 0.0179069858455 , sstd = 5.606376981956603
+image : 2 mean = 0.0182412034999 , sstd = 5.786556285444729
+image : 3 mean = 0.00624378137939 , sstd = 5.982731955786018
+image : 4 mean = -0.0062220294886 , sstd = 4.999173294534638
+image : 5 mean = 0.0759057611285 , sstd = 2.29283093816788
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [2963, 2849]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  38
+number of candiate pixels (clusters) in the image:  49
+number of candiate pixels (clusters) in the image:  28
+number of candiate pixels (clusters) in the image:  28
+number of candiate pixels (clusters) in the image:  56
+Run starts. Current local time is  Fri Aug 25 08:55:25 2017 
+Run stop. Current local time is  Fri Aug 25 08:55:54 2017 
+Total running time is  0.48336318333333333 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 08:55:54 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-02r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  38186
+number of candiate pixels (clusters) in the image:  26690
+number of candiate pixels (clusters) in the image:  44752
+number of candiate pixels (clusters) in the image:  26882
+number of candiate pixels (clusters) in the image:  39086
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.00755357281152 , sstd = 10.31239003967684
+image : 1 mean = 0.0203390213692 , sstd = 11.670309418066555
+image : 2 mean = 0.00695337409899 , sstd = 9.674279038935335
+image : 3 mean = 0.0192980000774 , sstd = 11.647873337031855
+image : 4 mean = 0.0148730102775 , sstd = 10.29467452438385
+image : 5 mean = 0.378838574172 , sstd = 10.690108508828061
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [1102, 87]
+check the  20000 -th pixel in the list:  [2185, 1953]
+check the  30000 -th pixel in the list:  [3249, 1778]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [1574, 1812]
+check the  20000 -th pixel in the list:  [3097, 1100]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [915, 637]
+check the  20000 -th pixel in the list:  [1856, 882]
+check the  30000 -th pixel in the list:  [2777, 1160]
+check the  40000 -th pixel in the list:  [3716, 1545]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [1564, 239]
+check the  20000 -th pixel in the list:  [3081, 1756]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [1070, 31]
+check the  20000 -th pixel in the list:  [2125, 14]
+check the  30000 -th pixel in the list:  [3193, 1908]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  5122
+number of candiate pixels (clusters) in the image:  2578
+number of candiate pixels (clusters) in the image:  6894
+number of candiate pixels (clusters) in the image:  2592
+number of candiate pixels (clusters) in the image:  5384
+Run starts. Current local time is  Fri Aug 25 08:55:54 2017 
+Run stop. Current local time is  Fri Aug 25 09:00:41 2017 
+Total running time is  4.765450666666667 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:00:41 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  4831
+number of candiate pixels (clusters) in the image:  2107
+number of candiate pixels (clusters) in the image:  8480
+number of candiate pixels (clusters) in the image:  7414
+number of candiate pixels (clusters) in the image:  1463
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0299194214192 , sstd = 6.379507585881594
+image : 1 mean = 0.03316969106 , sstd = 7.429801838298462
+image : 2 mean = 0.00893542844968 , sstd = 5.740852202703887
+image : 3 mean = 0.000660619606594 , sstd = 5.894031331374251
+image : 4 mean = 0.0284196329762 , sstd = 8.102216915256589
+image : 5 mean = 0.0435566357994 , sstd = 2.102825350463135
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  131
+number of candiate pixels (clusters) in the image:  64
+number of candiate pixels (clusters) in the image:  296
+number of candiate pixels (clusters) in the image:  238
+number of candiate pixels (clusters) in the image:  53
+Run starts. Current local time is  Fri Aug 25 09:00:41 2017 
+Run stop. Current local time is  Fri Aug 25 09:01:08 2017 
+Total running time is  0.4457758666666667 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:01:08 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-03r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  4031
+number of candiate pixels (clusters) in the image:  1655
+number of candiate pixels (clusters) in the image:  4764
+number of candiate pixels (clusters) in the image:  3777
+number of candiate pixels (clusters) in the image:  6572
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0184937906911 , sstd = 10.646113087588876
+image : 1 mean = 0.0178451298284 , sstd = 12.41256287247881
+image : 2 mean = 0.0156710032568 , sstd = 10.285798225993695
+image : 3 mean = 0.0367554031903 , sstd = 10.859689093262077
+image : 4 mean = 0.028242356542 , sstd = 9.782940550738806
+image : 5 mean = 0.31794474065 , sstd = 2.7530817545741217
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  102
+number of candiate pixels (clusters) in the image:  43
+number of candiate pixels (clusters) in the image:  123
+number of candiate pixels (clusters) in the image:  98
+number of candiate pixels (clusters) in the image:  204
+Run starts. Current local time is  Fri Aug 25 09:01:08 2017 
+Run stop. Current local time is  Fri Aug 25 09:01:28 2017 
+Total running time is  0.32840666666666674 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:01:28 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  14580
+number of candiate pixels (clusters) in the image:  21116
+number of candiate pixels (clusters) in the image:  11346
+number of candiate pixels (clusters) in the image:  38507
+number of candiate pixels (clusters) in the image:  4230
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0352745314401 , sstd = 9.02745063413807
+image : 1 mean = 0.0488018463843 , sstd = 8.142787041280542
+image : 2 mean = 0.0472792730571 , sstd = 9.61659991503988
+image : 3 mean = 0.0182997336471 , sstd = 6.658045791077639
+image : 4 mean = 0.0355409256955 , sstd = 11.711854798000456
+image : 5 mean = 0.130586144541 , sstd = 9.96701322937683
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [2875, 493]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [1975, 1179]
+check the  20000 -th pixel in the list:  [3926, 459]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [3677, 954]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [1086, 1329]
+check the  20000 -th pixel in the list:  [2157, 754]
+check the  30000 -th pixel in the list:  [3221, 101]
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  734
+number of candiate pixels (clusters) in the image:  1561
+number of candiate pixels (clusters) in the image:  427
+number of candiate pixels (clusters) in the image:  5491
+number of candiate pixels (clusters) in the image:  73
+Run starts. Current local time is  Fri Aug 25 09:01:28 2017 
+Run stop. Current local time is  Fri Aug 25 09:03:46 2017 
+Total running time is  2.2926736833333337 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:03:46 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-04r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  15597
+number of candiate pixels (clusters) in the image:  11923
+number of candiate pixels (clusters) in the image:  21583
+number of candiate pixels (clusters) in the image:  48527
+number of candiate pixels (clusters) in the image:  18750
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0337296897254 , sstd = 10.116297259660584
+image : 1 mean = 0.0326440431163 , sstd = 10.892055607520279
+image : 2 mean = 0.047363491538 , sstd = 9.218576356354532
+image : 3 mean = 0.0146207864787 , sstd = 6.7826888848780404
+image : 4 mean = 0.0519413053413 , sstd = 9.638846302557063
+image : 5 mean = 0.3152644934 , sstd = 3.7852868366561414
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [2700, 662]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [3476, 854]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [1884, 924]
+check the  20000 -th pixel in the list:  [3837, 464]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [857, 245]
+check the  20000 -th pixel in the list:  [1724, 1188]
+check the  30000 -th pixel in the list:  [2568, 973]
+check the  40000 -th pixel in the list:  [3414, 1058]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [2271, 1325]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  801
+number of candiate pixels (clusters) in the image:  460
+number of candiate pixels (clusters) in the image:  1555
+number of candiate pixels (clusters) in the image:  9407
+number of candiate pixels (clusters) in the image:  1125
+Run starts. Current local time is  Fri Aug 25 09:03:46 2017 
+Run stop. Current local time is  Fri Aug 25 09:06:50 2017 
+Total running time is  3.0695702333333332 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:06:51 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  3726
+number of candiate pixels (clusters) in the image:  2546
+number of candiate pixels (clusters) in the image:  2980
+number of candiate pixels (clusters) in the image:  13347
+number of candiate pixels (clusters) in the image:  2095
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = -0.00541550140086 , sstd = 6.54107241915422
+image : 1 mean = -0.00890271022656 , sstd = 6.8739678859461115
+image : 2 mean = -0.000856104395145 , sstd = 6.663188642343176
+image : 3 mean = -0.00451620681143 , sstd = 5.5339035652255975
+image : 4 mean = 0.00638346791959 , sstd = 7.151166138169045
+image : 5 mean = 0.526818417488 , sstd = 2.719332017591132
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [3087, 381]
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  128
+number of candiate pixels (clusters) in the image:  87
+number of candiate pixels (clusters) in the image:  49
+number of candiate pixels (clusters) in the image:  233
+number of candiate pixels (clusters) in the image:  90
+Run starts. Current local time is  Fri Aug 25 09:06:51 2017 
+Run stop. Current local time is  Fri Aug 25 09:07:18 2017 
+Total running time is  0.4457578 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:07:18 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-05r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  897
+number of candiate pixels (clusters) in the image:  778
+number of candiate pixels (clusters) in the image:  527
+number of candiate pixels (clusters) in the image:  765
+number of candiate pixels (clusters) in the image:  655
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0533136445272 , sstd = 11.706867992268558
+image : 1 mean = 0.0130364622784 , sstd = 8.817812847888424
+image : 2 mean = 0.0167914230081 , sstd = 10.186055863775833
+image : 3 mean = 0.0198577607854 , sstd = 8.568924333269063
+image : 4 mean = 0.0258982933236 , sstd = 9.446664732183736
+image : 5 mean = 0.0703107033292 , sstd = 2.498792828751474
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  44
+number of candiate pixels (clusters) in the image:  41
+number of candiate pixels (clusters) in the image:  37
+number of candiate pixels (clusters) in the image:  31
+number of candiate pixels (clusters) in the image:  35
+Run starts. Current local time is  Fri Aug 25 09:07:18 2017 
+Run stop. Current local time is  Fri Aug 25 09:07:19 2017 
+Total running time is  0.014263616666666666 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:07:19 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  89916
+number of candiate pixels (clusters) in the image:  119703
+number of candiate pixels (clusters) in the image:  98879
+number of candiate pixels (clusters) in the image:  100633
+number of candiate pixels (clusters) in the image:  50078
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0125691360385 , sstd = 10.133966779151562
+image : 1 mean = 0.00673301814834 , sstd = 9.527183630632315
+image : 2 mean = 0.0099246137608 , sstd = 10.558010750749729
+image : 3 mean = 0.0158965555335 , sstd = 10.03756421819633
+image : 4 mean = 0.00208254063383 , sstd = 11.08132543661031
+image : 5 mean = 0.24676522895 , sstd = 4.9758069773733204
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [374, 324]
+check the  20000 -th pixel in the list:  [778, 345]
+check the  30000 -th pixel in the list:  [1211, 1572]
+check the  40000 -th pixel in the list:  [1628, 1750]
+check the  50000 -th pixel in the list:  [2085, 337]
+check the  60000 -th pixel in the list:  [2548, 896]
+check the  70000 -th pixel in the list:  [2986, 1495]
+check the  80000 -th pixel in the list:  [3476, 1916]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [523, 179]
+check the  20000 -th pixel in the list:  [952, 1136]
+check the  30000 -th pixel in the list:  [1268, 1853]
+check the  40000 -th pixel in the list:  [1621, 1556]
+check the  50000 -th pixel in the list:  [1978, 1816]
+check the  60000 -th pixel in the list:  [2278, 512]
+check the  70000 -th pixel in the list:  [2581, 350]
+check the  80000 -th pixel in the list:  [2963, 266]
+check the  90000 -th pixel in the list:  [3314, 965]
+check the  100000 -th pixel in the list:  [3587, 608]
+check the  110000 -th pixel in the list:  [3883, 144]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [572, 1516]
+check the  20000 -th pixel in the list:  [895, 856]
+check the  30000 -th pixel in the list:  [1225, 1955]
+check the  40000 -th pixel in the list:  [1547, 153]
+check the  50000 -th pixel in the list:  [2051, 528]
+check the  60000 -th pixel in the list:  [2369, 1113]
+check the  70000 -th pixel in the list:  [2674, 991]
+check the  80000 -th pixel in the list:  [3046, 894]
+check the  90000 -th pixel in the list:  [3610, 1278]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [483, 630]
+check the  20000 -th pixel in the list:  [882, 448]
+check the  30000 -th pixel in the list:  [1356, 1783]
+check the  40000 -th pixel in the list:  [1863, 563]
+check the  50000 -th pixel in the list:  [2201, 1145]
+check the  60000 -th pixel in the list:  [2482, 902]
+check the  70000 -th pixel in the list:  [2805, 967]
+check the  80000 -th pixel in the list:  [3193, 37]
+check the  90000 -th pixel in the list:  [3630, 733]
+check the  100000 -th pixel in the list:  [4108, 1414]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [573, 2013]
+check the  20000 -th pixel in the list:  [1368, 706]
+check the  30000 -th pixel in the list:  [2347, 783]
+check the  40000 -th pixel in the list:  [3124, 47]
+check the  50000 -th pixel in the list:  [4124, 333]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  2334
+number of candiate pixels (clusters) in the image:  4261
+number of candiate pixels (clusters) in the image:  3591
+number of candiate pixels (clusters) in the image:  2765
+number of candiate pixels (clusters) in the image:  731
+Run starts. Current local time is  Fri Aug 25 09:07:19 2017 
+Run stop. Current local time is  Fri Aug 25 09:22:28 2017 
+Total running time is  15.115224283333335 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:22:28 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-06r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  27263
+number of candiate pixels (clusters) in the image:  11242
+number of candiate pixels (clusters) in the image:  2552
+number of candiate pixels (clusters) in the image:  19008
+number of candiate pixels (clusters) in the image:  3548
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0224579787116 , sstd = 8.898012950461123
+image : 1 mean = 0.0162636186906 , sstd = 10.500671380114344
+image : 2 mean = 0.0444210133654 , sstd = 13.622832639509033
+image : 3 mean = 0.00484119024221 , sstd = 9.49294113077061
+image : 4 mean = 0.0697821242666 , sstd = 14.03613747857209
+image : 5 mean = 0.130761454599 , sstd = 3.723983496062052
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [1536, 153]
+check the  20000 -th pixel in the list:  [3054, 506]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [3697, 1048]
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [2235, 554]
+checking the  4 -th image for clusters
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:24:00 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  1986
+number of candiate pixels (clusters) in the image:  16206
+number of candiate pixels (clusters) in the image:  1529
+number of candiate pixels (clusters) in the image:  855
+number of candiate pixels (clusters) in the image:  638
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.00593070504283 , sstd = 6.19671938601589
+image : 1 mean = 0.0109048341644 , sstd = 4.889648146270732
+image : 2 mean = 0.0170798329366 , sstd = 6.30838334712346
+image : 3 mean = 0.0183477586197 , sstd = 6.809659641017932
+image : 4 mean = 0.0176248402845 , sstd = 7.2368184466514025
+image : 5 mean = 0.00505036957259 , sstd = 2.2862121704648963
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [2510, 3357]
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  45
+number of candiate pixels (clusters) in the image:  68
+number of candiate pixels (clusters) in the image:  46
+number of candiate pixels (clusters) in the image:  42
+number of candiate pixels (clusters) in the image:  37
+Run starts. Current local time is  Fri Aug 25 09:24:00 2017 
+Run stop. Current local time is  Fri Aug 25 09:24:27 2017 
+Total running time is  0.43884363333333337 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:24:27 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-07r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  6148
+number of candiate pixels (clusters) in the image:  10430
+number of candiate pixels (clusters) in the image:  4153
+number of candiate pixels (clusters) in the image:  5397
+number of candiate pixels (clusters) in the image:  20421
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.00666661696001 , sstd = 10.867483190011729
+image : 1 mean = 0.0149983289855 , sstd = 9.893265251586065
+image : 2 mean = 0.0328337578986 , sstd = 11.65978157035046
+image : 3 mean = 0.0422270330285 , sstd = 11.17573295710102
+image : 4 mean = 0.00175198826153 , sstd = 8.54343130382026
+image : 5 mean = 0.295447017515 , sstd = 2.8546402515857796
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [3963, 824]
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [2052, 1012]
+check the  20000 -th pixel in the list:  [4043, 464]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  102
+number of candiate pixels (clusters) in the image:  213
+number of candiate pixels (clusters) in the image:  65
+number of candiate pixels (clusters) in the image:  85
+number of candiate pixels (clusters) in the image:  855
+Run starts. Current local time is  Fri Aug 25 09:24:27 2017 
+Run stop. Current local time is  Fri Aug 25 09:25:29 2017 
+Total running time is  1.0407019 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:25:30 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  40650
+number of candiate pixels (clusters) in the image:  75946
+number of candiate pixels (clusters) in the image:  77978
+number of candiate pixels (clusters) in the image:  74432
+number of candiate pixels (clusters) in the image:  67834
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = -0.000467352064712 , sstd = 8.630371460034985
+image : 1 mean = 0.0234184670956 , sstd = 7.226311742915358
+image : 2 mean = 0.0265670901802 , sstd = 7.141392184088864
+image : 3 mean = 0.025936491946 , sstd = 7.237746602176822
+image : 4 mean = 0.0268200260066 , sstd = 7.478899157201817
+image : 5 mean = 0.279106830029 , sstd = 2.6393818636920354
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [1028, 907]
+check the  20000 -th pixel in the list:  [2036, 450]
+check the  30000 -th pixel in the list:  [3052, 918]
+check the  40000 -th pixel in the list:  [4069, 1035]
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [545, 1899]
+check the  20000 -th pixel in the list:  [1098, 589]
+check the  30000 -th pixel in the list:  [1642, 1556]
+check the  40000 -th pixel in the list:  [2190, 1623]
+check the  50000 -th pixel in the list:  [2738, 294]
+check the  60000 -th pixel in the list:  [3279, 165]
+check the  70000 -th pixel in the list:  [3816, 1069]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [516, 1154]
+check the  20000 -th pixel in the list:  [1041, 1778]
+check the  30000 -th pixel in the list:  [1583, 187]
+check the  40000 -th pixel in the list:  [2112, 350]
+check the  50000 -th pixel in the list:  [2645, 1731]
+check the  60000 -th pixel in the list:  [3179, 1855]
+check the  70000 -th pixel in the list:  [3714, 2015]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [552, 666]
+check the  20000 -th pixel in the list:  [1121, 433]
+check the  30000 -th pixel in the list:  [1691, 386]
+check the  40000 -th pixel in the list:  [2240, 26]
+check the  50000 -th pixel in the list:  [2778, 42]
+check the  60000 -th pixel in the list:  [3329, 991]
+check the  70000 -th pixel in the list:  [3892, 682]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [611, 1258]
+check the  20000 -th pixel in the list:  [1223, 571]
+check the  30000 -th pixel in the list:  [1824, 1465]
+check the  40000 -th pixel in the list:  [2443, 1579]
+check the  50000 -th pixel in the list:  [3060, 1106]
+check the  60000 -th pixel in the list:  [3668, 1475]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  3685
+number of candiate pixels (clusters) in the image:  9553
+number of candiate pixels (clusters) in the image:  9741
+number of candiate pixels (clusters) in the image:  9213
+number of candiate pixels (clusters) in the image:  7961
+Run starts. Current local time is  Fri Aug 25 09:25:30 2017 
+Run stop. Current local time is  Fri Aug 25 09:35:26 2017 
+Total running time is  9.908534383333334 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:35:26 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-08r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  3324
+number of candiate pixels (clusters) in the image:  7420
+number of candiate pixels (clusters) in the image:  4460
+number of candiate pixels (clusters) in the image:  3111
+number of candiate pixels (clusters) in the image:  10131
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0396247970758 , sstd = 11.20004940446629
+image : 1 mean = 0.0204190875852 , sstd = 9.232238104525468
+image : 2 mean = 0.0400676266137 , sstd = 10.399231398751024
+image : 3 mean = 0.0299426969753 , sstd = 11.290027430275778
+image : 4 mean = 0.0303875925001 , sstd = 8.528468594420248
+image : 5 mean = 0.171037690552 , sstd = 2.3230483852025348
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [4080, 1467]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  113
+number of candiate pixels (clusters) in the image:  439
+number of candiate pixels (clusters) in the image:  176
+number of candiate pixels (clusters) in the image:  86
+number of candiate pixels (clusters) in the image:  646
+Run starts. Current local time is  Fri Aug 25 09:35:26 2017 
+Run stop. Current local time is  Fri Aug 25 09:35:58 2017 
+Total running time is  0.5308255166666667 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:35:58 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  8198
+number of candiate pixels (clusters) in the image:  1082
+number of candiate pixels (clusters) in the image:  19479
+number of candiate pixels (clusters) in the image:  8216
+number of candiate pixels (clusters) in the image:  9141
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.00802654915668 , sstd = 5.603131315444678
+image : 1 mean = 0.015836747057 , sstd = 7.202630998967608
+image : 2 mean = 0.00886752388694 , sstd = 4.992413908698733
+image : 3 mean = 0.004246501443 , sstd = 5.484473433693018
+image : 4 mean = 0.0206388680109 , sstd = 5.418250723414984
+image : 5 mean = 0.0978607107638 , sstd = 2.53252350196456
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [2113, 3124]
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  62
+number of candiate pixels (clusters) in the image:  48
+number of candiate pixels (clusters) in the image:  152
+number of candiate pixels (clusters) in the image:  59
+number of candiate pixels (clusters) in the image:  57
+Run starts. Current local time is  Fri Aug 25 09:35:58 2017 
+Run stop. Current local time is  Fri Aug 25 09:37:02 2017 
+Total running time is  1.0579729666666666 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:37:02 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-09r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  13156
+number of candiate pixels (clusters) in the image:  8877
+number of candiate pixels (clusters) in the image:  16532
+number of candiate pixels (clusters) in the image:  21162
+number of candiate pixels (clusters) in the image:  14017
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0213443029319 , sstd = 9.652124412851958
+image : 1 mean = 0.0322301650647 , sstd = 11.008065352294008
+image : 2 mean = 0.0181383634674 , sstd = 8.888790849938935
+image : 3 mean = 0.0126270777483 , sstd = 8.018086257278048
+image : 4 mean = 0.0251837920405 , sstd = 9.544973239510442
+image : 5 mean = 0.0689645302365 , sstd = 2.237353525113807
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [3205, 836]
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [2571, 1911]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [1963, 148]
+check the  20000 -th pixel in the list:  [3919, 850]
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [2986, 1633]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  1264
+number of candiate pixels (clusters) in the image:  382
+number of candiate pixels (clusters) in the image:  2315
+number of candiate pixels (clusters) in the image:  4026
+number of candiate pixels (clusters) in the image:  1551
+Run starts. Current local time is  Fri Aug 25 09:37:02 2017 
+Run stop. Current local time is  Fri Aug 25 09:38:52 2017 
+Total running time is  1.8295617833333333 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:38:52 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  1177
+number of candiate pixels (clusters) in the image:  368
+number of candiate pixels (clusters) in the image:  2108
+number of candiate pixels (clusters) in the image:  957
+number of candiate pixels (clusters) in the image:  372
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0226551199789 , sstd = 5.709721060533218
+image : 1 mean = 0.0198627910946 , sstd = 7.81203791425542
+image : 2 mean = 0.0119122241406 , sstd = 5.3950849194658925
+image : 3 mean = 0.0182020917852 , sstd = 5.817398061036351
+image : 4 mean = 0.0141414240204 , sstd = 6.643252613388592
+image : 5 mean = 0.0695083791559 , sstd = 2.0565630799004517
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  28
+number of candiate pixels (clusters) in the image:  44
+number of candiate pixels (clusters) in the image:  30
+number of candiate pixels (clusters) in the image:  37
+number of candiate pixels (clusters) in the image:  29
+Run starts. Current local time is  Fri Aug 25 09:38:52 2017 
+Run stop. Current local time is  Fri Aug 25 09:38:54 2017 
+Total running time is  0.030474466666666665 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:38:54 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-10r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  472
+number of candiate pixels (clusters) in the image:  530
+number of candiate pixels (clusters) in the image:  655
+number of candiate pixels (clusters) in the image:  764
+number of candiate pixels (clusters) in the image:  709
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0301034787176 , sstd = 8.112587715944585
+image : 1 mean = 0.0293241294256 , sstd = 8.948999752261898
+image : 2 mean = 0.0433659931677 , sstd = 7.639475247931565
+image : 3 mean = 0.0202651309783 , sstd = 10.007492768207445
+image : 4 mean = 0.039797207373 , sstd = 10.7793652035765
+image : 5 mean = 0.188035402353 , sstd = 2.351838751623827
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  29
+number of candiate pixels (clusters) in the image:  36
+number of candiate pixels (clusters) in the image:  32
+number of candiate pixels (clusters) in the image:  46
+number of candiate pixels (clusters) in the image:  48
+Run starts. Current local time is  Fri Aug 25 09:38:54 2017 
+Run stop. Current local time is  Fri Aug 25 09:38:55 2017 
+Total running time is  0.011960033333333335 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:38:55 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  370
+number of candiate pixels (clusters) in the image:  1203
+number of candiate pixels (clusters) in the image:  13859
+number of candiate pixels (clusters) in the image:  6282
+number of candiate pixels (clusters) in the image:  2583
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0358420838701 , sstd = 8.844040358106533
+image : 1 mean = 0.0140509983557 , sstd = 7.13641899986005
+image : 2 mean = 0.0438808979794 , sstd = 5.620609528438137
+image : 3 mean = 0.0372640731487 , sstd = 6.129733923330562
+image : 4 mean = 0.0183576366196 , sstd = 6.66428786180172
+image : 5 mean = 0.0335639201004 , sstd = 3.1258076066560094
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [3026, 272]
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  34
+number of candiate pixels (clusters) in the image:  37
+number of candiate pixels (clusters) in the image:  39
+number of candiate pixels (clusters) in the image:  46
+number of candiate pixels (clusters) in the image:  40
+Run starts. Current local time is  Fri Aug 25 09:38:55 2017 
+Run stop. Current local time is  Fri Aug 25 09:39:24 2017 
+Total running time is  0.48784619999999995 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:39:24 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-11r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  789
+number of candiate pixels (clusters) in the image:  580
+number of candiate pixels (clusters) in the image:  526
+number of candiate pixels (clusters) in the image:  556
+number of candiate pixels (clusters) in the image:  685
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0430606882623 , sstd = 10.03920247349066
+image : 1 mean = 0.0304607653295 , sstd = 9.151984773483479
+image : 2 mean = 0.0457448184605 , sstd = 10.050073017309902
+image : 3 mean = 0.0352446465704 , sstd = 9.28594224790514
+image : 4 mean = 0.0431328207197 , sstd = 8.412946159443072
+image : 5 mean = 0.106143410939 , sstd = 2.1503793987401307
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  62
+number of candiate pixels (clusters) in the image:  43
+number of candiate pixels (clusters) in the image:  38
+number of candiate pixels (clusters) in the image:  33
+number of candiate pixels (clusters) in the image:  39
+Run starts. Current local time is  Fri Aug 25 09:39:24 2017 
+Run stop. Current local time is  Fri Aug 25 09:39:25 2017 
+Total running time is  0.011915416666666666 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:39:25 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  1417
+number of candiate pixels (clusters) in the image:  23527
+number of candiate pixels (clusters) in the image:  18479
+number of candiate pixels (clusters) in the image:  12101
+number of candiate pixels (clusters) in the image:  5870
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.030057134204 , sstd = 8.351800390136065
+image : 1 mean = 0.00901482137536 , sstd = 5.3943331868609325
+image : 2 mean = 0.0187763734297 , sstd = 5.610927827128716
+image : 3 mean = 0.0173335471974 , sstd = 5.975556148705333
+image : 4 mean = 0.00943179656274 , sstd = 6.669183820882941
+image : 5 mean = 0.154180849544 , sstd = 2.3941218660397645
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [1780, 494]
+check the  20000 -th pixel in the list:  [3532, 1916]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [2253, 256]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [3439, 1108]
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  52
+number of candiate pixels (clusters) in the image:  567
+number of candiate pixels (clusters) in the image:  347
+number of candiate pixels (clusters) in the image:  217
+number of candiate pixels (clusters) in the image:  79
+Run starts. Current local time is  Fri Aug 25 09:39:25 2017 
+Run stop. Current local time is  Fri Aug 25 09:40:55 2017 
+Total running time is  1.5002364666666665 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:40:55 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-12r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  1221
+number of candiate pixels (clusters) in the image:  509
+number of candiate pixels (clusters) in the image:  567
+number of candiate pixels (clusters) in the image:  923
+number of candiate pixels (clusters) in the image:  610
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0432878379896 , sstd = 8.713352542076485
+image : 1 mean = 0.0370442484518 , sstd = 11.185945718246845
+image : 2 mean = 0.0198747756633 , sstd = 9.947537650357782
+image : 3 mean = 0.0656892750664 , sstd = 11.429400435661675
+image : 4 mean = 0.0298619925169 , sstd = 11.255401499463884
+image : 5 mean = 0.19332226471 , sstd = 2.3851628058144922
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  34
+number of candiate pixels (clusters) in the image:  35
+number of candiate pixels (clusters) in the image:  34
+number of candiate pixels (clusters) in the image:  39
+number of candiate pixels (clusters) in the image:  44
+Run starts. Current local time is  Fri Aug 25 09:40:55 2017 
+Run stop. Current local time is  Fri Aug 25 09:40:57 2017 
+Total running time is  0.018367033333333335 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:40:57 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  699
+number of candiate pixels (clusters) in the image:  1604
+number of candiate pixels (clusters) in the image:  6428
+number of candiate pixels (clusters) in the image:  762
+number of candiate pixels (clusters) in the image:  10692
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.03869510112 , sstd = 7.626304296348195
+image : 1 mean = 0.0214512528027 , sstd = 6.623583200021041
+image : 2 mean = 0.0279094098384 , sstd = 5.845879774619159
+image : 3 mean = 0.0277834436649 , sstd = 7.397178484343515
+image : 4 mean = 0.0318559170692 , sstd = 5.551113490815167
+image : 5 mean = 0.0402408872859 , sstd = 2.5225513816240603
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+check the  10000 -th pixel in the list:  [3864, 32]
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  55
+number of candiate pixels (clusters) in the image:  33
+number of candiate pixels (clusters) in the image:  41
+number of candiate pixels (clusters) in the image:  38
+number of candiate pixels (clusters) in the image:  35
+Run starts. Current local time is  Fri Aug 25 09:40:57 2017 
+Run stop. Current local time is  Fri Aug 25 09:41:22 2017 
+Total running time is  0.41930226666666665 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:41:22 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-13r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  480
+number of candiate pixels (clusters) in the image:  596
+number of candiate pixels (clusters) in the image:  576
+number of candiate pixels (clusters) in the image:  440
+number of candiate pixels (clusters) in the image:  495
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.010393898999 , sstd = 8.284879664938764
+image : 1 mean = 0.019120509666 , sstd = 8.291854305957086
+image : 2 mean = 0.0244414294481 , sstd = 12.345189511050682
+image : 3 mean = 0.0153357987247 , sstd = 8.436717738226529
+image : 4 mean = 0.0177798022154 , sstd = 8.381453556227413
+image : 5 mean = 0.0284768774154 , sstd = 2.019461879531875
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  39
+number of candiate pixels (clusters) in the image:  41
+number of candiate pixels (clusters) in the image:  40
+number of candiate pixels (clusters) in the image:  38
+number of candiate pixels (clusters) in the image:  43
+Run starts. Current local time is  Fri Aug 25 09:41:22 2017 
+Run stop. Current local time is  Fri Aug 25 09:41:23 2017 
+Total running time is  0.00855295 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:41:23 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  472
+number of candiate pixels (clusters) in the image:  2393
+number of candiate pixels (clusters) in the image:  1382
+number of candiate pixels (clusters) in the image:  957
+number of candiate pixels (clusters) in the image:  264
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0376680695111 , sstd = 7.0408930120201
+image : 1 mean = 0.0144165083334 , sstd = 5.5423147576897955
+image : 2 mean = 0.0227603211394 , sstd = 5.822447042068413
+image : 3 mean = 0.0531650373507 , sstd = 12.20191491701865
+image : 4 mean = 0.0134931892675 , sstd = 9.066908205028192
+image : 5 mean = 0.0266308148087 , sstd = 2.175040222194835
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  35
+number of candiate pixels (clusters) in the image:  27
+number of candiate pixels (clusters) in the image:  31
+number of candiate pixels (clusters) in the image:  54
+number of candiate pixels (clusters) in the image:  37
+Run starts. Current local time is  Fri Aug 25 09:41:23 2017 
+Run stop. Current local time is  Fri Aug 25 09:41:25 2017 
+Total running time is  0.03501541666666667 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:41:25 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-14r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  1212
+number of candiate pixels (clusters) in the image:  2726
+number of candiate pixels (clusters) in the image:  1285
+number of candiate pixels (clusters) in the image:  2255
+number of candiate pixels (clusters) in the image:  4423
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0149723399769 , sstd = 9.239665657874106
+image : 1 mean = 0.051486179492 , sstd = 10.140393561794468
+image : 2 mean = 0.0142070393959 , sstd = 9.24088976365084
+image : 3 mean = 0.0381652271263 , sstd = 10.075563615885162
+image : 4 mean = 0.0252173919973 , sstd = 4.868374215565991
+image : 5 mean = 1.25881336736 , sstd = 64.98527123907537
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  343
+number of candiate pixels (clusters) in the image:  796
+number of candiate pixels (clusters) in the image:  388
+number of candiate pixels (clusters) in the image:  602
+number of candiate pixels (clusters) in the image:  821
+Run starts. Current local time is  Fri Aug 25 09:41:25 2017 
+Run stop. Current local time is  Fri Aug 25 09:41:33 2017 
+Total running time is  0.13145198333333333 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:41:33 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  3586
+number of candiate pixels (clusters) in the image:  16478
+number of candiate pixels (clusters) in the image:  28482
+number of candiate pixels (clusters) in the image:  36937
+number of candiate pixels (clusters) in the image:  6606
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0139589032998 , sstd = 8.548381998402844
+image : 1 mean = -0.00791682864988 , sstd = 6.382950195910552
+image : 2 mean = 0.0115600563802 , sstd = 5.770469624751556
+image : 3 mean = 0.0241122845294 , sstd = 5.495939202064613
+image : 4 mean = 0.0151468457751 , sstd = 7.587152921603746
+image : 5 mean = 0.00991292617768 , sstd = 2.5427764954387295
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+check the  10000 -th pixel in the list:  [2557, 814]
+checking the  2 -th image for clusters
+check the  10000 -th pixel in the list:  [1480, 1049]
+check the  20000 -th pixel in the list:  [2932, 17]
+checking the  3 -th image for clusters
+check the  10000 -th pixel in the list:  [1138, 2291]
+check the  20000 -th pixel in the list:  [2246, 1350]
+check the  30000 -th pixel in the list:  [3350, 1167]
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  92
+number of candiate pixels (clusters) in the image:  707
+number of candiate pixels (clusters) in the image:  1418
+number of candiate pixels (clusters) in the image:  1916
+number of candiate pixels (clusters) in the image:  180
+Run starts. Current local time is  Fri Aug 25 09:41:33 2017 
+Run stop. Current local time is  Fri Aug 25 09:43:56 2017 
+Total running time is  2.3658336 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:43:56 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-15r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  3053
+number of candiate pixels (clusters) in the image:  850
+number of candiate pixels (clusters) in the image:  1307
+number of candiate pixels (clusters) in the image:  1423
+number of candiate pixels (clusters) in the image:  2073
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.039797952604 , sstd = 8.726447744032855
+image : 1 mean = 0.0478239575945 , sstd = 11.419269112327667
+image : 2 mean = 0.0385412422785 , sstd = 10.21655611346424
+image : 3 mean = 0.0283295411898 , sstd = 9.976682456607774
+image : 4 mean = 0.047413829678 , sstd = 9.336582035571388
+image : 5 mean = 0.211335506845 , sstd = 2.23824199028262
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  67
+number of candiate pixels (clusters) in the image:  45
+number of candiate pixels (clusters) in the image:  41
+number of candiate pixels (clusters) in the image:  38
+number of candiate pixels (clusters) in the image:  43
+Run starts. Current local time is  Fri Aug 25 09:43:56 2017 
+Run stop. Current local time is  Fri Aug 25 09:44:00 2017 
+Total running time is  0.06797818333333332 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16b-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:44:00 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16b-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16b-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16b-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  14551
+number of candiate pixels (clusters) in the image:  8898
+number of candiate pixels (clusters) in the image:  159
+number of candiate pixels (clusters) in the image:  1508
+number of candiate pixels (clusters) in the image:  197
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0204345050126 , sstd = 5.644897821195297
+image : 1 mean = 0.0221852223232 , sstd = 5.940624819318264
+image : 2 mean = 0.126764594471 , sstd = 79.68389572767708
+image : 3 mean = 0.0336808457365 , sstd = 7.144720196123445
+image : 4 mean = 0.0314800974479 , sstd = 36.62569608540722
+image : 5 mean = -0.00342222431412 , sstd = 2.586106740101967
+checking the  0 -th image for clusters
+check the  10000 -th pixel in the list:  [2858, 882]
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  43
+number of candiate pixels (clusters) in the image:  40
+number of candiate pixels (clusters) in the image:  29
+number of candiate pixels (clusters) in the image:  49
+number of candiate pixels (clusters) in the image:  27
+Run starts. Current local time is  Fri Aug 25 09:44:00 2017 
+Run stop. Current local time is  Fri Aug 25 09:44:34 2017 
+Total running time is  0.5615778833333332 minutes
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-10000-82496145-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:44:34 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-10000-82496145-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-10000-82496145-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-10000-82496145-clusters.txt
+env_filename_stat: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-stat.txt
+Run starts. Current local time is  Fri Aug 25 09:44:34 2017 
+file_stat     : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-stat.txt
+file_pixelList: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-pixelList.txt
+file_clusters : /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923/bias/rb-16r-20150923234527-clusters.txt
+number of images:  5
+number of candiate pixels (clusters) in the image:  775
+number of candiate pixels (clusters) in the image:  565
+number of candiate pixels (clusters) in the image:  1046
+number of candiate pixels (clusters) in the image:  688
+number of candiate pixels (clusters) in the image:  3019
+image stat where [0-4] is real data, [5] is bias medium
+image : 0 mean = 0.0254519885006 , sstd = 10.214631238446207
+image : 1 mean = 0.0401962877934 , sstd = 10.900419180601034
+image : 2 mean = 0.0517273281252 , sstd = 12.444472791721749
+image : 3 mean = 0.0136043209172 , sstd = 9.437594714289556
+image : 4 mean = 0.0229932869887 , sstd = 7.813067214197194
+image : 5 mean = 0.115523048711 , sstd = 2.585364691839438
+checking the  0 -th image for clusters
+checking the  1 -th image for clusters
+checking the  2 -th image for clusters
+checking the  3 -th image for clusters
+checking the  4 -th image for clusters
+dump clusters to file
+number of images:  5
+number of candiate pixels (clusters) in the image:  35
+number of candiate pixels (clusters) in the image:  35
+number of candiate pixels (clusters) in the image:  48
+number of candiate pixels (clusters) in the image:  31
+number of candiate pixels (clusters) in the image:  31
+Run starts. Current local time is  Fri Aug 25 09:44:34 2017 
+Run stop. Current local time is  Fri Aug 25 09:44:37 2017 
+Total running time is  0.04621733333333333 minutes
+total number of files: 33 for /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/20150923 analysed

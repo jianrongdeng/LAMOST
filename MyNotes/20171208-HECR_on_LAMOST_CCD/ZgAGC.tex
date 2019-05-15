@@ -1,0 +1,804 @@
+\documentclass[12pt,twoside,letterpaper]{article}
+%\documentclass[12pt,twoside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% include packages necessary for both 
+% LaTex and PDFLaTex 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\topmargin -0.25cm
+\textwidth 15.5cm
+\textheight 22cm
+\oddsidemargin 0.5cm
+\evensidemargin 0.5cm
+
+%\usepackage{journals}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage{cite}
+\usepackage{eso-pic} 
+\usepackage{amsmath} 
+%\AddToShipoutPicture{\resizebox{0.9\paperwidth}{0.9\paperheight}%           
+%{\rotatebox{60}{\color[gray]{0.9}\hspace*{5mm}\textsc{Draft \today}}}}
+
+\pagestyle{headings}
+
+% create a new 'if' command: ifpdf
+\newif\ifpdf
+ \ifx\pdfoutput\undefined
+ \pdffalse                  % we are not running PDFLaTeX 
+\else 
+ \pdfoutput=1               % we are running PDFLaTeX
+ \pdftrue
+\fi
+
+\ifpdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  include packages necessary for
+%  PDFLaTex ONLY 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \pdfcompresslevel=0
+ \usepackage{amsmath,cite,epsfig,lscape}
+ \usepackage{url,boxedminipage}
+ %\usepackage{graphicx,thumbpdf}
+ \usepackage{thumbpdf}
+ \definecolor{rltred}{rgb}{0.75,0,0}
+ \definecolor{rltgreen}{rgb}{0,0.5,0}
+ \definecolor{rltblue}{rgb}{0,0,0.75}
+ \definecolor{rltyellow}{rgb}{0.75,0.5,0.75}
+ \usepackage[colorlinks% 
+  ,bookmarks%
+  ,urlcolor=rltblue%
+  ,filecolor=rltgreen% 
+  ,linkcolor=rltred%
+  ,citecolor=rltyellow%
+  ,pdftitle={pdftitLe}%
+  ,pdfsubject={pdfsubject}%
+  ,pdfkeywords={pdfkeywords}%
+  ,pdfauthor={Jianrong Deng <jdeng@fnal.gov>}%
+  ,pdfpagemode={UseOutlines}%
+  ,bookmarksopen=true%
+  ,bookmarksnumbered=true%
+  ,pdfstartview={Fit}%
+  ,pagebackref%
+  ,hyperindex%
+  ]{hyperref}
+ \pdfimageresolution=300                                
+ \DeclareGraphicsExtensions{.pdf,.jpg,.jpeg,.eps,.epsi,.ps,.eps.gz,.ps.gz}                
+%
+\else
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  include packages necessary for
+%  latex ONLY (PS output file)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \usepackage{graphicx}                                  
+ \DeclareGraphicsExtensions{.eps,.epsi,.ps,.eps.gz,.ps.gz}    
+ \newcommand{\href}[2]{#2}                   % suppress URL's in PS files
+ \usepackage[dvips,pagebackref]{hyperref}    % also create Page-back-refrences
+                                             % in PS files
+
+\fi % end ifpdf
+
+\DeclareGraphicsRule{*}{mps}{*}{} 
+
+%\input{./mycommands}
+ \input{../ZSelection531_July2005/tex/mycommands}
+
+
+% ======================================================================
+% ======================================================================
+\begin{document}
+
+\thispagestyle{empty}
+\vspace*{-3.5cm}
+\begin{flushright}
+CDF/PHYS/ELECTROWEAK/CDFR/9059\\
+Draft 0.0\\
+\today
+\end{flushright}
+
+\vspace{0.5in}
+\begin{center}
+  \begin{Large}
+  %{\bf Photon ID Efficiency and Fake Rate Measurement Using 1 fb$^{-1}$ of Data}
+  {\bf Search for Anomalous ZZ$\gamma$ and $Z\gamma\gamma$ Couplings
+  in $p\bar{p} \rightarrow Z(ee)\gamma$ at $\sqrt{s}$ = 1.96 TeV}
+  \end{Large}
+\end{center}
+
+\vspace{0.5in}
+
+\begin{center}
+\small{J. Deng, A. Goshaw, B. Heinemann, C. Lester, A. Nagano, T. Phillips}\vspace{1.0ex} \\
+\emph{Berkeley, Duke and Tsukuba University}
+\end{center}
+
+\begin{abstract}
+We describe a search for anomalous triple gauge couplings at the
+ZZ$\gamma$ and Z$\gamma\gamma$ vertices. The analysis of these triple gauge couplings is based on
+analysing the photon Et distribution 
+obtained in the Z$\gamma$ cross section measurement. 
+95\% C.L. Limits on the couplings are calculated. 
+
+\end{abstract}
+
+%\clearpage
+%\tableofcontents
+%\clearpage
+
+% ======================================================================
+\section{Introduction} 
+% ======================================================================
+The Standard Model Electroweak theory makes precise predictions for the couplings between gauge bosons. Gauge boson pair production provides direct tests of the triple gauge boson couplings. Any non Standard Model (abnomalous) couplings enhance gauge boson pair production cross-section and would indicate new physics beyond the Standard Model. This note describes a search for anomalous gauge couplings in the \Zg production in the electron channel with 1fb$^{-1}$ of data.
+
+% ======================================================================
+\section{Event Selection}\label{Sec:EventSel}
+% ======================================================================
+The \Zg event selection is described in details in CDF note 8506\cite{Zgnote}. Here
+we briefly summarize the selection.
+
+    \begin{itemize}
+       \item {\textbf{Photon selection: }}
+	  \begin{itemize}
+	    \item \Et $> $ 7 GeV central photon ($|\eta| < 1.1$)
+	  \end{itemize}
+       \item {\textbf{Loose Z selection :}} 
+	  \begin{itemize}
+	     \item  Two \Et $> $ 20 GeV electrons :  
+	      \begin{itemize}
+		  \item One electron in central detector region ($|\eta| < 1.1$)
+		  \item The second electron in central or forward detector region ($|\eta| < 2.8$)
+		    \item Apply loose electron selection criteria
+	      \end{itemize}
+	     \item Measure the inclusive Z cross section as a cross check
+	  \end{itemize}
+      \item {\textbf{\Zg event selection}}
+	   \begin{itemize}
+	       \item Photon well separated from electrons
+	      \begin{itemize}
+		  \item $\Delta R(e,\gamma)$ = $\sqrt{( (\eta_e - \eta_{\gamma})^2 + (\phi_e - \phi_{\gamma})^2  )} > $  0.7
+	       \end{itemize}
+	       \item \Mee \textgreater~ 40 \GeVCC
+	  \end{itemize}
+      \item {\textbf{\Zg acceptance:}} 
+	  \begin{itemize}
+	    \item In a sample of $\sim$ 90K Z events, $390$ \Zg events observed. 
+ 	    \item Loose Z selection criteria doubles the final \Zg acceptance
+	  \end{itemize}
+    \end{itemize}
+
+% ======================================================================
+\section{Update on \Zg Cross Section Measurement}
+% ======================================================================
+The \Zg cross-section measurement was blessed in Oct 2006. Since then,
+we have updated measurements on photon ID efficiency and photon fake rate. 
+A new method to measure photon ID efficiency using pure photon sample
+has been developed. The photon ID efficiency was blessed in the Joint
+Physics group in July 2007. The measurement is documented in CDF note
+8889\cite{PhotonIDnote}. Table \ref{table:PhotonSF} summarizes the ID
+efficiencies and scale factor used in the cross section calculation. 
+
+% ======================================================================
+    \begin{table}[!hbtp]
+% ======================================================================
+ %\ptsize{8}
+    \begin{center}
+    \begin{tabular}{|l|l|l|l|} 
+ \hline 
+                Eff        &  Data                  &              MC    &   Scale Factor                  \\  
+ \hline                                                                                
+                Central    &   0.86 $\pm$ 0.02      &    0.88 $\pm$ 0.00 &  0.98 $\pm$ 2 \%  (stat) $\pm$ 1 \%  (syst) \\  
+% \hline                                                                                                
+%                Plug       &   0.81 $\pm$ 0.06      &    0.84 $\pm$ 0.00 &  0.96 $\pm$ 7 \%  (stat) $\pm$ 1 \%  (syst) \\  
+ \hline                                                            
+    \end{tabular}
+     \caption{Photon ID efficiencies and scale factors using FSR photon samples. $Et_{\gamma} > 7$ GeV, $|\eta| < 2.0 $.  \label{table:PhotonSF}}
+    \end{center}
+    \end{table}
+% ======================================================================
+
+A measurement of photon fake rate with 1fb$^{-1}$ of data (see CDF
+note 9033\cite{PhotonFakenote}) is scheduled for blessing next week. In this
+note, the Z + jet background, where a jet fakes a photon, is updated
+with the 1fb$^{-1}$ fake rate measurement. 
+
+% ======================================================================
+%\begin{Slide}{ISR \eeg Cross Section }                                
+% ====================================================================== 
+% File name is: 
+% ../DukpcResult/RunDtuple/CalcSigmaZg/CalcSigmaZg_1fb/Oct-3-2007/Oct-3-2007-CalcSigmaZg_1fb.SigmaZg.tex
+% DtupleAna::CalcSigmaZg.cc
+% Print out table for Zg Cross-section
+% ====================================================================== 
+%    \ptsize{10} 
+% ====================================================================== 
+   \begin{table}[!hbtp]                                                 
+% ====================================================================== 
+      \begin{center}                                                    
+      \begin{tabular}{|l|l|}\hline \hline                         
+ 	   \Zg type       &ISR           \\ 
+       Photon type        &  Central Photon           \\ 
+       Zee type        &  CC + CP           \\ 
+   \hline 
+ 	   $\int \lum dt(pb^{-1})$         & 1074          \\ 
+   	   K-Factor                   & 1.33                 \\ 
+   	   $\sigma_{LO}(pb)$         & 0.9           \\ 
+ 	   $\sigma_{NLO}(pb)$        & 1.2 $\pm$ 0.1                  \\ 
+   \hline 
+ $\sigma^{obs}$(pb)  &   1.2 $\pm$ 0.1(stat.)  $\pm$ 0.2(syst.)  $\pm$ 0.1(lum)   \\ 
+   \hline 
+   \hline 
+ $N^{bkg}_{\gamma+Jet}$     &           11.5 $\pm$ 5.5\\ 
+  $N^{bkg}_{Z+Jet}$     &           39.1 $\pm$ 11.1\\ 
+          $N^{exp}_{SM}$&          100.6 $\pm$ 5.4\\ 
+ $N^{exp}_{SM}$ + $N^{bkg}_{QCD}$     &          151.2 $\pm$ 13.5\\ 
+   \hline 
+               $N^{obs}$&            154\\ 
+	 \hline\hline                                                                
+      \end{tabular}                                                             
+      \end{center}                                                              
+      \caption{Input parameters to the ISR \eeg cross-section calculation, 1074$pb^{-1}$. \Etg $> 7$ GeV, \DeltaR $> 0.7$ , \Mee $> 40$ \GeVCC~ and \Meeg $> 100$ \GeVCC. }  
+      \label{Table:eegAcceptanceISR1fb}                                                        
+% ======================================================================        
+   \end{table}                                                                  
+% ======================================================================        
+%\end{Slide}                                                                     
+% ======================================================================        
+
+Table \ref{Table:eegAcceptanceISR1fb} shows the updated result of the
+cross section for the ISR dominant region ( \Meeg $>$ 100 GeV). The
+data agrees well with the SM prediction. Figure \ref{Fig:ISREt} shows
+the $E_t^{\gamma}$ distribution of the signal and background. The
+$E_t^{\gamma}$ distribution is used to extract limits on \Zg anomalous
+couplings.
+
+Tabs \ref{Table:eegAcceptanceFSR1fb} and \ref{Table:eegAcceptance1fb} show the cross section for the FSR region and ISR+FSR region, respectively. 
+
+% ======================================================================
+%\begin{Slide}{FSR \eeg  Cross Section -- {\red{for Blessing}}}                                
+% ====================================================================== 
+% File name is: 
+% ../DukpcResult/RunDtuple/CalcSigmaZg/CalcSigmaZg_1fb/Oct-30-2007/Oct-30-2007-CalcSigmaZg_1fb.SigmaZg.tex
+% DtupleAna::CalcSigmaZg.cc
+% Print out table for Zg Cross-section
+% ====================================================================== 
+%    \ptsize{10} 
+% ====================================================================== 
+   \begin{table}[!hbtp]                                                 
+% ====================================================================== 
+      \begin{center}                                                    
+      \begin{tabular}{|l|l|}\hline \hline                         
+ 	   \Zg type       &FSR           \\ 
+       Photon type        &  Central Photon           \\ 
+       Zee type        &  CC + CP           \\ 
+   \hline 
+ 	   $\int \lum dt(pb^{-1})$         & 1074          \\ 
+   	   K-Factor                   & 1.36                 \\ 
+   	   $\sigma_{LO}(pb)$         & 2.4           \\ 
+ 	   $\sigma_{NLO}(pb)$        & 3.3 $\pm$ 0.3                  \\ 
+   \hline 
+ $\sigma^{obs}$(pb)  &   3.5 $\pm$ 0.2(stat.)  $\pm$ 0.2(syst.)  $\pm$ 0.2(lum)   \\ 
+   \hline 
+   \hline 
+ $N^{bkg}_{\gamma+Jet}$     &            2.4 $\pm$ 1.6\\ 
+  $N^{bkg}_{Z+Jet}$     &           12.5 $\pm$ 3.0\\ 
+          $N^{exp}_{SM}$&          209.2 $\pm$ 11.2\\ 
+ $N^{exp}_{SM}$ + $N^{bkg}_{QCD}$     &          224.1 $\pm$ 11.7\\ 
+   \hline 
+               $N^{obs}$&            236\\ 
+	 \hline\hline                                                                
+      \end{tabular}                                                             
+      \end{center}                                                              
+      \caption{Input parameters to the FSR \eeg  cross-section calculation, 1074$pb^{-1}$. \Etg $> 7$ GeV, \DeltaR $> 0.7$ , \Mee $> 40$ \GeVCC~ and \Meeg $< 100$ \GeVCC. }  
+      \label{Table:eegAcceptanceFSR1fb}                                                        
+% ======================================================================        
+   \end{table}                                                                  
+% ======================================================================        
+%\end{Slide}                                                                     
+% ======================================================================        
+
+% ======================================================================
+%\begin{Slide}{FSR+ISR \eeg  Cross Section -- {\red{for Blessing}}}                                
+% ====================================================================== 
+% File name is: 
+% ../DukpcResult/RunDtuple/CalcSigmaZg/CalcSigmaZg_1fb/Oct-30-2007/Oct-30-2007-CalcSigmaZg_1fb.SigmaZg.tex
+% DtupleAna::CalcSigmaZg.cc
+% Print out table for Zg Cross-section
+% ====================================================================== 
+%    \ptsize{10} 
+% ====================================================================== 
+   \begin{table}[!hbtp]                                                 
+% ====================================================================== 
+      \begin{center}                                                    
+      \begin{tabular}{|l|l|}\hline \hline                         
+ 	   \Zg type       &eeg           \\ 
+       Photon type        &  Central Photon           \\ 
+       Zee type        &  CC + CP           \\ 
+   \hline 
+ 	   $\int \lum dt(pb^{-1})$         & 1074          \\ 
+   	   K-Factor                   & 1.35                 \\ 
+   	   $\sigma_{LO}(pb)$         & 3.4           \\ 
+ 	   $\sigma_{NLO}(pb)$        & 4.5 $\pm$ 0.4                  \\ 
+   \hline 
+ $\sigma^{obs}$(pb)  &   4.7 $\pm$ 0.3(stat.)  $\pm$ 0.4(syst.)  $\pm$ 0.3(lum)   \\ 
+   \hline 
+   \hline 
+ $N^{bkg}_{\gamma+Jet}$     &           13.9 $\pm$ 7.1\\ 
+  $N^{bkg}_{Z+Jet}$     &           51.6 $\pm$ 14.1\\ 
+          $N^{exp}_{SM}$&          309.8 $\pm$ 16.6\\ 
+ $N^{exp}_{SM}$ + $N^{bkg}_{QCD}$     &          375.3 $\pm$ 25.2\\ 
+   \hline 
+               $N^{obs}$&            390\\ 
+	 \hline\hline                                                                
+      \end{tabular}                                                             
+      \end{center}                                                              
+      \caption{Input parameters to the FSR+ISR \eeg  cross-section calculation, 1074$pb^{-1}$. \Etg $> 7$ GeV, \DeltaR $> 0.7$ and \Mee $> 40$ \GeVCC~. }  
+      \label{Table:eegAcceptanceeeg1fb}                                                        
+% ======================================================================        
+   \end{table}                                                                  
+% ======================================================================        
+%\end{Slide}                                                                     
+% ======================================================================        
+
+
+
+% ======================================================================
+%\begin{slide}
+% ======================================================================
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       \includegraphics[width=12cm]{../../figures/AGC/Likelihood/Oct-3-2007-Lambda_1200_ZZg_h3_ALL_gammaEt_LogX.eps}
+       \caption{ Photon Et distribution.  Electron 1fb$^{-1}$.}  
+       \label{Fig:ISREt}
+   \end{center}    
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+% ======================================================================
+%\end{slide}
+% ======================================================================
+
+% ======================================================================
+\section{Neutral Anomalous Gauge Couplings (AGC)}\label{nTGCPar}
+% ======================================================================
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+\begin{center}
+       \includegraphics[width=6in, clip, bb=30 170 570 630]{ThesisFigure/Diboson/DibosonFeynman.eps}
+       \caption{Feynman diagrams for gauge boson pair production.
+       $V_{0, 1, 2}$ are the photon, W or Z gauge boson\cite{D0TGC}.}
+       \label{Fig:Diboson}
+\end{center}
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+Figure \ref{Fig:Diboson} shows the Feynman diagrams for gauge boson pair production. (a) and (b) are diagrams for quark and boson interactions and represent initial state radiation (ISR) from the incoming quarks. (c) is a diagram of trilinear gauge boson vertex. 
+The WW$\gamma$, WWZ, ZZZ, ZZ$\gamma$ and Z$\gamma\gamma$ couplings are
+the possible trilinear couplings involving the W, the Z and the photon. 
+Only the first two couplings have
+non-zero value in the Standard Model at tree level, all the neutral
+triple couplings vanish at tree level.  
+
+ By substituting $V_0$ with Z or $\gamma$, $V_1$ with Z, $V_2$ with $\gamma$ in Figure \ref{Fig:Diboson}, the Feynman diagrams for the ZZ$\gamma$ and Z$\gamma\gamma$ couplings are obtained. 
+These two couplings, involving the
+interaction of the neutral Z boson and the photon, are studied in
+the \Zg production, where the Z boson decays to electron pairs. 
+
+The general form of the neutral trilinear boson couplings is given by\cite{nTGC}:
+
+% ======================================================================
+    \begin{eqnarray*}
+	\Gamma_{Z\gamma V}^{\alpha\beta\mu}(q_1, q_2, P) = \frac{i(s - m_V^2)}{m_Z^2} \{h_1^V(q_2^{\mu}g^{\alpha\beta} - q_2^{\alpha}g^{\mu\beta}) + \frac{h_2^V}{m_Z^2}P^{\alpha}[(Pq_2)g^{\mu\beta} - q_2^{\mu}P^{\beta}] \\
+	-h_3^V\epsilon^{\mu\alpha\beta\rho}q_{2\rho} - \frac{h_4^V}{m_Z^2}P^{\alpha}\epsilon^{\mu\beta\rho\sigma}P_{\rho}q_{2\sigma}\},		\\
+	\Gamma_{ZZV}^{\alpha\beta\mu}(q_1, q_2, P) = \frac{i(s - m_V^2)}{m_Z^2} [f_4^V(P^{\alpha}g^{\mu\beta} + P^{\beta}g^{\mu\alpha}) - f_5^V\epsilon^{\mu\alpha\beta\rho}(q_1 - q_2)_{\rho}],		
+	\label{eq:zzv}
+    \end{eqnarray*}
+% ======================================================================
+% ======================================================================
+%\ptsize{8}
+% ======================================================================
+    \begin{figure}[!htbp]
+% ======================================================================
+    \begin{center}
+        \includegraphics[clip, scale=1.40, trim= 20 110 370 590]{ThesisFigure/Diboson/VVV.eps}
+        \caption{The general neutral gauge boson vertex $V_1 V_2 V_3$\cite{nTGC}.} 
+    \label{Fig:VVV}
+    \end{center}
+%% ======================================================================
+    \end{figure}
+%% ======================================================================
+%
+where V = Z or $\gamma$. The notation of the vertex is given in Figure \ref{Fig:VVV}. The Z$\gamma$V vertices are described by 8
+parameters h$^V_i$ (i = 1 - 4, V = Z or $\gamma$). The ZZV vertices
+are described by 4 parameters f$^V_i$ (i = 5, 6). The couplings h$_1^V$, h$_2^V$ and f$_4^V$ are CP-violating, 
+while the couplings h$_3^V$, h$_4^V$ and f$_5^V$ are CP-conserving. In
+this note, limits on the CP-conserving couplings are presented. 
+
+The relation of the couplings to physical quantities are as following\cite{nTGC}:
+% ======================================================================
+    \begin{eqnarray*}
+     \mu_Z = \frac{-e}{\sqrt{2}m_Z} \frac{E^2_{\gamma}}{m^2_Z}(h_1^Z - h_2^Z) 
+	 \hspace{1.2cm} Q^e_Z = \frac{2\sqrt{10}e}{m^2_Z}h_1^Z \\
+       d_Z = \frac{-e}{\sqrt{2}m_Z} \frac{E^2_{\gamma}}{m^2_Z}(h_3^Z - h_4^Z) 
+	   \hspace{1.2cm} Q^m_Z = \frac{2\sqrt{10}e}{m^2_Z}h_3^Z 
+    \end{eqnarray*}
+% ======================================================================
+where $\mu$ and d are the magnetic and electric dipole moments of the
+Z boson respectively. And $Q^m$ and $Q^e$ are the quadrupole moments
+of the Z boson. 
+
+The anomalous couplings terms rises as the center-of-mass
+energy ($\hat{s}$) increases and eventually the cross section
+amplitude violates tree-level unitarity (conservation of probability). This can be avoided by introducing form factors that decrease with $\hat{s}$:
+\begin{equation}
+h_i^V (\hat{s} ) = \frac{h_{i0}^V}{(1 + \frac{\hat{s}}{\Lambda})^n}
+\end{equation}
+where $\Lambda$ is the energy scale of new physics contributing to the
+anomalous couplings. $\Lambda$ = 1.2 TeV is chosen in our measurement. n = 3 for $h_{1,3}^V$ and n = 4
+for $h_{2,4}^V$ are chosen to ensure that unitarity is preserved\cite{BaurPRD47}. 
+
+% ======================================================================
+\subsection{Current Limits on ZZ$\gamma$ and Z$\gamma\gamma$ Couplings}
+% ======================================================================
+% ======================================================================
+    \begin{table}[!hbtp]
+% ======================================================================
+ %\ptsize{8}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+ \hline
+           Experiment        &CDF Run I\cite{CDFRunIZg} &LEP II\cite{EWMsrmnt}& D0 \cite{D0Zg}     \\
+      Luminosity(fb$^{-1}$)  &  0.02                    &  0.7                &   1.1                       \\
+ \hline                                                                      
+           $h_3^Z$           &    -3.0, 2.9             &  -0.20, 0.07        &    -0.083, 0.082                \\
+           $h_4^Z$           &    -0.7, 0.7             &  -0.05, 0.12        &    -0.005, 0.005                \\
+ \hline                                                                      
+           $h_3^{\gamma}$    &    -3.1, 3.1             &  -0.049, 0.008      &    -0.085, 0.084                \\
+           $h_4^{\gamma}$    &    -0.8, 0.8             &  -0.02, 0.034       &    -0.005, 0.005                \\
+ \hline
+    \end{tabular}
+%\vspace{0.2cm}
+     \caption{95\% C.L. limits on $\Zg$ anomalous couplings. }
+     \label{Table:ZgAGC}
+    \end{center}
+    \end{table}
+% ======================================================================
+
+
+The current published limits on these couplings are summarized in Table
+\ref{Table:ZgAGC}. 
+%Details on these coupling parameters are given in Section \ref{nTGCPar}.
+
+% ======================================================================
+\section{Anomalous Coupling Monte Carlo Samples}
+% ======================================================================
+LO Baur MC program \cite{BaurPRD47} is used to generate \Zg samples at various
+anomalous coupling points. 
+For $h_3^V$ couplings, 400 samples are
+generated in the range [-0.2, 0.2], increasing in a step of 0.001. 
+For $h_4^V$ couplings, 400 samples are
+generated in the range [-0.002, 0.002], increasing in a step of 0.0001. 
+
+
+% ======================================================================
+\section{Reconstruction Efficiency}
+% ======================================================================
+
+To avoid full CDF simulation for every coupling samples, an universal
+efficiency curve is applied to generator level samples to take into
+account the reconstruction efficiency of the electrons and photons. 
+
+The efficiency is defined as
+% ======================================================================
+%\begin{slide}
+% ======================================================================
+%\ptsize{10}
+$\epsilon(E_t^{\gamma})$ =    Et$^{\gamma}$ (Rec) / Et$^{\gamma}$(Accp),
+where the cuts applied to denominator and numerator are listed below: 
+	\begin{itemize}
+	   \item Denominator: acceptance cuts on generator level objects. 
+	\begin{itemize}
+	   \item Et$_{\gamma}$ $>$ 7, \DeltaR(e,$\gamma$) $>0.7$, \Meeg $>$ 100.  
+	   \item $|\eta_{\gamma}| < 1.1$, Et$_{e}$ $>$ 20, $|\eta_{e}| < 1.1 (C)$, $|\eta_{e}| < 2.8 (P)$
+	\end{itemize}
+	   \item Numerator: selection cuts on reconstructed objects. 
+	\begin{itemize}
+	   \item CCC and CPC ISR \Zg events selection cuts (see
+	   Section \ref{Sec:EventSel})
+	   \item No cuts apply to generator level objects
+	\end{itemize}
+	\end{itemize}
+
+%% ======================================================================
+%%   \begin{figure}[htbp]
+%% ======================================================================
+%   \begin{center}
+%       \includegraphics[width=8cm]{../../figures/AGC/UniEff/Aug-17-2007-eegAna_Dtuple_rewk33_Zeeg_2fb_612align-ZgISRCPC_Uni_Eff_Accp_EtBinb_Fit.eps}
+%       \tiny{\caption{Et$^{\gamma}$ (Rec) / Et$^{\gamma}$ (Accp) for ISR \Zg events. } }
+%   \end{center}    
+%% ======================================================================
+%   \end{figure}
+% ======================================================================
+
+Figure \ref{Fig:EffSMvsAGC} plots the efficiency as a function of
+photon $E_t$ measured from the SM \Zg MC sample. The efficiency curves
+measured from one AGC ($h_3^Z$ = 0.25) sample are also shown. The difference
+is assigned as systematic uncertainty for the universal efficiency. 
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       %\includegraphics[width=8cm]{../../figures/AGC/UniEff/Aug-17-2007-eegAna_Dtuple_rewk33_Zeeg_2fb_612align-ZgISRCPC_Uni_Eff_Accp_EtBinb_Fit.eps}
+       \includegraphics[width=8cm]{figures/AGC/UniEff/SMvsh3Z0_25_ZgISR-_Uni_Eff_Accp_EtBinb.eps}
+       \caption{Et$^{\gamma}$ (Rec) / Et$^{\gamma}$ (Accp) for ISR \Zg events, SM vs AGC.} 
+       \label{Fig:EffSMvsAGC}
+   \end{center}    
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+
+% ======================================================================
+\section{Setting Limits on Anomalous Gauge Couplings}
+% ======================================================================
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       %\includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-3-2007-Lambda_1200_ZZg_h3_ALL_Likelihood.eps}
+       \includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-14-2007-Lambda_1200_ZZg_h3_ALLC_Likelihood_Rebin.eps}
+       \caption{Likelihood distribution as a function of h3Z from data. h3Z 95\% C.L. observed limit: 0.13. 1fb$^{-1}$ electron data.}
+% ======================================================================
+   \label{Fig:h3ZLikelihood}
+   \end{center}
+   \end{figure}
+% ======================================================================
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       %\includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-15-2007-Lambda_1200_ZZg_h4_ALLC_Likelihood.eps}
+       \includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-15-2007-Lambda_1200_ZZg_h4_ALLC_Likelihood_Rebin.eps}
+       \caption{Likelihood distribution as a function of h4g from data. h4Z 95\% C.L. observed limit:  0.0074, expected limit: 0.0079 $\pm$ 0.0010. }
+   \label{Fig:h4gLikelihood}
+   \end{center}
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       %\includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-10-2007-Lambda_1200_Zgg_h3_ALLC_Likelihood.eps}
+       \includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-14-2007-Lambda_1200_Zgg_h3_ALLC_Likelihood_Rebin.eps}
+       \caption{Likelihood distribution as a function of h3g from data. h3g 95\% C.L. observed limit:  0.13, expected limit: 0.13 $\pm$ 0.02. }
+   \label{Fig:h3gLikelihood}
+   \end{center}
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       %\includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-10-2007-Lambda_1200_Zgg_h4_ALLC_Likelihood.eps}
+       \includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-14-2007-Lambda_1200_Zgg_h4_ALLC_Likelihood_Rebin.eps}
+       \caption{Likelihood distribution as a function of h4g from data. h4g 95\% C.L. observed limit:  0.0074, expected limit: 0.0078 $\pm$ 0.0010. }
+   \label{Fig:h4gLikelihood}
+   \end{center}
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+% ======================================================================
+%\begin{Slide}{Calculate Likelihood and Set Limits}
+% ======================================================================
+Maximum likelihood method is used to extract limits on couplings. The
+limits is calculated as following:
+	\begin{itemize}
+	   \item Use $E_t^{\gamma}$ spectra
+	   \item Calculate likelihood \\
+	    \begin{itemize}
+	    \item $\lum = \displaystyle\prod_i \frac{\mu_i^{N_i}e^{-\mu_i}}{N_i !}$
+	       \item $N_i$ : number of events observed in the ith bin in data
+	       \item $\mu_i$: number of expected events = $S_i(h_3, h_4)$ + $bkg_i$
+	       \item $S_i(h_3, h_4)$  = $\sigma(h_3, h_4)$ * KF * Acceptance * Efficiency * Luminosity  
+	       \item note: $\sigma(h_3, h_4)$ != $\sigma(SM)$ 
+	    \end{itemize}
+	    %\item Plot -2ln( $\lum/\lum_{max} )$
+	    \item $95\%$ C.L., 1-D limit:
+	\begin{itemize}
+	   %\item method -1 : ln$\lum(h_3, 0 \hspace{0.1cm})$  = ln$\lum_{max}$ - $s^2/2$, \quad $s^2$ = 3.84
+	%   \item 2-D limit: ln$\lum(h_3, h_4)$ = ln$\lum_{max}$ - $s^2/2$, \quad $s^2$ = 5.99
+	   \item $\int_{A}^{B}{\lum}$ = 95\%, A(B) is the lower (up) limit
+	\end{itemize}
+%% ======================================================================
+%   \begin{figure}[!htbp]
+%% ======================================================================
+%   \begin{center}
+%       \includegraphics[width=4cm, bb=0 130 590 690, clip]{../../figures/AGC/Likelihood/SetLimit_1_a.eps}
+%%       \tiny{\caption{ Photon Et distribution.  Electron 1fb$^{-1}$.} }
+%   \end{center}    
+%% ======================================================================
+%   \end{figure}
+%% ======================================================================
+ 	\end{itemize}
+%% ======================================================================
+%\end{Slide}
+% ======================================================================
+
+The likelihood distributions of the couplings $h_{3,4}^{Z,\gamma}$ are
+showen in Figure \ref{Fig:h3ZLikelihood} - \ref{Fig:h4gLikelihood}.
+
+% ======================================================================
+\subsection{Expected limits}
+% ======================================================================
+% ======================================================================
+%\begin{slide}
+% ======================================================================
+%   \begin{center}
+%      %\coolbox{blue}{blue}{white}{\large Pseudo-Experiment}
+%   \end{center}
+
+Toy MC is used to obtaine expected limits on the couplings. The
+procedure is described below:
+	\begin{itemize}
+\item For one pseudo-experiment
+	\begin{itemize}
+	   \item generate one pseudo-data
+	    \begin{itemize}
+	    \item Poisson smearing $N_b^i$ (backgrounds) and  $N_s$ (SM signal)
+	    \begin{itemize}
+	       \item $N_b^i \rightarrow N_b^i$(PE) 
+	       \item $N_s \rightarrow N_s$(PE) 
+	    \end{itemize}
+	    \item Use background and SM signal $E_t^{\gamma}$ distributions
+	    \item Throw random numbers to generate $N_b^i$(PE) and $N_s$(PE) events 
+	    \end{itemize}
+	    \item Calculate Likelihood using the generated pseudo-data as "data" 
+	    \item Extract AGC limits
+	\end{itemize}
+
+\item Repeat pseudo-experiments a large number of times
+\item Read out average upper and lower AGC limits, as expected limits
+	\end{itemize}
+
+Figure \ref{Fig:h3ZExpected} shows the distribution of the AGC limits
+from pseudo-experiments. The average value is taken as the expected
+limit.
+% ======================================================================
+   \begin{figure}[htbp]
+% ======================================================================
+   \begin{center}
+       \includegraphics[width=11.5cm]{../../figures/AGC/Likelihood/Oct-4-2007-Lambda_1200_ZZg_h3_ALL_Limit.eps}
+       \caption{Expected lower and upper limit of h3Z from
+       pseudo-experiments: \hspace{8.2cm} [-0.128, 0.128], 1 $\sigma$
+       = 0.0196 (stat only).}
+       \label{Fig:h3ZExpected}
+   \end{center}
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+%\end{slide}
+% ======================================================================
+
+
+% ======================================================================
+\subsection{Uncertainties on expected limits}
+% ======================================================================
+The expected limits for $h_3^Z$ is $|h_3^Z| < 0.128$, and the 1
+$\sigma$ uncertainty is 0.0196 ( statistic uncertainty only), and
+ is 0.0199 if including both statistic and systematic uncertainties.
+Due to limited statistics at high $E_t^{\gamma}$ bins (less than 5 events), the statistic uncertainty is the dominant error. 
+The systematic uncertainties included in the calculation are the following:
+
+% ======================================================================
+%\begin{slide}
+% ======================================================================
+
+%Evalucate Systematic uncertainty using Pseudo-experiments: 
+	\begin{itemize}
+	   \item Bkg: $N_b^i \pm \Delta N_b^i$, Gaussian smearing with mean = $N_b^i$, width = $\Delta N_b^i$
+	   \item Expected Signal: Gaussian mean = $N^{exp}$, width = $\Delta N^{exp}$
+	    \begin{itemize}
+	       \item $N^{exp}$ = LO Baur ME x Acceptance x $\epsilon(E_t^{\gamma})$ x kF($E_t^{\gamma}$) x $\sigma^{LO}$ x $\lum$
+	       \item 6\% on luminosity
+	       \item 5\% on $\sigma^{LO}_{th}$
+	       \item 3\% on KF($E_t^{\gamma}$)
+	       \item 3\% on $\epsilon(E_t^{\gamma})$
+	       \item Other systematics already included in the cross-section measurement 5\%
+	    \end{itemize}
+	\end{itemize}
+
+% ======================================================================
+%\end{slide}
+% ======================================================================
+
+
+% ======================================================================
+\section{Results}
+% ======================================================================
+The expected and observed limits of the couplings are summarized in
+Table \ref{Table:ZgAGC1fbEle}.
+% ======================================================================
+    \begin{table}[!hbtp]
+% ======================================================================
+ %\ptsize{8}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+ \hline
+                             & Observed Limits          &Expected Limits                           \\
+ \hline                                                                      
+           $|h_3^Z|$         &  0.124                   &   0.128 $\pm$ 0.020                      \\
+           $|h_4^Z|$         &  0.0074                  &   0.0079 $\pm$ 0.0010                    \\
+ \hline                                                                      
+           $|h_3^{\gamma}|$  &  0.126                   &   0.130 $\pm$ 0.020                                   \\
+           $|h_4^{\gamma}|$  &  0.0074                  &   0.0078 $\pm$ 0.0010                               \\
+ \hline
+    \end{tabular}
+%\vspace{0.2cm}
+     \caption{95\% C.L. limits on $\Zg$ anomalous couplings using 1fb$^{-1}$ electron data.}
+     \label{Table:ZgAGC1fbEle}
+    \end{center}
+    \end{table}
+% ======================================================================
+
+% ======================================================================
+\section{Coming next...}
+% ======================================================================
+The D0 published limits are based on 1fb$^{-1}$ of data including both
+electron and muon channels. D0 obtains tighter limits (see Table \ref{Table:ZgAGC}) than those
+presented in this note (using data from electron channel only). 
+A \Zg cross section measurement in the muon channel is ongoing. And
+there is a possibility to include the $Z(\nu\nu)\gamma$ data (analyzed
+by Max Goncharov) for setting limits. With
+these additions, we expect to obtain limits that are competitive to D0's
+result. 
+
+% ======================================================================
+% reference
+% ======================================================================
+   \begin{thebibliography}{99}
+% ======================================================================
+
+% Photon ID
+    \bibitem{Zgnote} J. Deng et al., \emph{Measurement of $Z\gamma$ Production using 1 $fb^{-1}$ of CDF RUN II Data}, CDF note 8506
+    \bibitem{PhotonIDnote} J. Deng et al., \emph{A New Method to Measure Photon ID Efficiency at CDF}, CDF note 8889
+    \bibitem{PhotonFakenote} C. Lester et al., \emph{Measurement of the Rate of Jets Faking Central Isolated Photons Using 1 fb$^{-1}$ of Data}, CDF note 9033 
+    \bibitem{Wgnote} A. Nagano et al., \emph{Measurement of the $W\gamma \to e \nu \gamma$ Cross Sections using 1~fb$^{-1}$ of CDF Data}, CDF note 8756
+    \bibitem{SaraPhotonSF} S-M Wynne, \emph{Very High-Pt Photon Efficiency Scale Factors V.2}, CDF note 7947, V2.0. \\
+    \bibitem{BaurPRD47} U. Baur and E.L. Berger, \emph{Probing the weak-boson sector in Zγ production at hadron colliders},
+    PRD V47 (1993) 4889. \\
+    \bibitem{nTGC} G. J. Gounaris et al, \emph{New and standard physics contributions to anomalous Z and γ self-couplings},
+    PRD V62 (2000) 073013.\\
+    \bibitem{D0TGC} D0 Collaboration, S. Abachi et al., \emph{Studies of gauge boson pair production and trilinear couplings}, PRD V56 (1997) 6742. \\
+\bibitem{EWMsrmnt}  LEP Collaborations ALEPH, DELPHI, L3, OPAL, the LEP Electroweak Working Group and the SLD Heavy Flavour Group, \emph{A Combination of Preliminary Electroweak Measurements and Constraints on the Standard Model}, CERN-EP-2002-091, hep-ex/0212036 v3, 2002. \\
+\bibitem{CDFRunIZg} CDF Collaboration, F. Abe et al, \emph{Limits on Z-Photon Couplings from p-$\bar{p}$ Interactions at $\sqrt{s}$ = 1.8 TeV }, PRL V74 (1995) 1941. \\
+\bibitem{D0Zg} D0 Collaboration, V.M. Abazov et al., \emph{Z$\gamma$ production and limits on anomalous ZZ$\gamma$ and Z$\gamma\gamma$ couplings in p $\bar{p}$ collisions at   $\sqrt{s}$ = 1.96 TeV }, Physics Letter B, V653 (2007) 378.
+
+
+% ======================================================================
+   \end{thebibliography}
+% ======================================================================
+
+
+
+%\nocite{*}
+%\bibliographystyle{unsrt}
+%\bibliography{tex/lit}
+%
+\end{document}
+% ======================================================================
+

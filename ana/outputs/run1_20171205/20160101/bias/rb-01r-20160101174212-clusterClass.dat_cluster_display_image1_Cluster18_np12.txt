@@ -1,0 +1,31 @@
+filename =  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusterClass.dat_cluster_display_image1_Cluster18_np12.txt
+data_type =  rb , det =  01r , time_stamp =  20160101174212
+image mean =  0.0 image sstd =  12.2
+image_index =  1
+cluster_index =  18
+pixels : 
+0  	:   3053,   1833,    226
+1  	:   3054,   1832,     87
+2  	:   3055,   1832,     43
+3  	:   3054,   1833,   1600
+4  	:   3055,   1833,    357
+5  	:   3054,   1834,   1610
+6  	:   3053,   1834,    168
+7  	:   3054,   1835,     70
+8  	:   3055,   1834,   6052
+9  	:   3056,   1834,     37
+10  	:   3055,   1835,   5258
+11  	:   3056,   1835,    406
+number of pixels in the cluster =  12
+xmin =  3053
+xmax =  3056
+ymin =  1832
+ymax =  1835
+pVmin =  37.0
+pVmax =  6052.9
+sumpV =  15918.5
+avgpV =  1326.5
+correlation coefficient          =  0.25
+weighted correlation coefficient =  0.56
+eigen values of the covariance matrix=          [  0.79 ,  1.36 ]
+weighted eigen values of the covariance matrix= [  0.21 ,  0.85 ]

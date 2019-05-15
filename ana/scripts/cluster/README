@@ -1,0 +1,74 @@
+============================
+Current Directory: cluster/
+============================
+  date: 20180116 by Jianrong Deng
+  Purpose: cluster class and analysis codes
+============================
+
+
+============================
+cluster.py
+============================
+
+	date: 20171202 by Jianrong Deng
+	purpose:
+		the cluster class
+============================
+
+
+============================
+test_cluster.py
+============================
+
+	date: 20171202 by Jianrong Deng
+	purpose:
+		test the cluster class
+============================
+
+============================
+ana_cluster.py
+============================
+	date: 20171226 by Jianrong Deng
+	purpose:
+		analyze the pixel-clusters, develop muon selection
+		criteria. 
+============================
+
+============================
+hsimple.py
+============================
+	date: 20190329 
+	purpose:
+	    This program creates :
+		a one dimensional histogram
+		a two dimensional histogram
+		a profile histogram
+		a memory-resident ntuple
+
+	    These objects are filled with some random numbers and saved on a file
+	source: ~/Installed/root-6.14.06/tutorials/pyroot/hsimple.py	
+	    by Wim Lavrijsen 
+============================
+
+
+============================
+h_clusterClass.py
+============================
+	date: 20190329 by Jianrong Deng
+	purpose:
+	    This program creates :
+		one dimensional histograms
+		two dimensional histograms
+		a memory-resident ntuple with the variables in the cluster Class
+	    These objects are filled with variables in the cluster Class and saved on a file
+        Functions: 
+            FillClusterTree
+============================
+
+============================
+script: cluster_cut.py
+============================
+	date: 20190424 by Jianrong Deng
+	purpose: define loose cluster selection cuts
+	
+"""

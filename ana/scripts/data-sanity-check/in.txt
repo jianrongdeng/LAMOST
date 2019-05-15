@@ -11,8 +11,10 @@ in.txt
 
 @@@ input to cluster_density.py 
      /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/
+     /Volumes/Untitled/run1_20171205   # this has data of 2016 as 20180612
 
-@@@ input to cluster_hist.py:
+@@@ input to cluster_hist.py, check_cluster.py:
      /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01b-20160101174212-clusters.dat 
+     /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusters.dat 
      /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-02r-20160101174212-clusters.dat
      /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-08b-20160101174212-clusters.dat

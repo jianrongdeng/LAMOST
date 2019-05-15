@@ -1,0 +1,28 @@
+
+============================
+Current Directory: EventDisplay/
+============================
+  date: 20190429 by Jianrong Deng
+  Purpose: display selected events
+============================
+
+
+============================
+cluster_display.py
+============================
+
+	date: 20190429 by Jianrong Deng
+	purpose:
+		display cluster events
+============================
+
+============================
+test_cluster_display.py
+============================
+
+	date: 20190430 by Jianrong Deng
+	purpose:
+		test cluster_display
+============================
+
+

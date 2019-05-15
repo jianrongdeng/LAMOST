@@ -72,7 +72,9 @@ def check_CR_density_distribution(data, Nsigma=5, info='', verbose=1):
        Nsigma: default is to print out points outside 5 sigma region
        info: additional info to print out 
 
-    output: print out a list of out of range points
+    output: 
+       stat: the stat info return to the main function
+       print out a list of out of range points
 
     """
 
@@ -82,6 +84,11 @@ def check_CR_density_distribution(data, Nsigma=5, info='', verbose=1):
     # mean and sstd of the mean array
     mean = sts.mean(data)
     sstd = sts.stdev(data)
+
+    # the stat info return to the main function
+    stat = []
+    stat.append(mean)
+    stat.append(sstd)
 
 
     print( ' dataset : ', info)
@@ -103,7 +110,7 @@ def check_CR_density_distribution(data, Nsigma=5, info='', verbose=1):
 
     print( '    mean = {:,}'.format(int(mean)), '    sstd = {:,} '.format( int(sstd) ) )
 
-    return
+    return stat
 
 #============================
 
@@ -159,7 +166,7 @@ for index in range(0, const.N_det):  # 32 CCDs, index [0, 31]  = 2 * [1, 16]
                      # fIO.printPixelLists(clusterLists, debug, 'clusters')
                      # number of clusters in .dat files
                      N_cluster[index] +=  fIO.getNumClusters(clusterLists,debug)
-                     N_in_dat_file[index] +=  1
+                     N_in_dat_file[index] +=  1 # number of input data files
 
 # print out results to screen and/or to output files:
 print ( ' total number of *clusters.dat files analyzed = ',  N_in_dat_file.sum() )
@@ -188,11 +195,51 @@ if debug:
 
 """
 
-# check statistical distribution, print out outside 5*sigma points
+# check statistical distribution, print out outside N_sigma * sigma points
 # mean = np.mean (N_cluster)
 # sstd = sts.stdev(N_cluster.flatten())
-check_CR_density_distribution(N_cluster, 3, 'Number of clusters found in each CCD   ', 0)
+N_sigma = 3
+stat = check_CR_density_distribution(N_cluster, N_sigma, 'Number of clusters found in each CCD   ', 0)
 
+
+# plot out the distribution
+
+import matplotlib.pyplot as plt
+#plt.semilogy(h_Ncl, '-r*')
+iDet = range(1, 33)
+lMean = []
+lSigmaP = []
+lSigmaM = []
+
+# add the mean & 3*sigma lines to the plot:
+for id in iDet:
+  lMean.append(     stat[0] )
+  lSigmaP.append(   stat[0] + N_sigma * stat[1] )
+  lSigmaM.append(   stat[0] - N_sigma * stat[1] )
+
+#plt.semilogy(iDet, N_cluster, 'ro')
+#plt.plot(iDet, N_cluster, 'ro', iDet, lMean, '-', iDet, lSigmaP, '--', iDet, lSigmaM, '--' )
+plt.semilogy(iDet, N_cluster, 'ro', iDet, lMean, '-', iDet, lSigmaP, '--', iDet, lSigmaM, '--' )
+"""  
+plt.line(iDet, lMean,  '-') # draw mean value with a solid line
+plt.line(iDet, lSigmaP, '--') # draw mean value with a solid line
+plt.line(iDet, lSigmaM, '--') # draw mean value with a solid line
+"""
+#plt.grid(which='major')
+plt.grid(which='both')
+plt.xlabel('The index of CCDs: 1-16: r, 17-32: b')
+
+plt.ylabel('Total Number of Candidate Cluster Events Found in Each CCD')
+#plt.legend('Number of Candidate Cluster Events', 'Mean','+{}*sigma'.format(N_sigma), '-{}*sigma'.format(N_sigma)  )
+#str_PSigma = '+' + str(N_sigma) + '*sigma'
+#str_MSigma = '-' + str(N_sigma) + '*sigma'
+#plt.legend('Number of Candidate Cluster Events', 'Mean', str(str_PSigma), str(str_MSigma) )
+#plt.legend('Number of Candidate Cluster Events', 'Mean', '+ N * sigma ', '- N * sigma ')
+#plt.legend('abcd')
+
+  
+
+plt.show()
 
 
 

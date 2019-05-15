@@ -1,0 +1,26 @@
+============================
+Current Directory: common/
+============================
+  date: 20180613 by Jianrong Deng
+  Purpose: common functions used by various packages
+============================
+
+============================
+script: filesIO.py
+============================
+	date: 20170615 by Jianrong Deng
+	purpose:
+		handle input / output files
+		various data I/O functions
+	Input: input dir, date, time 
+============================
+
+
+============================
+script: const.py
+============================
+	date: 20170612 by Jianrong Deng
+	purpose: define constants used in LAMOST image processing
+============================
+
+

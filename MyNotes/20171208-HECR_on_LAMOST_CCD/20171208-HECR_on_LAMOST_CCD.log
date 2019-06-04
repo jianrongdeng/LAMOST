@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  23 APR 2019 14:34
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  3 JUN 2019 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -103,34 +103,60 @@ r-20150924000612-10000-82496166.ps Graphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
 50924000612-10000-82496166.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 134--135
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
 r-20150924000612-10000-82496166-bright-spot-x692-y2637.ps Graphic file (type ep
 s)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
 50924000612-10000-82496166-bright-spot-x692-y2637.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 146--148
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
 r-20150923235754-10000-82496157-bright-spot-x827-y2839.ps Graphic file (type ep
 s)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
 50923235754-10000-82496157-bright-spot-x827-y2839.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 159--161
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16
 r-20150923235754-10000-82496157-straightline-muCand.ps Graphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/SAOImage_DS9/rb-16r-201
-50923235754-10000-82496157-straightline-muCand.ps> [2] [3] [4] [5] [6]
+50923235754-10000-82496157-straightline-muCand.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 172--174
+ [] 
+ []
+
+[2] [3] [4] [5] [6]
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
 150923235754-10000-82496157-hist-pixel-value.ps Graphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
 3235754-10000-82496157-hist-pixel-value.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 218--219
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
 150923235754-10000-82496157-hist-pixel-value-overscan.ps Graphic file (type eps
 )
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
 3235754-10000-82496157-hist-pixel-value-overscan.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 230--231
+ [] 
+ []
+
+[7] [8]
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
 150923235754-10000-82496157-overscan-mean-sstd.ps Graphic file (type eps)
 
@@ -141,19 +167,29 @@ File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
 3235754-10000-82496157-hist-sub_overscan.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10]
 File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-20
 150923235754-10000-82496157-hist-sub_overscan-sub_bias.ps Graphic file (type ep
 s)
 
 </Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run_alpha/Overscan/rb-16r-2015092
-3235754-10000-82496157-hist-sub_overscan-sub_bias.ps> [7] [8] [9] [10] [11]
-[12] [13]
+3235754-10000-82496157-hist-sub_overscan-sub_bias.ps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 2772) has occurred while \output is active []
+
+ [12]
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
 run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps G
 raphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps>
+[13]
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
 run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Data
 set.ps Graphic file (type eps)
@@ -161,6 +197,10 @@ set.ps Graphic file (type eps)
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Dataset.p
 s>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 445--446
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
 run1_20171205/cluster_density/figures/20180606_cluster_hist_2016Dataset_Ncl_vs_
 Np_loglog.ps Graphic file (type eps)
@@ -168,10 +208,48 @@ Np_loglog.ps Graphic file (type eps)
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/figures/20180606_cluster_hist_2016Dataset_Ncl_vs_Np_lo
 glog.ps>
+Overfull \hbox (11.5pt too wide) in paragraph at lines 460--461
+ [] 
+ []
+
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bia
+s/rb-01b-20160101174212.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-
+01b-20160101174212.ps>
+Overfull \hbox (212.25pt too wide) in paragraph at lines 481--482
+ [] 
+ []
+
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bia
+s/cluster_candidate_hxy_rb-01b-20160101.ps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/clu
+ster_candidate_hxy_rb-01b-20160101.ps>
+Overfull \hbox (65.24387pt too wide) in paragraph at lines 494--495
+ [] 
+ []
+
+File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bia
+s/rb-01r-20160101174212-clusterClass.dat_cluster_display_image1_Cluster5_np220_
+sumpV_131353_graph.eps Graphic file (type eps)
+
+</Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-
+01r-20160101174212-clusterClass.dat_cluster_display_image1_Cluster5_np220_sumpV
+_131353_graph.eps>
+Overfull \hbox (65.24408pt too wide) in paragraph at lines 508--509
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 516--535
+
+ []
+
+[14] [15] [16] [17] [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-[15] [16] [17]
+ [19]
 Missing character: There is no ‰ in font cmr12!
 Missing character: There is no ∏ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -236,19 +314,19 @@ Missing character: There is no È in font cmr12!
 Missing character: There is no Å in font cmr12!
 Missing character: There is no ì in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 536--537
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 []\OT1/cmr/m/it/12 http://blog.csdn.net/u013709332/article/details/45768763\OT1
 /cmr/m/n/12 , Python-
  []
 
-[18] (./20171208-HECR_on_LAMOST_CCD.aux) ) 
+[20] (./20171208-HECR_on_LAMOST_CCD.aux) ) 
 Here is how much of TeX's memory you used:
- 642 strings out of 493634
- 10481 string characters out of 3143401
+ 654 strings out of 493634
+ 11243 string characters out of 3143401
  59404 words of memory out of 3000000
- 3974 multiletter control sequences out of 15000+200000
+ 3981 multiletter control sequences out of 15000+200000
  9195 words of font info for 32 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 32i,7n,21p,400b,279s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,7n,21p,440b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 20171208-HECR_on_LAMOST_CCD.dvi (18 pages, 16584 bytes).
+Output written on 20171208-HECR_on_LAMOST_CCD.dvi (20 pages, 20572 bytes).

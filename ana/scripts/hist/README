@@ -1,0 +1,31 @@
+============================
+Current Directory: hist/
+============================
+  date: 20190516 by Jianrong Deng
+  Purpose: hist class and histogramming codes
+============================
+
+
+============================
+h_cluster.py
+============================
+
+	date: 20190516 by Jianrong Deng
+	purpose:
+		the h_cluster class
+		histogram module for the cluster candidate events
+
+	    This program creates :
+		one dimensional histograms
+		two dimensional histograms
+		a memory-resident ntuple for variables in the cluster Class
+	    These objects are filled with variables in the cluster Class and saved on a rootfile
+        Functions: 
+            def __init__(): 
+	    	initial histogrmas / ntuple
+
+	    def Fill(self, cluster): 
+	        fill histograms/ntuple from the input cluster event
+
+
+============================

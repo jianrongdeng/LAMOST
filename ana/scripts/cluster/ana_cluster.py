@@ -18,9 +18,12 @@ import filesIO as fIO # under ../common/ directory
 import const
 import os
 import cluster 
-import h_clusterClass as hcl
+#import h_clusterClass as hcl
 import cluster_cut as cl_cut
 import numpy as np
+
+sys.path.append('../hist/')
+import h_cluster
 
 
 #============================
@@ -90,18 +93,50 @@ for im in range(len(clusterLists)):
                    nCl[im]  = nCl[im] + 1  # number of clusters found
 
    
-print('det=', cls[0][0].det, ', n_cluster_cand in', im+1, 'images = \t', np.sum(nCl), ', in each image:\t', nCl)
-
-# fill root file
-hcl.FillClusterTree(cls, file_clusterROOT)
+#print('det=', cls[0][0].det, ', n_cluster_cand in', im+1, 'images = \t', np.sum(nCl), ', in each image:\t', nCl)
+print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ) )
 
 # save results
 # save clusterClass to file			  
-# 5 clusters from 5 images save in one file
+# 5 lists of clusters from 5 images save in one file
 if DEBUG:
     print('dump clusterClass to file')
     #print('number of clusters found = ', len(cls[0]) )
 fIO.dumpPixelLists(file_clusterClass, cls)
+
+
+# ROOT histograms
+from ROOT import TFile
+from ROOT import gROOT, gStyle
+# root style
+gStyle.SetOptStat(11111111) 
+gStyle.SetLineColor(2) 
+gStyle.SetLineWidth(4) 
+gStyle.SetMarkerColor(3) 
+gStyle.SetMarkerStyle(21) 
+gROOT.ForceStyle() 
+
+rootfile=file_clusterROOT
+hfile = gROOT.FindObject(rootfile)
+if hfile:
+   hfile.Close()
+hfile = TFile( rootfile, 'RECREATE', 'ROOT file for the cluster class' )
+# initialize the h_cluster class
+hcl = h_cluster.h_cluster()
+
+# fill the h_cluster class
+# five images
+for im in cls: 
+# clusters in each image
+   for ic in im: 
+       hcl.Fill(ic)
+
+# destroy cache, close rootfiles
+hcl.destroyCache()
+
+hfile.Write()
+# Note that the file is automatically closed when application terminates
+# or when the file destructor is called.
 
 
 # time stamp: 

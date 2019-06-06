@@ -53,18 +53,21 @@ def setOutFilename(rawfile, d_tag='stat'):
 #==========================
 
 #==========================
-def setFilename(infile, in_tag='stat.dat', out_tag='clusters.dat'):
+def setFilename(infile, in_tag='stat.dat', out_tag='clusters.dat',
+out_path=''):
     """
     purpose: set output filename using environment variables
     input: infile: the input filename
            in_tag: tag of the input file
            out_tag: tag of the output file
+           out_path: the output path name
     output: output filename
     """
 
     in_len = len(infile)
-    file_out = infile[0:in_len-len(in_tag)]
-    file_out = file_out + out_tag 
+    file_out = infile[0:in_len-len(in_tag)] + out_tag
+    if out_path != '':
+        file_out = out_path + '/' + file_out 
     return file_out
 
 #==========================

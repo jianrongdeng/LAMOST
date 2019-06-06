@@ -6,10 +6,12 @@
 #   copy from ana_pixelLists.sh 
 #   purpose:
 #   	bash script to run through clusterLists data, analyze cluster and save muon candidates
-#   usage: ./ana_cluster.sh $run_flag $date $env_path_out [$verbose_level]
+#   usage: ./ana_cluster.sh $run_flag $date $env_path_in [$env_path_out] [$verbose_level]
 #       Note:
 #          1. $date: acceptable format: 2016, 201612, 20161201
-#          2. input data directory = output data directory = $env_path_out
+#          2. if no $env_path_out, then:
+#                   input data directory = output data directory = $env_path_out
+#             else: output = $env_path_out
 #          3. run_flag: 
 #                 0 (test run, see ex1, only checking the flow of script loops)
 #                 1 (test data run, see ex2, ex3, only checking the first five (out of 32) dets)  
@@ -18,6 +20,7 @@
 #       example1: 
 #                ./ana_cluster.sh 0 2016  /home/jdeng/LAMOST/ana/outputs/run1_20171205
 #                ./ana_cluster.sh 0 2016  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205
+#                ./ana_cluster.sh 0 2016  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205  /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/
 #           note:
 #                test run without running the python analysis code, just checking the script loops
 #              test run: 		             
@@ -25,6 +28,9 @@
 #                       year = 2016 (loop through data of year 2016)
 #			env_path_out=/home/jdeng/LAMOST/ana/outputs/run1_20171205
 #            
+#   example2b: 
+#               ./ana_cluster.sh 1 20160101  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205  /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/
+#     
 #   example2: 
 #               nohup ./ana_cluster.sh 1 201601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../../log/ana_cluster/run1_20171205/test_201601.txt
 #          note: 
@@ -32,9 +38,13 @@
 #                       run_flag = 1
 #                       year = 201601 (loop through data of January 2016)
 #
+#   example3b: 
+#               ./ana_cluster.sh 2 20160101  /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205  /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/ > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_20160101.txt 
+#               ./ana_cluster.sh 2 201601  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201601.txt 
+#
 #   example3: 
-#               nohup ./ana_cluster.sh 1 20160601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../../log/ana_cluster/run1_20171205/test_20160601.txt 1
-#               nohup ./ana_cluster.sh 1 20160601 /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205 > ../../log/ana_cluster/run1_20171205/test_20160601.txt 1
+#               nohup ./ana_cluster.sh 1 20160601 /home/jdeng/LAMOST/ana/outputs/run1_20171205 > ../../log/ana_cluster/run1_20171205/test_20160601.txt 
+#               nohup ./ana_cluster.sh 1 20160601 /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205 > ../../log/ana_cluster/run1_20171205/test_20160601.txt 
 #          note: 
 #            data run: 		             
 #                       run_flag = 1
@@ -58,7 +68,7 @@
 #               $@: returns the list of input arguments to the bash script
 if test $# -eq 0
     then
-        echo "Usage: $0 $run_flag $date $path_out [$verbose]" 1>&2 #  note: "1>&2": redirect its output to standard error
+        echo "Usage: $0 $run_flag $date $path_in [$path_out] [$verbose]" 1>&2 #  note: "1>&2": redirect its output to standard error
 	echo " Note: examples of acceptable formats for 'date': 2016, 201601, 20160101, 2016010[1-5]"
 	echo " Note1: run_flag (0, 1, 2)"
         echo "   0 (test run, see ex1, only checking the flow of script loops) "
@@ -73,22 +83,40 @@ echo $0 $@
 run_flag=$1
 export env_year=$2
 #export env_path_out='/home/jdeng/LAMOST/ana/outputs'
-export env_path_out=$3
+export env_path_in=$3
 # reading the optional arguments if any
+# check if any output directory is given
 if [ $# -le 3 ]
+    then
+       export env_path_out=$env_path_in
+    else        
+       export env_path_out=$4
+fi    
+if [ $# -le 4 ]
     then
        verbose=0
     else
-       verbose=$4
+       verbose=$5
 fi    
+echo verbose = $verbose
 
 
-# if it is a directory 
+# if the input path is a directory 
+if [ -d "$env_path_in" ]
+  then 
+      echo Data Directory = "$env_path_in" 
+  else
+      echo "ERROR: $env_path_in" directory does not exist
+      exit
+fi  
+
+# if the output path is a directory 
 if [ -d "$env_path_out" ]
   then 
-      echo Data Directory = "$env_path_out" 
+      echo output Directory = "$env_path_out" 
   else
-      echo "ERROR: $env_path_out" directory does not exist
+      echo "create output directory: $env_path_out" 
+      mkdir -p $env_path_out
       exit
 fi  
 
@@ -100,7 +128,7 @@ total_days_dets_analyzed=0
 total_dets=32
 
 # loop through dates in $year
-for i_date in $env_path_out/$env_year*
+for i_date in $env_path_in/$env_year*
 do
 
    if [ $verbose == 1 ]
@@ -131,7 +159,7 @@ do
 		  export env_filename_stat=$i_file
 		  if [ $verbose == 1 ]
 		      then 
-		         echo "env_filename_stat: ${env_filename_clusters}"
+		         echo "env_filename_stat: ${env_filename_stat}"
 		  fi	 
 		  # check the run flag, if run_flag>=1, run the python analysis process
 		  if [ $run_flag -ge 1 ]

@@ -41,10 +41,26 @@ t_start_clock = time.clock()
 # input / output filenames
 #set input / output files using environment variables, create output directory if not already exist
 # input file for saving cluster lists (one file for 5 lists)
+# input files
 file_stat = os.environ['env_filename_stat']
+if DEBUG:
+    print('file_stat :', file_stat)
 file_cluster = fIO.setFilename(file_stat, in_tag='stat.dat', out_tag='clusters.dat')
-file_clusterClass = fIO.setFilename(file_stat, in_tag='stat.dat', out_tag='clusterClass.dat')
-file_clusterROOT = fIO.setFilename(file_stat, in_tag='stat.dat', out_tag='clusterClass.root')
+# get the filename of the cluster file (without pathname)
+tmp_a = file_cluster.strip().split('/')
+filename = tmp_a[-1]
+date = filename[7:15]
+# output directory
+out_path=os.environ['env_path_out'] + '/' + date + '/bias/'
+if DEBUG:
+    print('out_path :', out_path)
+# if the directory does not exist, make the directory
+if os.access(out_path, 0) == False:  # access(path, mode), set mode = 0
+    os.makedirs(out_path, exist_ok=True)
+# output files
+file_clusterClass = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.dat', out_path=out_path)
+file_clustertxt = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.txt', out_path=out_path)
+file_clusterROOT = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.root', out_path=out_path)
 
 if DEBUG:
     print('file_clusters :', file_cluster)
@@ -52,9 +68,6 @@ if DEBUG:
     print('file_clusterROOT :', file_clusterROOT)
 
 
-# get the filename of the cluster file (without pathname)
-tmp_a = file_cluster.strip().split('/')
-filename = tmp_a[-1]
 # read stat info from stat file
 stat = fIO.loadStat(file_stat, DEBUG)
 # read clusters from input file
@@ -93,8 +106,19 @@ for im in range(len(clusterLists)):
                    nCl[im]  = nCl[im] + 1  # number of clusters found
 
    
-#print('det=', cls[0][0].det, ', n_cluster_cand in', im+1, 'images = \t', np.sum(nCl), ', in each image:\t', nCl)
-print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ) )
+# open output file with "w"
+try:
+    with open(file_clustertxt, 'w' ) as txt_file:
+         #print('filename = ', fn, file=txt_file)
+         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ), file=txt_file)
+         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
+#         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
+
+except IOError as err:
+    print('File error: ', + str(err))
+finally:
+    txt_file.close()
+
 
 # save results
 # save clusterClass to file			  

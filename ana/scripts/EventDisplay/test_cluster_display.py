@@ -19,7 +19,8 @@ sys.path.append('../cluster/')
 import cluster_display as cl_d
 import numpy as np
 
-file_cluster = '/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusterClass.dat'
+#file_cluster = '/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-01r-20160101174212-clusterClass.dat'
+file_cluster = '/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160112/bias/rb-01r-20160112175148-clusclusterClass.dat'
 
 # read clusters from input file
 clusters = fIO.loadPixelLists(file_cluster, False, 'clusters')

@@ -58,9 +58,9 @@ if DEBUG:
 if os.access(out_path, 0) == False:  # access(path, mode), set mode = 0
     os.makedirs(out_path, exist_ok=True)
 # output files
-file_clusterClass = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.dat', out_path=out_path)
-file_clustertxt = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.txt', out_path=out_path)
-file_clusterROOT = fIO.setFilename(filename, in_tag='stat.dat', out_tag='clusterClass.root', out_path=out_path)
+file_clusterClass = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.dat', out_path=out_path)
+file_clustertxt = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.txt', out_path=out_path)
+file_clusterROOT = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.root', out_path=out_path)
 
 if DEBUG:
     print('file_clusters :', file_cluster)

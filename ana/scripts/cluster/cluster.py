@@ -246,17 +246,17 @@ class Cluster(list):  # inherit from the 'list' class
                  print('pVmax = ', np.round(self.pVmax, decimals), file=txt_file) 
                  print('sumpV = ', np.round(self.sumpV, decimals), file=txt_file) 
                  print('avgpV = ', np.round(self.avgpV, decimals), file=txt_file) 
-                 print('    pVmax/sumpV = {:.2f}'.format( self.ratio_pVmax_sumpV), file=txt_file) 
-                 print(' pVmax3x3/sumpV = {:.2f}'.format( self.ratio_pVmax3x3_sumpV), file=txt_file) 
-                 print('    pVmax/avgpV = {:.2f}'.format( self.ratio_pVmax_avgpV), file=txt_file) 
-                 print(' pVmax3x3/avgpV = {:.2f}'.format( self.ratio_pVmax3x3_avgpV), file=txt_file) 
+                 #print('    pVmax/sumpV = {:.2f}'.format( self.ratio_pVmax_sumpV), file=txt_file) 
+                 #print(' pVmax3x3/sumpV = {:.2f}'.format( self.ratio_pVmax3x3_sumpV), file=txt_file) 
+                 #print('    pVmax/avgpV = {:.2f}'.format( self.ratio_pVmax_avgpV), file=txt_file) 
+                 #print(' pVmax3x3/avgpV = {:.2f}'.format( self.ratio_pVmax3x3_avgpV), file=txt_file) 
                  decimals = 2
                  print('correlation coefficient          = ', np.round(self.coef, decimals), file=txt_file) 
                  print('eigen values of the covariance matrix=          [ ', np.round(self.eigVal[0], decimals), ', ', np.round(self.eigVal[1], decimals), ']',  file=txt_file) 
-                 print(' eigVal[0]/eigVal[1] = {:.2f}'.format( self.ratio_eigVal), file=txt_file) 
+                 #print(' eigVal[0]/eigVal[1] = {:.2f}'.format( self.ratio_eigVal), file=txt_file) 
                  print('weighted correlation coefficient = ', np.round(self.w_coef, decimals), file=txt_file) 
                  print('weighted eigen values of the covariance matrix= [ ',np.round(self.w_eigVal[0], decimals), ', ',  np.round(self.w_eigVal[1], decimals),  ']', file=txt_file) 
-                 print(' w_eigVal[0]/w_eigVal[1] = {:.2f}'.format( self.ratio_w_eigVal), file=txt_file) 
+                 #print(' w_eigVal[0]/w_eigVal[1] = {:.2f}'.format( self.ratio_w_eigVal), file=txt_file) 
 
          except IOError as err:
             print('File error: ', + str(err))

@@ -33,6 +33,7 @@ class h_cluster():
         self.hx            = TH1F( 'hx', 'This is the x distribution', 4136, 0, 4136 )
         self.hy            = TH1F( 'hy', 'This is the y distribution', 4096, 0, 4096 )
         self.hpV           = TH1F( 'hpV', 'This is the pV distribution', 65536, 0, 65536)
+        self.havgpV        = TH1F( 'havgpV', 'This is the average pV distribution', 300, 0, 3000 )
         self.hxy           = TH2F( 'hxy', 'y vs x', 100, 0, 4136, 100, 0, 4096)
         self.hxpV          = TH2F( 'hxpV', 'pV vs x', 100, 0, 4136, 1000, 0, 60000)
         self.hypV          = TH2F( 'hypV', 'pV vs y', 100, 0, 4096, 1000, 0, 60000)

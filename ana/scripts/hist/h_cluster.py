@@ -47,7 +47,7 @@ class h_cluster():
         self.ntuple = TNtuple( 'ntuple', 'cluster ntuple', 'mean:sstd:n_p:coef:eigVal_0:eigVal_1:w_coef:w_eigVal_0:w_eigVal_1:sumpV:avgpV' )
 
         # For speed, bind and cache the Fill member functions,
-        self.histos = [ 'self.hx', 'self.hy', 'self.hpV', 'self.hxy', 'self.hxpV', 'self.hypV', 'self.heigV0_eigV1', 'self.hweigV0_eigV1', 'self.hcoef_eigV0', 'self.hcoef_eigV1', 'self.hwcoef_eigV0', 'self.hwcoef_eigV1', 'self.hcoef_wcoef', 'self.ntuple' ]
+        self.histos = [ 'self.hx', 'self.hy', 'self.hpV', 'self.havgpV', 'self.hxy', 'self.hxpV', 'self.hypV', 'self.heigV0_eigV1', 'self.hweigV0_eigV1', 'self.hcoef_eigV0', 'self.hcoef_eigV1', 'self.hwcoef_eigV0', 'self.hwcoef_eigV1', 'self.hcoef_wcoef', 'self.ntuple' ]
         for name in self.histos:
            exec('%sFill = %s.Fill' % (name,name))
 
@@ -73,6 +73,7 @@ class h_cluster():
             self.hxpV.Fill( ip[0], ip[2])
             self.hypV.Fill( ip[1], ip[2])
         # Fill in other 2-D histograms    
+        self.havgpV.Fill(cluster.avgpV)
         self.heigV0_eigV1.Fill(cluster.eigVal[0], cluster.eigVal[1])
         self.hweigV0_eigV1.Fill(cluster.w_eigVal[0], cluster.w_eigVal[1])
         self.hcoef_eigV0.Fill(cluster.coef, cluster.eigVal[0])

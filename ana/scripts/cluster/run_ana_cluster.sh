@@ -1,5 +1,5 @@
 # run through 2016 data
-#nohup ./ana_cluster.sh 2 201601  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201601.txt
+nohup ./ana_cluster.sh 2 201601  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201601.txt
 nohup ./ana_cluster.sh 2 201602  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201602.txt
 nohup ./ana_cluster.sh 2 201603  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201603.txt
 nohup ./ana_cluster.sh 2 201604  /Volumes/Untitled/run1_20171205/ /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/  > /Volumes/MyPassport/LAMOST/ana/outputs/run1_20171205/log_ana_cluster/20190606_201604.txt

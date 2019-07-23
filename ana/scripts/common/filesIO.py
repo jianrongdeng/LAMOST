@@ -102,7 +102,8 @@ def dumpPixelLists(file_out, pixelLists, DEBUG = const.DEBUG, data_type='pixels'
             pickle.dump(pixelLists, data)
     except IOError as err:
         print('File error: ', + str(err))
-    except pickle.pickleError as perr:
+    except pickle.PickleError as perr:
+        printPixelLists(pixelLists, DEBUG, data_type)
         print('picklingerror:' + str(perr))
 
     if DEBUG: printPixelLists(pixelLists, DEBUG, data_type)
@@ -125,7 +126,7 @@ def loadPixelLists(file_out, DEBUG = const.DEBUG, data_type='pixels'):
             pixelLists  = pickle.load(data)
     except IOError as err:
         print('File error: ', + str(err))
-    except pickle.pickleError as perr:
+    except pickle.PickleError as perr:
         print('picklingerror:' + str(perr))
     
     if DEBUG: printPixelLists(pixelLists, DEBUG, data_type)
@@ -153,6 +154,10 @@ def printPixelLists(pixelLists, DEBUG = const.DEBUG_L2, data_type = 'pixels'):
                     # only print clusters with more than 3 pixels
                     if (len(ic) > 3): 
                         print('number of pixels in the cluster: ', len(ic))
+                        print(ic)
+            elif ( data_type == 'LooseClusterClass') :
+                for ic in im:
+                        print('number of pixels in the cluster: ', ic.n_p)
                         print(ic)
     return           
 #============================
@@ -195,7 +200,7 @@ def dumpStat(file_stat, stat, DEBUG = const.DEBUG_L2):
     except IOError as err:
         print('File error: ' + str(err))
 
-    except pickle.pickleError as perr:
+    except pickle.PickleError as perr:
         print('picklingerror:' + str(perr))
 
     if DEBUG:
@@ -219,7 +224,7 @@ def loadStat(file_stat, DEBUG = const.DEBUG):
     except IOError as err:
         print('File error: ' + str(err))
 
-    except pickle.pickleError as perr:
+    except pickle.PickleError as perr:
         print('picklingerror:' + str(perr))
         
     if DEBUG:

@@ -11,6 +11,27 @@ ROOT-plotting/
   Purpose: module to plot histograms 
 ============================
 
+============================
+clusterClassified/
+============================
+  date: 20190619 by Jianrong Deng
+  Purpose: clusterClassified module
+  Data Input: cluster class data files
+  Size: 1.3G for 2016 data
+  Output: classify various eventtypes, including: 
+       1. hot-strip clusters
+       2. muon tracks
+       3. gamma -> electron position conversion tracks
+       4. non-track clusters: gamma / x-rays ? / alpha particles? / ...
+  Output data format: 
+       A. track classes 
+          a. muon track class
+	  b. conversion tracks class
+       B. clusters classes: 
+          a. gamma cluster
+
+============================
+
 
 ============================
 cluster/

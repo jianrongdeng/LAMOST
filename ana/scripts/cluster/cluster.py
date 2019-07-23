@@ -148,15 +148,32 @@ class Cluster(list):  # inherit from the 'list' class
          self.deltay  = self.ymax  - self.ymin
          self.deltapV = self.pVmax - self.pVmin
 
+         # number of pixels in the cluster
+         self.n_p = len(pixels)
+
          # TODO
          # the pixel where the pixel value is the maximum in the pixels of the cluster
          # pixel_pVmax = getPixel()
          # find the neighbor pixels in a 3x3 matrix with the pixel of the pVmax in the center
          # pixels_pVmax3x3 = getPixels3x3(pixel_pVmax)
 
+         # total energy in the cluster
+         self.sumpV = sum(self.pVs)
+         # average energy per pixel in the cluster
+         self.avgpV = self.sumpV/self.n_p
+         # pV ratios:
+         #ratio_pVmax_sumpV:  ratio of pVmax to sumpV
+         self.ratio_pVmax_sumpV = tools.getRatio(self.pVmax, self.sumpV, error = -1)
+         #ratio_pVmax_avgpV:  pVmax/avgpV
+         self.ratio_pVmax_avgpV = tools.getRatio(self.pVmax, self.avgpV, error = -1)
+         # note: clustering is done with a 3x3 matrix mask
+         #ratio_pVmax3x3_sumpV: pVmax(3x3 neighboring pixels)/sumpV
+         # self.ratio_pVmax3x3_sumpV = tools.getRatio(self.pVmax3x3, self.sumpV, error = -1)
+         #ratio_pVmax3x3_avgpV: pVmax(3x3 neighboring pixels)/avgpV
+         # self.ratio_pVmax3x3_avgpV = tools.getRatio(self.pVmax3x3, self.avgpV, error = -1)
 
-         # number of pixels in the cluster
-         self.n_p = len(pixels)
+         # when there are more than 1 pixel in the cluster, check the correlation of the pixels in the cluster
+         #if (self.n_p > 1) : 
          # the pearson's correlation coefficient, a measure of the linear correlation of a dataset
          # It has a value between +1 and −1, 
          #  where 1 is total positive linear correlation, 
@@ -171,29 +188,12 @@ class Cluster(list):  # inherit from the 'list' class
          # if self.eigVal[1] == 0:
          #    self.ratio_eigVal =  -1 # set to a negative value
          # else:    
-         # TODO
-         # self.ratio_eigVal = tools.getRatio(  self.eigVal[0], self.eigVal[1], error= -1 )
+         self.ratio_eigVal = tools.getRatio(  self.eigVal[0], self.eigVal[1], error= -1 )
          # coefficients and eigen values weighted with the pixel value
          self.w_coef, self.w_eigVal = st.cal_corr(pixels, weight=True)
          # ratio of the short axis to the long axis of the weighted eigVals
-         # TODO
-         # self.ratio_w_eigVal = tools.getRatio(  self.w_eigVal[0], self.w_eigVal[1], error= -1 )
+         self.ratio_w_eigVal = tools.getRatio(  self.w_eigVal[0], self.w_eigVal[1], error= -1 )
 
-         # total energy in the cluster
-         self.sumpV = sum(self.pVs)
-         # average energy per pixel in the cluster
-         self.avgpV = self.sumpV/self.n_p
-         # TODO
-         # pV ratios:
-         #ratio_pVmax_sumpV:  ratio of pVmax to sumpV
-         # self.ratio_pVmax_sumpV = tools.getRatio(self.pVmax, self.sumpV, error = -1)
-         #ratio_pVmax_avgpV:  pVmax/avgpV
-         # self.ratio_pVmax_avgpV = tools.getRatio(self.pVmax, self.avgpV, error = -1)
-         # note: clustering is done with a 3x3 matrix mask
-         #ratio_pVmax3x3_sumpV: pVmax(3x3 neighboring pixels)/sumpV
-         # self.ratio_pVmax3x3_sumpV = tools.getRatio(self.pVmax3x3, self.sumpV, error = -1)
-         #ratio_pVmax3x3_avgpV: pVmax(3x3 neighboring pixels)/avgpV
-         # self.ratio_pVmax3x3_avgpV = tools.getRatio(self.pVmax3x3, self.avgpV, error = -1)
 #==========================
 
 
@@ -246,17 +246,17 @@ class Cluster(list):  # inherit from the 'list' class
                  print('pVmax = ', np.round(self.pVmax, decimals), file=txt_file) 
                  print('sumpV = ', np.round(self.sumpV, decimals), file=txt_file) 
                  print('avgpV = ', np.round(self.avgpV, decimals), file=txt_file) 
-                 #print('    pVmax/sumpV = {:.2f}'.format( self.ratio_pVmax_sumpV), file=txt_file) 
+                 print('    pVmax/sumpV = {:.2f}'.format( self.ratio_pVmax_sumpV), file=txt_file) 
                  #print(' pVmax3x3/sumpV = {:.2f}'.format( self.ratio_pVmax3x3_sumpV), file=txt_file) 
-                 #print('    pVmax/avgpV = {:.2f}'.format( self.ratio_pVmax_avgpV), file=txt_file) 
+                 print('    pVmax/avgpV = {:.2f}'.format( self.ratio_pVmax_avgpV), file=txt_file) 
                  #print(' pVmax3x3/avgpV = {:.2f}'.format( self.ratio_pVmax3x3_avgpV), file=txt_file) 
                  decimals = 2
                  print('correlation coefficient          = ', np.round(self.coef, decimals), file=txt_file) 
                  print('eigen values of the covariance matrix=          [ ', np.round(self.eigVal[0], decimals), ', ', np.round(self.eigVal[1], decimals), ']',  file=txt_file) 
-                 #print(' eigVal[0]/eigVal[1] = {:.2f}'.format( self.ratio_eigVal), file=txt_file) 
+                 print(' eigVal[0]/eigVal[1] = {:.2f}'.format( self.ratio_eigVal), file=txt_file) 
                  print('weighted correlation coefficient = ', np.round(self.w_coef, decimals), file=txt_file) 
                  print('weighted eigen values of the covariance matrix= [ ',np.round(self.w_eigVal[0], decimals), ', ',  np.round(self.w_eigVal[1], decimals),  ']', file=txt_file) 
-                 #print(' w_eigVal[0]/w_eigVal[1] = {:.2f}'.format( self.ratio_w_eigVal), file=txt_file) 
+                 print(' w_eigVal[0]/w_eigVal[1] = {:.2f}'.format( self.ratio_w_eigVal), file=txt_file) 
 
          except IOError as err:
             print('File error: ', + str(err))

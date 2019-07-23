@@ -57,10 +57,23 @@ if DEBUG:
 # if the directory does not exist, make the directory
 if os.access(out_path, 0) == False:  # access(path, mode), set mode = 0
     os.makedirs(out_path, exist_ok=True)
+
+# data type
+# 1.  'LooseClusterClass' type keeps all cluster-pixel-lists from the ana_pixelLists.sh run
+data_type = 'LooseClusterClass' 
+# 2.  'clusterClass' type: apply cluster selection cuts from  cluster_cut.py with the following three cuts : 
+# np = 10 ### > number of pixels in a cluster
+# avgpV = 120 ### > average pixle value
+# sumpV = 400 ### > total pV in the cluster
+# data_type = 'clusterClass' 
+
 # output files
-file_clusterClass = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.dat', out_path=out_path)
-file_clustertxt = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.txt', out_path=out_path)
-file_clusterROOT = fIO.setFilename(filename, in_tag='clusters.dat', out_tag='clusterClass.root', out_path=out_path)
+out_tag = data_type + '.dat'
+file_clusterClass = fIO.setFilename(filename, in_tag='clusters.dat', out_tag=out_tag, out_path=out_path)
+out_tag = data_type + '.txt'
+file_clustertxt = fIO.setFilename(filename, in_tag='clusters.dat', out_tag=out_tag, out_path=out_path)
+out_tag = data_type + '.root'
+file_clusterROOT = fIO.setFilename(filename, in_tag='clusters.dat', out_tag=out_tag, out_path=out_path)
 
 if DEBUG:
     print('file_clusters :', file_cluster)
@@ -93,26 +106,36 @@ for im in range(len(clusterLists)):
        if (DEBUG ): 
           if ( nCl[im] == 1 ): break
        #if (debug_L2): print (ic)
-       # Apply n_p cut
-       if ( len(ic) > cl_cut.np): 
-           # fill in the cluster class variables
-           icluster = cluster.Cluster(filename, stat[im][0], stat[im][1], im, nCl[im], ic) 
-           # a few selection cuts to reduce noise
-           # avgpV sumpV cuts
-           if (icluster.sumpV > cl_cut.sumpV ): 
-               if (icluster.avgpV > cl_cut.avgpV ): 
+       # apply event selection cuts if any
+       if data_type == 'clusterClass': 
+           # Apply n_p cut
+           if ( len(ic) > cl_cut.np): 
+               # fill in the cluster class variables
+               icluster = cluster.Cluster(filename, stat[im][0], stat[im][1], im, nCl[im], ic) 
+               # a few selection cuts to reduce noise
+               # avgpV sumpV cuts
+               if (icluster.sumpV > cl_cut.sumpV ): 
+                   if (icluster.avgpV > cl_cut.avgpV ): 
+                       cls[im].append(icluster)
+
+                       nCl[im]  = nCl[im] + 1  # number of clusters found
+
+       else:
+           # fill in all clusters, no selection cuts applied
+           if data_type == 'LooseClusterClass': 
+               if ( len(ic) > 1 ): # require at least 2 pixels in a cluster
+                   # fill in the cluster class variables
+                   icluster = cluster.Cluster(filename, stat[im][0], stat[im][1], im, nCl[im], ic) 
                    cls[im].append(icluster)
-
                    nCl[im]  = nCl[im] + 1  # number of clusters found
-
    
 # open output file with "w"
 try:
     with open(file_clustertxt, 'w' ) as txt_file:
          #print('filename = ', fn, file=txt_file)
-         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ), file=txt_file)
-         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
-#         print('det= {:s}, n_cluster_cand in the {:d} images = {:4d} , in each image: [{:4d}, {:4d}, {:4d}, {:4d}, {:4d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
+         print('det= {:s}, n_clusters in the {:d} images = {:6d}, in each image: [{:5d}, {:5d}, {:5d}, {:5d}, {:5d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ), file=txt_file)
+         print('det= {:s}, n_clusters in the {:d} images = {:6d} , in each image: [{:5d}, {:5d}, {:5d}, {:5d}, {:5d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
+#         print('det= {:s}, n_clusters in the {:d} images = {:6d} , in each image: [{:5d}, {:5d}, {:5d}, {:5d}, {:5d}]'.format( cls[0][0].det, im+1, np.sum(nCl), nCl[0], nCl[1], nCl[2], nCl[3], nCl[4] ))
 
 except IOError as err:
     print('File error: ', + str(err))
@@ -126,7 +149,7 @@ finally:
 if DEBUG:
     print('dump clusterClass to file')
     #print('number of clusters found = ', len(cls[0]) )
-fIO.dumpPixelLists(file_clusterClass, cls)
+fIO.dumpPixelLists(file_clusterClass, cls,DEBUG = True, data_type=data_type)
 
 
 # ROOT histograms
@@ -137,7 +160,7 @@ gStyle.SetOptStat(11111111)
 gStyle.SetLineColor(2) 
 gStyle.SetLineWidth(4) 
 gStyle.SetMarkerColor(3) 
-gStyle.SetMarkerStyle(21) 
+gStyle.SetMarkerStyle(2) 
 gROOT.ForceStyle() 
 
 rootfile=file_clusterROOT

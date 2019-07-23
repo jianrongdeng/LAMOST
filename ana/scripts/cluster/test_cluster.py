@@ -16,7 +16,7 @@ sys.path.append('../common/')
 import filesIO as fIO # under ../common/ directory
 import const
 import cluster 
-import h_clusterClass as hcl
+#import h_clusterClass as hcl
 
 debug = False
 debug_L2 = True
@@ -26,6 +26,7 @@ file_stat    = '/Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/201
 # get the filename of the cluster file (without pathname)
 tmp_a = file_cluster.strip().split('/')
 filename = tmp_a[-1]
+if(debug_L2): print('filename=', filename)
 # read stat info from stat file
 stat = fIO.loadStat(file_stat, debug)
 # read clusters from input file
@@ -59,7 +60,7 @@ for im in range(len(clusterLists)):
    
 
 # fill tree
-hcl.FillClusterTree(cls)
+#hcl.FillClusterTree(cls)
 
 
 

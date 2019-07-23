@@ -22,3 +22,16 @@ def flatten(items):
             non_list_items.append(item)
 
     yield non_list_items
+
+##############################
+def getRatio(numerator, denominator, error=-1):
+    """
+    return the ratio of numerator/denominator
+    if denominator = 0, return error=-1
+    """
+    if denominator == 0 : 
+        yield error
+    else:
+        yield numerator/denominator
+
+##############################

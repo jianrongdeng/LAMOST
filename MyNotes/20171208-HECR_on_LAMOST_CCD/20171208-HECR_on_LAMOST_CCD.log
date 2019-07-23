@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  3 JUN 2019 21:26
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  6 JUN 2019 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -180,16 +180,23 @@ s)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \vbox (badness 2772) has occurred while \output is active []
+[12]
+File: /Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run1_20171205/cluster/201601
+-rb-01r_weigV0vsweigV1_zoom.eps Graphic file (type eps)
 
- [12]
+</Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run1_20171205/cluster/201601-rb-0
+1r_weigV0vsweigV1_zoom.eps>
+Overfull \hbox (65.24408pt too wide) in paragraph at lines 419--420
+ [] 
+ []
+
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
 run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps G
 raphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/20180612_cluster_density_vs_CCDs_2016Dataset.ps>
-[13]
+[13] [14]
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/
 run1_20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Data
 set.ps Graphic file (type eps)
@@ -197,7 +204,7 @@ set.ps Graphic file (type eps)
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/20180612_cluster_density_vs_CCDs_semilog_2016Dataset.p
 s>
-Overfull \hbox (11.5pt too wide) in paragraph at lines 445--446
+Overfull \hbox (11.5pt too wide) in paragraph at lines 493--494
  [] 
  []
 
@@ -208,7 +215,7 @@ Np_loglog.ps Graphic file (type eps)
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/scripts/data-sanity-check/results/run1_
 20171205/cluster_density/figures/20180606_cluster_hist_2016Dataset_Ncl_vs_Np_lo
 glog.ps>
-Overfull \hbox (11.5pt too wide) in paragraph at lines 460--461
+Overfull \hbox (11.5pt too wide) in paragraph at lines 508--509
  [] 
  []
 
@@ -217,16 +224,21 @@ s/rb-01b-20160101174212.ps Graphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-
 01b-20160101174212.ps>
-Overfull \hbox (212.25pt too wide) in paragraph at lines 481--482
+Overfull \hbox (212.25pt too wide) in paragraph at lines 529--530
  [] 
  []
 
+
+Underfull \vbox (badness 2111) has occurred while \output is active []
+
+ [15]
+[16] [17]
 File: /Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bia
 s/cluster_candidate_hxy_rb-01b-20160101.ps Graphic file (type eps)
 
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/clu
 ster_candidate_hxy_rb-01b-20160101.ps>
-Overfull \hbox (65.24387pt too wide) in paragraph at lines 494--495
+Overfull \hbox (65.24387pt too wide) in paragraph at lines 542--543
  [] 
  []
 
@@ -237,19 +249,20 @@ sumpV_131353_graph.eps Graphic file (type eps)
 </Users/jdeng/baiduCloudDisk/LAMOST/ana/outputs/run1_20171205/20160101/bias/rb-
 01r-20160101174212-clusterClass.dat_cluster_display_image1_Cluster5_np220_sumpV
 _131353_graph.eps>
-Overfull \hbox (65.24408pt too wide) in paragraph at lines 508--509
+Overfull \hbox (65.24408pt too wide) in paragraph at lines 556--557
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--535
+Underfull \hbox (badness 10000) in paragraph at lines 564--583
 
  []
 
-[14] [15] [16] [17] [18]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [18]
+[19] [20] [21]
 Missing character: There is no ‰ in font cmr12!
 Missing character: There is no ∏ in font cmr12!
 Missing character: There is no Ä in font cmr12!
@@ -314,19 +327,19 @@ Missing character: There is no È in font cmr12!
 Missing character: There is no Å in font cmr12!
 Missing character: There is no ì in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
 []\OT1/cmr/m/it/12 http://blog.csdn.net/u013709332/article/details/45768763\OT1
 /cmr/m/n/12 , Python-
  []
 
-[20] (./20171208-HECR_on_LAMOST_CCD.aux) ) 
+[22] (./20171208-HECR_on_LAMOST_CCD.aux) ) 
 Here is how much of TeX's memory you used:
- 654 strings out of 493634
- 11243 string characters out of 3143401
+ 659 strings out of 493634
+ 11493 string characters out of 3143401
  59404 words of memory out of 3000000
- 3981 multiletter control sequences out of 15000+200000
+ 3984 multiletter control sequences out of 15000+200000
  9195 words of font info for 32 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  32i,7n,21p,440b,235s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 20171208-HECR_on_LAMOST_CCD.dvi (20 pages, 20572 bytes).
+Output written on 20171208-HECR_on_LAMOST_CCD.dvi (22 pages, 22580 bytes).

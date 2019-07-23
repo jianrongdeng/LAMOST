@@ -366,6 +366,8 @@ These pixels (x, y, pValue) are saved for further analyzed.
 \subsection{From Pixels to Clusters} 
 % ======================================================================
 
+TODO: add find\_cluster to this section.
+
 This step is much faster than the previous step. For example, for data
 of December 2016, it takes 10 hours (on NAOC desktop machine) to run through the whole month's
 data, where the CCDs were recording data for 28 days. 
@@ -375,8 +377,55 @@ Note: the systme information of the Linux desktop machine used at NAOC is listed
 Linux localhost.localdomain 3.19.8-100.fc20.x86\_64 \#1 SMP Tue May 12 17:08:50 UTC 2015 x86\_64 x86\_64 x86\_64 GNU/Linux
 
 % ======================================================================
+\subsubsection{Cluster Selection Criteria}{\label{Sec:clusterSelection}}
+% ======================================================================
+The following cuts are applied to select cluster candidate events: 
+
+       \begin{itemize}
+	    \item np > 10, where np is the  number of pixels in a cluster
+	    \item avgpV > 120, where avgpV is the average pixle value in a cluster
+	    \item sumpV > 400, where sumpV is the total pV in a cluster
+       \end{itemize}
+
+The following variables are calculated for a cluster candidate event:
+
+       \begin{itemize}
+           \item wcoef
+           \item weigV0, weigV1
+       \end{itemize}
+
+% ======================================================================
 \subsection{Particle Identifications} 
 % ======================================================================
+
+% ======================================================================
+\subsubsection{Muon Selection Criteria} 
+% ======================================================================
+The following cuts are applied to select muon candidate events: 
+
+       \begin{itemize}
+	    \item weigV0 <     , where weigV0 is one of the two
+	    eigenvalues of the weighted covariance matrix with weigV0
+	    < weigV1, i.e, the smaller eigenvalue.
+	    \item weigV1 >  
+       \end{itemize}
+
+Fig. \ref{Fig:weigV1vsweigV0} shows a distribution of the variables weigV1 vs weigV0, where weigV0 and weigV1 are the two eigenvalues of the weighted covariance matrix (see section \ref{Sec:clusterSelection}), with weigV0 < weigV1.
+For a muon track, The weigV0 variable gives a measure of its track width, and the weigV1 variable gives a measure of its track length.  The muon tracks are located on the left side on the figure with small weigV0 and large weigV1. 
+
+% ======================================================================
+   \begin{figure}[!htbp]
+% ======================================================================
+   \begin{center}
+       \includegraphics[bb=  100 0 600 350, width=16cm]{/Users/jdeng/baiduCloudDisk/MyFigures/LAMOST/run1_20171205/cluster/201601-rb-01r_weigV0vsweigV1_zoom.eps}
+       \caption{A distribution of the variables weigV1 vs weigV0. }
+       \label{Fig:weigV1vsweigV0}
+   \end{center}    
+% ======================================================================
+   \end{figure}
+% ======================================================================
+
+
 
 % ======================================================================
 \subsection{Data Sanity Check} 

@@ -21,3 +21,14 @@ pickle_data.py
 		Pickle data (default is a list of candidate pixels) to a binary .dat file.
                 Use pickle.dump and pickle.load for write/read data to/from a file. 
 ============================
+
+
+============================
+test_pickle_data.py
+============================
+
+	date: 20190430 by Jianrong Deng
+	purpose:
+		test pickle_data module
+	usage: python test_pickle_data	
+============================

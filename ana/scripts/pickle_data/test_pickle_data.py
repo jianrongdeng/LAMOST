@@ -6,6 +6,7 @@ test_pickle_data.py
 	date: 20190430 by Jianrong Deng
 	purpose:
 		test pickle_data module
+	usage: python test_pickle_data	
 ============================
 '''
 

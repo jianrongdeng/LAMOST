@@ -1,0 +1,94 @@
+============================
+Current module: MuonTrackFitting/
+============================
+  date: 20191009 by Jianrong Deng
+  Purpose: do a linear fit for muon tracks
+  Method: use numpy.linalg.lstsq
+  reference: https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq
+============================
+============================
+
+============================
+testMuonTrackFitting.py
+============================
+  Date: 20191009 by Jianrong Deng
+  Purpose: do a linear fit for muon tracks
+  Method: use numpy.linalg.lstsq
+  Reference: https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq
+  Input: one track from pickle
+  Output: fitting parameters of the line
+  Plot: data points vs fitting line
+
+============================
+============================
+
+
+============================
+ex1_LeastSquareLinearFit.py
+============================
+  Date: 20191010 by Jianrong Deng
+  Purpose: an example of a linear fit using the least square method
+  Method: use numpy.linalg.lstsq
+          " Solves the equation a x = b by computing a vector x that minimizes the squared Euclidean 2-norm \| b - a x \|^2_2"
+  Reference: https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq
+  Input: array x and y
+  Output: fitting parameters of the line
+        y = mx + c
+	residuals = sums of residuals
+  Plot: data points vs fitting line
+
+============================
+============================
+
+============================
+ex1a_LeastSquareLinearFit.py
+============================
+  Date: 20191014 by Jianrong Deng
+
+  Purpose: an example of a linear fit using the least square method
+
+  Method: use numpy.linalg.lstsq
+          " Solves the equation a x = b by computing a vector x that minimizes the squared Euclidean 2-norm \| b - a x \|^2_2"
+  Reference: https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq
+  
+  Note: Modified from example: ex1_LeastSquareLinearFit.py
+  Modification: 
+      read in input array from an input data file in.txt
+
+  Input: in.txt
+     ASCII text file, with at least two columns of data, the first column is X, the second column is Y
+       
+  Output: fitting parameters of the line
+        y = mx + c
+	residuals = sums of residuals
+	normalized residuals = sums of residuals / len(x)
+  Plot: data points vs fitting line
+
+  Usage: python ex1a_LeastSquareLinearFit.py in.dat
+
+============================
+============================
+
+
+============================
+ex2_LeastSquarePolynomialFit.py
+============================
+  Date: 20191012 by Jianrong Deng
+  Purpose: an example of a polynomial fit using the least square method
+  Method: use numpy.polynomial.polynomial.Polynomial.fit
+  Reference: 
+  	https://docs.scipy.org/doc/numpy/reference/generated/numpy.polynomial.polynomial.Polynomial.fit.html#numpy.polynomial.polynomial.Polynomial.fit
+
+  Input: 
+        array x and y: sample points (x_i, y_i)
+	deg: degree of the fitting polynomials
+	    all terms up to and including the deg'th term are included in the fit
+  Output: 
+        series: fitting parameters of the polynomial
+	residuals = sums of squared residuals of the lease squares fit
+  Plot: data points vs fitting polynomial
+
+============================
+============================
+
+

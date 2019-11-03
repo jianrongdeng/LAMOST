@@ -7,6 +7,10 @@ test_pickle_data.py
 	purpose:
 		test pickle_data module
 	usage: python test_pickle_data	
+        Working Directory: test_pickle_data_20190806/
+        Input:  pickle_load.dat
+        Output: pickle_dump.dat
+                data.txt
 ============================
 '''
 
